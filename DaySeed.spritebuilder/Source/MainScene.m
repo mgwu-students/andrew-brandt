@@ -10,4 +10,11 @@
 
 @implementation MainScene
 
+- (void)start {
+
+  CCScene *_gameplay = [CCBReader loadAsScene:@"Gameplay"];
+  [[CCDirector sharedDirector] presentScene:_gameplay];
+
+}
+
 @end
