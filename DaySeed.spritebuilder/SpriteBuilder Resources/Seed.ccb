@@ -54,7 +54,7 @@
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
@@ -62,7 +62,7 @@
 			<key>collisionType</key>
 			<string></string>
 			<key>cornerRadius</key>
-			<real>0.0</real>
+			<real>15</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -74,75 +74,12 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>12.804656982421875</real>
-					<real>17.183578491210938</real>
-				</array>
-				<array>
-					<real>-0.246124267578125</real>
-					<real>57.964828491210938</real>
-				</array>
-				<array>
-					<real>13.617156982421875</real>
-					<real>100.79295349121094</real>
-				</array>
-				<array>
-					<real>61.792938232421875</real>
-					<real>123.29293823242188</real>
-				</array>
-				<array>
-					<real>109.48825073242188</real>
-					<real>107.09762573242188</real>
-				</array>
-				<array>
-					<real>122.74606323242188</real>
-					<real>67.874984741210938</real>
-				</array>
-				<array>
-					<real>107.18356323242188</real>
-					<real>15.488265991210938</real>
-				</array>
-				<array>
-					<real>62.707000732421875</real>
-					<real>-2.3086090087890625</real>
+					<real>13.5</real>
+					<real>12.5</real>
 				</array>
 			</array>
 			<key>polygons</key>
-			<array>
-				<array>
-					<array>
-						<real>62.707000732421875</real>
-						<real>-2.3086090087890625</real>
-					</array>
-					<array>
-						<real>107.18356323242188</real>
-						<real>15.488265991210938</real>
-					</array>
-					<array>
-						<real>122.74606323242188</real>
-						<real>67.874984741210938</real>
-					</array>
-					<array>
-						<real>109.48825073242188</real>
-						<real>107.09762573242188</real>
-					</array>
-					<array>
-						<real>61.792938232421875</real>
-						<real>123.29293823242188</real>
-					</array>
-					<array>
-						<real>13.617156982421875</real>
-						<real>100.79295349121094</real>
-					</array>
-					<array>
-						<real>-0.246124267578125</real>
-						<real>57.964828491210938</real>
-					</array>
-					<array>
-						<real>12.804656982421875</real>
-						<real>17.183578491210938</real>
-					</array>
-				</array>
-			</array>
+			<array/>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -200,7 +137,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>Assets/ring@4x.png</string>
+					<string>Assets/seal.png</string>
 				</array>
 			</dict>
 			<dict>

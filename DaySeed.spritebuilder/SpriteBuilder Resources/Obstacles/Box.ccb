@@ -156,7 +156,7 @@
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
-			<true/>
+			<false/>
 			<key>elasticity</key>
 			<real>0.30000001192092896</real>
 			<key>friction</key>
@@ -164,40 +164,58 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>-69.968780517578125</real>
-					<real>-70.43359375</real>
+					<real>-33.804718017578125</real>
+					<real>-34.929702758789062</real>
 				</array>
 				<array>
-					<real>-67.781280517578125</real>
-					<real>69.191375732421875</real>
+					<real>-32.574249267578125</real>
+					<real>34.652328491210938</real>
 				</array>
 				<array>
-					<real>67.7265625</real>
-					<real>70.63671875</real>
+					<real>-28.871124267578125</real>
+					<real>32.371078491210938</real>
 				</array>
 				<array>
-					<real>68.16790771484375</real>
-					<real>-70.45703125</real>
+					<real>34.867156982421875</real>
+					<real>36.304672241210938</real>
+				</array>
+				<array>
+					<real>35.007781982421875</real>
+					<real>-36.722671508789062</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>68.16790771484375</real>
-						<real>-70.45703125</real>
+						<real>-28.871124267578125</real>
+						<real>32.371078491210938</real>
 					</array>
 					<array>
-						<real>67.7265625</real>
-						<real>70.63671875</real>
+						<real>-32.574249267578125</real>
+						<real>34.652328491210938</real>
 					</array>
 					<array>
-						<real>-67.781280517578125</real>
-						<real>69.191375732421875</real>
+						<real>-33.804718017578125</real>
+						<real>-34.929702758789062</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>-33.804718017578125</real>
+						<real>-34.929702758789062</real>
 					</array>
 					<array>
-						<real>-69.968780517578125</real>
-						<real>-70.43359375</real>
+						<real>35.007781982421875</real>
+						<real>-36.722671508789062</real>
+					</array>
+					<array>
+						<real>34.867156982421875</real>
+						<real>36.304672241210938</real>
+					</array>
+					<array>
+						<real>-28.871124267578125</real>
+						<real>32.371078491210938</real>
 					</array>
 				</array>
 			</array>

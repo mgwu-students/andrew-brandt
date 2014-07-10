@@ -10,4 +10,6 @@
 
 @interface Gameplay : CCScene
 
+@property (assign) BOOL captureEnabled;
+
 @end
