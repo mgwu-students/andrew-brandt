@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49042D8A196EDCC800A64DE1 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49042D89196EDCC800A64DE1 /* Obstacle.m */; };
+		49042D8E196EDD3900A64DE1 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 49042D8D196EDD3900A64DE1 /* Box.m */; };
 		49557F51196D82F5008BE76C /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F50196D82F5008BE76C /* Gameplay.m */; };
 		49557F55196D8CE0008BE76C /* Seed.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F54196D8CE0008BE76C /* Seed.m */; };
 		49557F58196D96DC008BE76C /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F57196D96DC008BE76C /* LightingLayer.m */; };
@@ -59,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49042D88196EDCC800A64DE1 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = Source/Obstacle.h; sourceTree = "<group>"; };
+		49042D89196EDCC800A64DE1 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Obstacle.m; path = Source/Obstacle.m; sourceTree = "<group>"; };
+		49042D8C196EDD3900A64DE1 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		49042D8D196EDD3900A64DE1 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		49557F4F196D82F5008BE76C /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		49557F50196D82F5008BE76C /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		49557F53196D8CE0008BE76C /* Seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Seed.h; path = Source/Seed.h; sourceTree = "<group>"; };
@@ -144,6 +150,10 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				49557F56196D96DC008BE76C /* LightingLayer.h */,
 				49557F57196D96DC008BE76C /* LightingLayer.m */,
+				49042D88196EDCC800A64DE1 /* Obstacle.h */,
+				49042D89196EDCC800A64DE1 /* Obstacle.m */,
+				49042D8C196EDD3900A64DE1 /* Box.h */,
+				49042D8D196EDD3900A64DE1 /* Box.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -356,9 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49557F55196D8CE0008BE76C /* Seed.m in Sources */,
+				49042D8E196EDD3900A64DE1 /* Box.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				49557F51196D82F5008BE76C /* Gameplay.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
+				49042D8A196EDCC800A64DE1 /* Obstacle.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49557F58196D96DC008BE76C /* LightingLayer.m in Sources */,
 			);

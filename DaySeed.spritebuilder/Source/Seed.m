@@ -26,7 +26,9 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 	CCPhysicsBody *body = self.physicsBody;
 	body.collisionType = @"blob";
 	
-	[_lightingLayer addLight:self];
+	//[[self lightingLayer] addLight:self];
+    
+    self.visible = YES;
 	
 	[super onEnter];
 }
@@ -42,14 +44,14 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 {
 	_phase += dt;
 	
-	float speed = ccpLength(self.physicsBody.velocity);
-	float intensity = clampf(speed/100.0f + 0.3f*(0.5f + 0.5*sinf(_phase)), 0.0f, 1.0f);
-	
-	float yPos = self.position.y;
-	float blend = clampf((yPos - 140.0f)/30.0f, 0.0f, 1.0f);
-	
-	GLKVector4 dstColor = GLKVector4MultiplyScalar(GLKVector4Lerp(WaterBaseColor, AlgaeBaseColor, blend), intensity);
-	_lightColor = GLKVector4Lerp(dstColor, _lightColor, powf(0.3, dt));
+//	float speed = ccpLength(self.physicsBody.velocity);
+//	float intensity = clampf(speed/100.0f + 0.3f*(0.5f + 0.5*sinf(_phase)), 0.0f, 1.0f);
+//	
+//	float yPos = self.position.y;
+//	float blend = clampf((yPos - 140.0f)/30.0f, 0.0f, 1.0f);
+//	
+//	GLKVector4 dstColor = GLKVector4MultiplyScalar(GLKVector4Lerp(WaterBaseColor, AlgaeBaseColor, blend), intensity);
+//	_lightColor = GLKVector4Lerp(dstColor, _lightColor, powf(0.3, dt));
 }
 
 -(float)lightRadius

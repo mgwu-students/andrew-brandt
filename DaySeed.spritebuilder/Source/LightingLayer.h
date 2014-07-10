@@ -26,4 +26,10 @@
 -(void)addOccluder:(CCNode<Occluder> *)occluder;
 -(void)removeOccluder:(CCNode<Occluder> *)occluder;
 
+//+(LightingLayer *)lightLayerSingleton;
+
+@end
+
+@interface CCNode(LightingLayer)
+-(LightingLayer *)lightingLayer;
 @end
