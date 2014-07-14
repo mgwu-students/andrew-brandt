@@ -26,7 +26,7 @@
 -(void)addOccluder:(CCNode<Occluder> *)occluder;
 -(void)removeOccluder:(CCNode<Occluder> *)occluder;
 
-//+(LightingLayer *)lightLayerSingleton;
++(LightingLayer *)sharedLayer;
 
 @end
 

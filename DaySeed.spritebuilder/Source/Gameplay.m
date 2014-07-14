@@ -7,9 +7,12 @@
 //
 
 #import "Gameplay.h"
+#import "Entity.h"
+#import "Large.h"
 #import "Seed.h"
 #import "Box.h"
 #import "LightingLayer.h"
+#import "PnPHelper.h"
 
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "CCTexture_Private.h"
@@ -21,14 +24,22 @@
     CCPhysicsJoint *_mouseNode;
     LightingLayer *_lightingLayer;
     
-    CGPoint originPoint;
+    CGPoint originPoint;    
     NSMutableArray *_positionArray;
+    NSMutableArray *_capturedArray;
+    NSMutableArray *_entityArray;
+    
+    NSInteger _numberOfComposite;
 }
 
 - (void)onEnter {
     CCTexture *caustics = [CCTexture textureWithFile:@"Assets/Caustics.psd"];
 	
     _positionArray = [NSMutableArray array];
+    _entityArray = [NSMutableArray array];
+    _capturedArray = [NSMutableArray array];
+    
+    _numberOfComposite = 0;
 	// This is currently part of the private texture API...
 	// Need to find a nice way to expose this when loading textures since it's not very friendly to cached textures.
 	caustics.texParameters = &((ccTexParams){GL_LINEAR, GL_LINEAR, GL_REPEAT, GL_REPEAT});
@@ -69,20 +80,22 @@
 //		}
 //	)];
 //    
-    Seed *_seed = (Seed *)[CCBReader load:@"Seed"];
+    Entity *_seed = [Entity generateEntity];
     
     _seed.position = ccp(130,110);
 //    _seed.scaleX = 0.3f;
 //    _seed.scaleY = 0.3f;
 //    
     [_physicsNode addChild: _seed];
-    [_lightingLayer addLight:_seed];
+    //[_lightingLayer addLight:_seed];
+    [_entityArray addObject:_seed];
     
-    Seed *_seed2 = (Seed *)[CCBReader load:@"Seed"];
+    Entity *_seed2 = (Entity *)[CCBReader load:@"Seed"];
     
     _seed2.position = ccp(200,170);
     [_physicsNode addChild: _seed2];
-    [_lightingLayer addLight:_seed2];
+    //[_lightingLayer addLight:_seed2];
+    [_entityArray addObject:_seed2];
     
     Box *_box = (Box *)[CCBReader load:@"Obstacles/Box"];
     _box.position = ccp(130,220);
@@ -133,24 +146,111 @@
 
 - (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
     
+    BOOL needAction = YES;
     CGPoint finalPoint = [touch locationInNode: self];
     CCNode *_pos = [CCNode node];
     _pos.position = finalPoint;
     
     [_positionArray addObject:_pos];
     
-    NSLog(@"%d positions recorded in array, cleaning.",_positionArray.count);
-    [_positionArray removeAllObjects];
+    //TODO: Refactor ungrouping of entity into method(s)
+    if (_numberOfComposite > 0) {
+        for (Entity *_obj in _entityArray) {
+            if (_obj.entitiesPresent > 1 && CGRectContainsPoint([_obj boundingBox], finalPoint)) {
+                NSLog(@"Breaking up entity.");
+                needAction = NO;
+                for (int i = 0; i < _obj.entitiesPresent; i++) {
+                    Entity *_small = [Entity generateEntity];
+                    _small.entitiesPresent = 1;
+                    _small.position = finalPoint;
+                    [_physicsNode addChild:_small];
+                    [_entityArray addObject:_small];
+                }
+                [_entityArray removeObject:_obj];
+                [_physicsNode removeChild:_obj];
+            }
+        }
+    }
     
+    //TODO: Refactor grouping of entities into method(s)
     if (_captureEnabled) {
-    
         if (ccpDistance(originPoint, finalPoint) < 15) {
-        NSLog(@"Capture in progress!");
+            NSLog(@"Capture in progress!");
+        
+            int num = _positionArray.count;
+            int i = 0;
+            
+            float vertx[num];
+            float verty[num];
+            
+            for (CCNode *node in _positionArray) {
+            
+                vertx[i] = node.position.x;
+                verty[i] = node.position.y;
+                i++;
+            
+            }
+            
+            for (Entity *_obj in _entityArray) {
+            
+                NSLog(@"Checking for entity...");
+                
+                if (pointInPoly(num, vertx, verty, [_obj position].x, [_obj position].y)) {
+                
+                    NSLog(@"Entity captured!");
+                    [_capturedArray addObject:_obj];
+                }
+            
+            }
+            
+            if (_capturedArray.count >= 2) {
+            
+                NSInteger num = 0;
+                NSLog(@"Joining objects!");
+                for (Entity *_obj in _capturedArray) {
+                    [_physicsNode removeChild:_obj];
+                    [_entityArray removeObject:_obj];
+                    num++;
+                    NSLog(@"Entity removed.");
+                }
+                
+                Large *_lg = [Large generateEntity];
+                _lg.position = finalPoint;
+                _lg.entitiesPresent = num;
+                [_physicsNode addChild:_lg];
+                [_entityArray addObject:_lg];
+                _numberOfComposite++;
+            
+            }
+            
+            [_capturedArray removeAllObjects];
         }
         
         NSLog(@"Capture disabled.");
         self.captureEnabled = NO;
+        needAction = NO;
     }
+    if (needAction) {
+        for  (Entity *_obj in _entityArray) {
+            [_obj encourage:finalPoint];
+        }
+    }
+    
+    NSLog(@"%d positions recorded in array, cleaning.",_positionArray.count);
+    [_positionArray removeAllObjects];
 }
+
+#pragma mark - Other user input
+
+- (void)pause {
+
+    //Just reload the scene for now...
+    [[CCDirector sharedDirector] presentScene: [CCBReader loadAsScene:@"Gameplay"]];
+
+}
+
+#pragma mark - Capture handling
+
+#pragma mark - Release handling
 
 @end

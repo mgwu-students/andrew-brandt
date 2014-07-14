@@ -13,8 +13,6 @@
 
 @implementation Obstacle {
 	CCVertex *_occluderVertexes;
-    LightingLayer *_lightingLayer;
-    
 	int _occluderVertexCount;
 }
 
@@ -28,8 +26,7 @@
 	CCPhysicsBody *body = self.physicsBody;
 	body.collisionType = @"floater";
 	
-	//[[self lightingLayer] addOccluder:self];
-	
+    _lightingLayer = [LightingLayer sharedLayer];
 	[super onEnter];
 	
 	// Ooof

@@ -11,4 +11,6 @@
 
 @interface Obstacle : CCSprite<Occluder>
 
+@property (weak) LightingLayer *lightingLayer;
+
 @end

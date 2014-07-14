@@ -19,13 +19,18 @@
 	CCRenderTexture *_lightMapBuffer;
 	CCRenderState *_shadowRenderState;
 	CCRenderState *_lightRenderState;
+    
 }
+
+static LightingLayer *_sharedLayer;
 
 -(id)init
 {
 	if((self = [super init])){
 		_occluders = [NSMutableArray array];
 		_lights = [NSMutableArray array];
+        
+        _sharedLayer = self;
 		
 		_shadowRenderState = [CCRenderState renderStateWithBlendMode:[CCBlendMode disabledMode] shader:[CCShader positionColorShader] mainTexture:[CCTexture none]];
 		
@@ -67,6 +72,10 @@
 	[self addChild:_lightMapBuffer z:NSIntegerMax];
 	
 	[super onEnter];
+}
+
++(LightingLayer *)sharedLayer {
+    return _sharedLayer;
 }
 
 -(LightingLayer *)lightingLayer
