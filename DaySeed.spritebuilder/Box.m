@@ -10,11 +10,4 @@
 
 @implementation Box
 
-- (void) onEnter {
-
-  [super onEnter];
-
-}
-
-
 @end

@@ -40,7 +40,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>Seed</string>
+		<string>Individual</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -62,7 +62,7 @@
 			<key>collisionType</key>
 			<string></string>
 			<key>cornerRadius</key>
-			<real>15</real>
+			<real>4</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -74,8 +74,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>13.5</real>
-					<real>12.5</real>
+					<real>7.5</real>
+					<real>5.5</real>
 				</array>
 			</array>
 			<key>polygons</key>
@@ -137,7 +137,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>Assets/bug1.png</string>
+					<string>Assets/bug2.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -203,13 +203,13 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>0.3333333432674408</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.10000000149011612</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

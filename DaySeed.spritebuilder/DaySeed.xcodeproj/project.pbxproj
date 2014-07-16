@@ -15,6 +15,7 @@
 		49557F55196D8CE0008BE76C /* Seed.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F54196D8CE0008BE76C /* Seed.m */; };
 		49557F58196D96DC008BE76C /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F57196D96DC008BE76C /* LightingLayer.m */; };
 		49B99082197449B3002C0C77 /* Large.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B99081197449B3002C0C77 /* Large.m */; };
+		49CE98C01975B329003C7AC9 /* Individual.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE98BF1975B329003C7AC9 /* Individual.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -80,6 +81,8 @@
 		49557F57196D96DC008BE76C /* LightingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightingLayer.m; path = Source/LightingLayer.m; sourceTree = "<group>"; };
 		49B99080197449B3002C0C77 /* Large.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Large.h; path = Source/Large.h; sourceTree = "<group>"; };
 		49B99081197449B3002C0C77 /* Large.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Large.m; path = Source/Large.m; sourceTree = "<group>"; };
+		49CE98BE1975B329003C7AC9 /* Individual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Individual.h; path = Source/Individual.h; sourceTree = "<group>"; };
+		49CE98BF1975B329003C7AC9 /* Individual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Individual.m; path = Source/Individual.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				49557F53196D8CE0008BE76C /* Seed.h */,
 				49557F54196D8CE0008BE76C /* Seed.m */,
+				49CE98BE1975B329003C7AC9 /* Individual.h */,
+				49CE98BF1975B329003C7AC9 /* Individual.m */,
 				49B99080197449B3002C0C77 /* Large.h */,
 				49B99081197449B3002C0C77 /* Large.m */,
 			);
@@ -408,6 +413,7 @@
 				49B99082197449B3002C0C77 /* Large.m in Sources */,
 				49042DA5196F426F00A64DE1 /* PnPHelper.m in Sources */,
 				49557F55196D8CE0008BE76C /* Seed.m in Sources */,
+				49CE98C01975B329003C7AC9 /* Individual.m in Sources */,
 				49042D8E196EDD3900A64DE1 /* Box.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				49557F51196D82F5008BE76C /* Gameplay.m in Sources */,
@@ -438,6 +444,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -455,6 +462,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "6E1998EB-320D-4966-B4C9-853B315A4F94";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,6 +477,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -483,6 +492,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "6E1998EB-320D-4966-B4C9-853B315A4F94";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,7 +526,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = DaySeed;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6E1998EB-320D-4966-B4C9-853B315A4F94";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -547,7 +557,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = DaySeed;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6E1998EB-320D-4966-B4C9-853B315A4F94";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

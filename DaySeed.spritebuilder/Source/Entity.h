@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, EntityState) {
 
 };
 
+
+
 @interface Entity : CCSprite<Light>
 
 @property(weak) LightingLayer *lightingLayer;

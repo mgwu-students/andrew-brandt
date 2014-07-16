@@ -8,6 +8,7 @@
 
 #import "Gameplay.h"
 #import "Entity.h"
+#import "Individual.h"
 #import "Large.h"
 #import "Seed.h"
 #import "Box.h"
@@ -82,6 +83,11 @@
 //    
     Entity *_seed = [Entity generateEntity];
     
+    Individual *_i = [Individual generateEntity];
+    _i.position = ccp (250,250);
+    
+    [self incorporate:_i];
+    
     _seed.position = ccp(130,110);
 //    _seed.scaleX = 0.3f;
 //    _seed.scaleY = 0.3f;
@@ -136,7 +142,7 @@
     CCNode *_pos = [CCNode node];
     _pos.position = currentPoint;
     
-    if (!_captureEnabled && ccpDistance(originPoint, currentPoint) > 100) {
+    if (!_captureEnabled && ccpDistance(originPoint, currentPoint) > 30) {
         NSLog(@"Capture enabled!");
         self.captureEnabled = YES;
     }
@@ -174,7 +180,7 @@
     
     //TODO: Refactor grouping of entities into method(s)
     if (_captureEnabled) {
-        if (ccpDistance(originPoint, finalPoint) < 15) {
+        if (ccpDistance(originPoint, finalPoint) < 100) {
             NSLog(@"Capture in progress!");
         
             int num = _positionArray.count;
@@ -240,6 +246,13 @@
     [_positionArray removeAllObjects];
 }
 
+- (void)incorporate: (Entity *)entity {
+
+    [_physicsNode addChild:entity];
+    [_entityArray addObject:entity];
+
+}
+
 #pragma mark - Other user input
 
 - (void)pause {
@@ -251,6 +264,14 @@
 
 #pragma mark - Capture handling
 
+- (void)removeEntity {
+
+}
+
 #pragma mark - Release handling
+
+- (void)createEntity {
+
+}
 
 @end

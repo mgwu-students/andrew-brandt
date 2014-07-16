@@ -22,7 +22,7 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 -(void)onEnter
 {
 	_phase = 2.0*M_PI*CCRANDOM_0_1();
-	_lightColor = AlgaeBaseColor;
+	_lightColor = WaterBaseColor;
 	_lightingLayer = [LightingLayer sharedLayer];
     [_lightingLayer addLight:self];
     
@@ -79,7 +79,7 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 
 + (Entity *)generateEntity {
 
-    Entity *_obj = (Entity *)[CCBReader load:@"Seed"];
+    Entity *_obj = (Entity *)[CCBReader load:@"Individual"];
     return _obj;
 
 }
