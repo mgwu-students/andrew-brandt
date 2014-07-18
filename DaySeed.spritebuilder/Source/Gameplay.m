@@ -9,9 +9,6 @@
 #import "Gameplay.h"
 #import "Entity.h"
 #import "Individual.h"
-#import "Large.h"
-#import "Seed.h"
-#import "Box.h"
 #import "LightingLayer.h"
 #import "PnPHelper.h"
 
@@ -222,12 +219,12 @@
                     NSLog(@"Entity removed.");
                 }
                 
-                Large *_lg = [Large generateEntity];
-                _lg.position = finalPoint;
-                _lg.entitiesPresent = num;
-                [_physicsNode addChild:_lg];
-                [_entityArray addObject:_lg];
-                _numberOfComposite++;
+//                Large *_lg = [Large generateEntity];
+//                _lg.position = finalPoint;
+//                _lg.entitiesPresent = num;
+//                [_physicsNode addChild:_lg];
+//                [_entityArray addObject:_lg];
+//                _numberOfComposite++;
             
             }
             

@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		49042D8A196EDCC800A64DE1 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49042D89196EDCC800A64DE1 /* Obstacle.m */; };
-		49042D8E196EDD3900A64DE1 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 49042D8D196EDD3900A64DE1 /* Box.m */; };
-		49042DA5196F426F00A64DE1 /* PnPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 49042DA4196F426F00A64DE1 /* PnPHelper.m */; };
 		49042DA819705D9900A64DE1 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49042DA719705D9900A64DE1 /* Entity.m */; };
+		4905E3B919799404002FA714 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 4905E3B819799404002FA714 /* Group.m */; };
+		4905E3BD19799479002FA714 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 4905E3BC19799479002FA714 /* Box.m */; };
+		4905E3C01979948E002FA714 /* PnPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4905E3BF1979948E002FA714 /* PnPHelper.m */; };
 		49557F51196D82F5008BE76C /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F50196D82F5008BE76C /* Gameplay.m */; };
-		49557F55196D8CE0008BE76C /* Seed.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F54196D8CE0008BE76C /* Seed.m */; };
 		49557F58196D96DC008BE76C /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F57196D96DC008BE76C /* LightingLayer.m */; };
-		49B99082197449B3002C0C77 /* Large.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B99081197449B3002C0C77 /* Large.m */; };
 		49CE98C01975B329003C7AC9 /* Individual.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE98BF1975B329003C7AC9 /* Individual.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
@@ -67,20 +66,18 @@
 /* Begin PBXFileReference section */
 		49042D88196EDCC800A64DE1 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = Source/Obstacle.h; sourceTree = "<group>"; };
 		49042D89196EDCC800A64DE1 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Obstacle.m; path = Source/Obstacle.m; sourceTree = "<group>"; };
-		49042D8C196EDD3900A64DE1 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
-		49042D8D196EDD3900A64DE1 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
-		49042DA3196F426F00A64DE1 /* PnPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PnPHelper.h; sourceTree = "<group>"; };
-		49042DA4196F426F00A64DE1 /* PnPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PnPHelper.m; sourceTree = "<group>"; };
 		49042DA619705D9900A64DE1 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Source/Entity.h; sourceTree = "<group>"; };
 		49042DA719705D9900A64DE1 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Source/Entity.m; sourceTree = "<group>"; };
+		4905E3B719799404002FA714 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = Source/Group.h; sourceTree = "<group>"; };
+		4905E3B819799404002FA714 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = Source/Group.m; sourceTree = "<group>"; };
+		4905E3BB19799479002FA714 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Box.h; path = Source/Box.h; sourceTree = "<group>"; };
+		4905E3BC19799479002FA714 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Box.m; path = Source/Box.m; sourceTree = "<group>"; };
+		4905E3BE1979948E002FA714 /* PnPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PnPHelper.h; path = Source/PnPHelper.h; sourceTree = "<group>"; };
+		4905E3BF1979948E002FA714 /* PnPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PnPHelper.m; path = Source/PnPHelper.m; sourceTree = "<group>"; };
 		49557F4F196D82F5008BE76C /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		49557F50196D82F5008BE76C /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
-		49557F53196D8CE0008BE76C /* Seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Seed.h; path = Source/Seed.h; sourceTree = "<group>"; };
-		49557F54196D8CE0008BE76C /* Seed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Seed.m; path = Source/Seed.m; sourceTree = "<group>"; };
 		49557F56196D96DC008BE76C /* LightingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightingLayer.h; path = Source/LightingLayer.h; sourceTree = "<group>"; };
 		49557F57196D96DC008BE76C /* LightingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightingLayer.m; path = Source/LightingLayer.m; sourceTree = "<group>"; };
-		49B99080197449B3002C0C77 /* Large.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Large.h; path = Source/Large.h; sourceTree = "<group>"; };
-		49B99081197449B3002C0C77 /* Large.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Large.m; path = Source/Large.m; sourceTree = "<group>"; };
 		49CE98BE1975B329003C7AC9 /* Individual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Individual.h; path = Source/Individual.h; sourceTree = "<group>"; };
 		49CE98BF1975B329003C7AC9 /* Individual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Individual.m; path = Source/Individual.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -144,12 +141,10 @@
 		49042DA919705DE400A64DE1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				49557F53196D8CE0008BE76C /* Seed.h */,
-				49557F54196D8CE0008BE76C /* Seed.m */,
+				4905E3B719799404002FA714 /* Group.h */,
+				4905E3B819799404002FA714 /* Group.m */,
 				49CE98BE1975B329003C7AC9 /* Individual.h */,
 				49CE98BF1975B329003C7AC9 /* Individual.m */,
-				49B99080197449B3002C0C77 /* Large.h */,
-				49B99081197449B3002C0C77 /* Large.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -157,8 +152,8 @@
 		49042DAA19705DF100A64DE1 /* Obstacles */ = {
 			isa = PBXGroup;
 			children = (
-				49042D8C196EDD3900A64DE1 /* Box.h */,
-				49042D8D196EDD3900A64DE1 /* Box.m */,
+				4905E3BB19799479002FA714 /* Box.h */,
+				4905E3BC19799479002FA714 /* Box.m */,
 			);
 			name = Obstacles;
 			sourceTree = "<group>";
@@ -166,8 +161,8 @@
 		49042DAB19705E8B00A64DE1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				49042DA3196F426F00A64DE1 /* PnPHelper.h */,
-				49042DA4196F426F00A64DE1 /* PnPHelper.m */,
+				4905E3BE1979948E002FA714 /* PnPHelper.h */,
+				4905E3BF1979948E002FA714 /* PnPHelper.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -409,16 +404,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4905E3C01979948E002FA714 /* PnPHelper.m in Sources */,
 				49042DA819705D9900A64DE1 /* Entity.m in Sources */,
-				49B99082197449B3002C0C77 /* Large.m in Sources */,
-				49042DA5196F426F00A64DE1 /* PnPHelper.m in Sources */,
-				49557F55196D8CE0008BE76C /* Seed.m in Sources */,
+				4905E3B919799404002FA714 /* Group.m in Sources */,
 				49CE98C01975B329003C7AC9 /* Individual.m in Sources */,
-				49042D8E196EDD3900A64DE1 /* Box.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				49557F51196D82F5008BE76C /* Gameplay.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				49042D8A196EDCC800A64DE1 /* Obstacle.m in Sources */,
+				4905E3BD19799479002FA714 /* Box.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49557F58196D96DC008BE76C /* LightingLayer.m in Sources */,
 			);
