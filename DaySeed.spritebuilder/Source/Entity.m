@@ -71,16 +71,21 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 - (void)encourage: (CGPoint)location
 {
     NSLog(@"Received encouragement!");
-    CGPoint push = ccpMult(ccpSub(location, self.position), 0.5);
+    CGPoint push = ccpMult(ccpSub(location, self.position), 0.1);
     [self.physicsBody applyImpulse: push];
+}
+
+- (void)lift{
+    NSLog(@"Upward bound!");
+    [self.physicsBody applyImpulse: ccp(0,30)];
 }
 
 #pragma mark - Factory method
 
 + (Entity *)generateEntity {
 
-    Entity *_obj = (Entity *)[CCBReader load:@"Individual"];
-    return _obj;
+    Entity *obj = (Entity *)[CCBReader load:@"Entities/Individual"];
+    return obj;
 
 }
 

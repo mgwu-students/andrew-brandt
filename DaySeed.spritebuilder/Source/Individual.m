@@ -19,7 +19,7 @@
 
 + (Individual *)generateEntity {
 
-    Individual *_obj = (Individual *)[CCBReader load:@"Individual"];
+    Individual *_obj = (Individual *)[CCBReader load:@"Entities/Individual"];
     return _obj;
 
 }

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "CCSprite.h"
+#import "CCNode.h"
 #import "LightingLayer.h"
 
 typedef NS_ENUM(NSInteger, EntityState) {
@@ -19,8 +19,7 @@ typedef NS_ENUM(NSInteger, EntityState) {
 };
 
 
-
-@interface Entity : CCSprite<Light>
+@interface Entity : CCNode<Light>
 
 @property(weak) LightingLayer *lightingLayer;
 
@@ -28,6 +27,8 @@ typedef NS_ENUM(NSInteger, EntityState) {
 @property(nonatomic, assign) NSInteger entitiesPresent;
 
 - (void)encourage: (CGPoint)location;
+- (void)lift;
+
 + (Entity *)generateEntity;
 
 @end

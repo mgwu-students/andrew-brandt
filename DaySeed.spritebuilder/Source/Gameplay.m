@@ -40,6 +40,8 @@
     _entityArray = [NSMutableArray array];
     _capturedArray = [NSMutableArray array];
     
+    [_physicsNode addChild: [CCBReader loadAsScene:@"Levels/Level1a"]];
+    
     _numberOfComposite = 0;
 	// This is currently part of the private texture API...
 	// Need to find a nice way to expose this when loading textures since it's not very friendly to cached textures.
@@ -96,28 +98,28 @@
     //[_lightingLayer addLight:_seed];
     [_entityArray addObject:_seed];
     
-    Entity *_seed2 = (Entity *)[CCBReader load:@"Seed"];
+    Entity *_seed2 = (Entity *)[CCBReader load:@"Entities/Individual" ];
     
     _seed2.position = ccp(200,170);
     [_physicsNode addChild: _seed2];
     //[_lightingLayer addLight:_seed2];
     [_entityArray addObject:_seed2];
     
-    Box *_box = (Box *)[CCBReader load:@"Obstacles/Box"];
-    _box.position = ccp(130,220);
-    _box.scaleX = 0.6f;
-    _box.scaleY = 0.6f;
-    
-    [_physicsNode addChild :_box];
-    [_lightingLayer addOccluder:_box];
-    
-    Box *_box2 = (Box *)[CCBReader load:@"Obstacles/Box"];
-    _box2.position = ccp(260,100);
-    _box2.scaleX = 0.6f;
-    _box2.scaleY = 0.6f;
-    
-    [_physicsNode addChild :_box2];
-    [_lightingLayer addOccluder:_box2];
+//    Box *_box = (Box *)[CCBReader load:@"Obstacles/Box"];
+//    _box.position = ccp(130,220);
+//    _box.scaleX = 0.6f;
+//    _box.scaleY = 0.6f;
+//    
+//    [_physicsNode addChild :_box];
+//    [_lightingLayer addOccluder:_box];
+//    
+//    Box *_box2 = (Box *)[CCBReader load:@"Obstacles/Box"];
+//    _box2.position = ccp(260,100);
+//    _box2.scaleX = 0.6f;
+//    _box2.scaleY = 0.6f;
+//    
+//    [_physicsNode addChild :_box2];
+//    [_lightingLayer addOccluder:_box2];
     
     [super onEnter];
     
@@ -237,8 +239,8 @@
         needAction = NO;
     }
     if (needAction) {
-        for  (Entity *_obj in _entityArray) {
-            [_obj encourage:finalPoint];
+        for  (Entity *obj in _entityArray) {
+            [obj lift];
         }
     }
     
