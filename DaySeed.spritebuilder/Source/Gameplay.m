@@ -8,6 +8,7 @@
 
 #import "Gameplay.h"
 #import "Entity.h"
+#import "Group.h"
 #import "Individual.h"
 #import "LightingLayer.h"
 #import "PnPHelper.h"
@@ -20,6 +21,10 @@
     CCSprite *_backgroundSprite;
     CCPhysicsNode *_physicsNode;
     CCPhysicsJoint *_mouseNode;
+    
+    CCAction *_sideScroll;
+    CCNode *_speedEnforcer;
+    
     LightingLayer *_lightingLayer;
     
     CGPoint originPoint;    
@@ -36,6 +41,11 @@
     _positionArray = [NSMutableArray array];
     _entityArray = [NSMutableArray array];
     _capturedArray = [NSMutableArray array];
+    
+    _speedEnforcer = [CCNode node];
+    _speedEnforcer.physicsBody.collisionMask = @[];
+    _speedEnforcer.position = ccp(100,100);
+    [_physicsNode addChild: _speedEnforcer];
     
     [_physicsNode addChild: [CCBReader loadAsScene:@"Levels/Level1a"]];
     
@@ -86,6 +96,10 @@
     _i.position = ccp (250,250);
     
     [self incorporate:_i];
+    _physicsNode.debugDraw = TRUE;
+    _physicsNode.collisionDelegate = self;
+    
+    
     
     _seed.position = ccp(130,110);
 //    _seed.scaleX = 0.3f;
@@ -122,6 +136,10 @@
     
     self.captureEnabled = NO;
     self.userInteractionEnabled = YES;
+    
+    _sideScroll = [CCActionFollow actionWithTarget:_speedEnforcer worldBoundary:self.boundingBox];
+    [_physicsNode runAction:_sideScroll];
+    [_speedEnforcer.physicsBody applyImpulse:ccp(300,0)];
 }
 
 #pragma mark - Touch handling
@@ -158,24 +176,30 @@
     
     [_positionArray addObject:_pos];
     
-    //TODO: Refactor ungrouping of entity into method(s)
-    if (_numberOfComposite > 0) {
-        for (Entity *_obj in _entityArray) {
-            if (_obj.entitiesPresent > 1 && CGRectContainsPoint([_obj boundingBox], finalPoint)) {
-                NSLog(@"Breaking up entity.");
-                needAction = NO;
-                for (int i = 0; i < _obj.entitiesPresent; i++) {
-                    Entity *_small = [Entity generateEntity];
-                    _small.entitiesPresent = 1;
-                    _small.position = finalPoint;
-                    [_physicsNode addChild:_small];
-                    [_entityArray addObject:_small];
-                }
-                [_entityArray removeObject:_obj];
-                [_physicsNode removeChild:_obj];
-            }
+    for (Entity *i in _entityArray) {
+        if (CGRectContainsPoint(i.boundingBox, finalPoint)) {
+            [self groupEntitiesAtLoc:finalPoint];
         }
     }
+    
+    //TODO: Refactor ungrouping of entity into method(s)
+//    if (_numberOfComposite > 0) {
+//        for (Entity *_obj in _entityArray) {
+//            if (_obj.entitiesPresent > 1 && CGRectContainsPoint([_obj boundingBox], finalPoint)) {
+//                NSLog(@"Breaking up entity.");
+//                needAction = NO;
+//                for (int i = 0; i < _obj.entitiesPresent; i++) {
+//                    Entity *_small = [Entity generateEntity];
+//                    _small.entitiesPresent = 1;
+//                    _small.position = finalPoint;
+//                    [_physicsNode addChild:_small];
+//                    [_entityArray addObject:_small];
+//                }
+//                [_entityArray removeObject:_obj];
+//                [_physicsNode removeChild:_obj];
+//            }
+//        }
+//    }
     
     //TODO: Refactor grouping of entities into method(s)
     if (_captureEnabled) {
@@ -263,8 +287,26 @@
 
 #pragma mark - Capture handling
 
-- (void)removeEntity {
+- (void)groupEntitiesAtLoc: (CGPoint)point {
+    NSLog(@"Grouping stuff...");
+    
+//    for (Entity *e in _entityArray) {
+//        [e encourage:point];
+//    }
+//    Creates spring to pull entities together... not very effective
+    Group *group = (Group *)[CCBReader load:@"Entities/Group"];
+    group.position = point;
+    [_physicsNode addChild:group];
+    for (Individual *i in _entityArray) {
+        [group addIndividual:i];
+    }
 
+}
+
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair entity:(Individual *)nodeA entity:(Individual *)nodeB {
+    [[_physicsNode space] addPostStepBlock:^{
+        [nodeA tryJoinWithSpring:nodeB];
+    } key:nodeA];
 }
 
 #pragma mark - Release handling

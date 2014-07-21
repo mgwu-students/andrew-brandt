@@ -14,6 +14,9 @@
 
 @implementation Entity{
         float _phase;
+        CGFloat timeSinceAction;
+    
+        NSMutableArray *_entitiesJoined;
 }
 
 static const GLKVector4 AlgaeBaseColor = {{0.00f,	0.99f,	0.27f, 1.0f}};
@@ -26,10 +29,12 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 	_lightingLayer = [LightingLayer sharedLayer];
     [_lightingLayer addLight:self];
     
-    //_entitiesPresent = 1;
+    _entitiesJoined = [NSMutableArray array];
+    _currentState = EntityIdle;
+    timeSinceAction = 0;
     
 	CCPhysicsBody *body = self.physicsBody;
-	body.collisionType = @"blob";
+	body.collisionType = @"entity";
 	   
     self.visible = YES;
 	
@@ -46,6 +51,12 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 -(void)update:(CCTime)dt
 {
 	_phase += dt;
+    timeSinceAction += dt;
+    
+    if (timeSinceAction >= 3.0f && _currentState != EntityIdle
+    ) {
+        [self setState:EntityIdle];
+    }
 	
 //	float speed = ccpLength(self.physicsBody.velocity);
 //	float intensity = clampf(speed/100.0f + 0.3f*(0.5f + 0.5*sinf(_phase)), 0.0f, 1.0f);
@@ -57,6 +68,8 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 //	_lightColor = GLKVector4Lerp(dstColor, _lightColor, powf(0.3, dt));
 }
 
+#pragma mark - Light effect methods
+
 -(float)lightRadius
 {
 	return 180.f;
@@ -67,17 +80,52 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 	return _lightColor;
 }
 
+#pragma mark - Movement handling
 
 - (void)encourage: (CGPoint)location
 {
     NSLog(@"Received encouragement!");
-    CGPoint push = ccpMult(ccpSub(location, self.position), 0.1);
+    [self setState:EntityJoining];
+    CGPoint push = ccpMult(ccpSub(location, self.position), 0.3);
     [self.physicsBody applyImpulse: push];
 }
 
 - (void)lift{
     NSLog(@"Upward bound!");
     [self.physicsBody applyImpulse: ccp(0,30)];
+}
+
+#pragma mark - State handling
+
+- (void)setState: (EntityState)state {
+    NSLog(@"State changing to %d", state);
+    _currentState = state;
+}
+
+#pragma mark - Joint handling
+
+- (void)tryJoinWithSpring: (Entity *)e {
+
+    BOOL goodState = (_currentState == EntityJoining && e.currentState == EntityJoining) ? YES : NO;
+    BOOL goodJoints = (_jointsPresent < 2 && e.jointsPresent < 2) ? YES : NO;
+    BOOL noDup = YES;
+    for (Entity *obj in _entitiesJoined) {
+        if ([e isEqual:obj]) {
+            noDup = NO;
+        }
+    }
+    
+    if (goodState && goodJoints && noDup) {
+            NSLog(@"Can create joint.");
+            [self joinWithSpring: e];
+    }
+}
+
+- (void)joinWithSpring: (Entity *)e {
+    NSLog(@"Joining.");
+    [CCPhysicsJoint connectedSpringJointWithBodyA:self.physicsBody bodyB:e.physicsBody anchorA:ccp(0.5,0.5) anchorB:ccp(0.5,0.5) restLength:30.f stiffness:100.f damping:80.f];
+    _jointsPresent++;
+    e.jointsPresent++;
 }
 
 #pragma mark - Factory method

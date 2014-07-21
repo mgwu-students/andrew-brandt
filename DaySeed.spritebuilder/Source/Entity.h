@@ -14,7 +14,9 @@ typedef NS_ENUM(NSInteger, EntityState) {
     EntityIdle,
     EntityMoving,
     EntityAppearing,
-    EntityDisappearing
+    EntityDisappearing,
+    EntityJoining,
+    EntityJoined
 
 };
 
@@ -24,10 +26,12 @@ typedef NS_ENUM(NSInteger, EntityState) {
 @property(weak) LightingLayer *lightingLayer;
 
 @property(nonatomic, assign) GLKVector4 lightColor;
-@property(nonatomic, assign) NSInteger entitiesPresent;
+@property(nonatomic, assign) NSInteger jointsPresent;
+@property(nonatomic, assign) EntityState currentState;
 
 - (void)encourage: (CGPoint)location;
 - (void)lift;
+- (void)tryJoinWithSpring: (Entity *)e;
 
 + (Entity *)generateEntity;
 

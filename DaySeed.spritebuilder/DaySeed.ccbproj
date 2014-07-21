@@ -80,6 +80,18 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
+		<key>Assets/bug1.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Assets/bug2.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Group.ccbi</key>
+		<dict/>
 		<key>Sprites</key>
 		<dict/>
 		<key>ccbResources</key>

@@ -8,7 +8,7 @@
 
 #import "CCScene.h"
 
-@interface Gameplay : CCScene
+@interface Gameplay : CCScene<CCPhysicsCollisionDelegate>
 
 @property (assign) BOOL captureEnabled;
 

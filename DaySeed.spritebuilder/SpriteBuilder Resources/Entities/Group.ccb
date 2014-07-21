@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>4</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -40,11 +40,11 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string></string>
+		<string>Group</string>
 		<key>displayName</key>
-		<string>CCNode</string>
+		<string>GroupNode</string>
 		<key>memberVarAssignmentName</key>
-		<string></string>
+		<string>_groupNode</string>
 		<key>memberVarAssignmentType</key>
 		<integer>1</integer>
 		<key>physicsBody</key>
@@ -54,7 +54,7 @@
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
@@ -77,9 +77,40 @@
 					<real>0.0</real>
 					<real>0.0</real>
 				</array>
+				<array>
+					<real>0.0</real>
+					<real>32</real>
+				</array>
+				<array>
+					<real>32</real>
+					<real>32</real>
+				</array>
+				<array>
+					<real>32</real>
+					<real>0.0</real>
+				</array>
 			</array>
 			<key>polygons</key>
-			<array/>
+			<array>
+				<array>
+					<array>
+						<real>32</real>
+						<real>0.0</real>
+					</array>
+					<array>
+						<real>32</real>
+						<real>32</real>
+					</array>
+					<array>
+						<real>0.0</real>
+						<real>32</real>
+					</array>
+					<array>
+						<real>0.0</real>
+						<real>0.0</real>
+					</array>
+				</array>
+			</array>
 		</dict>
 		<key>properties</key>
 		<array>

@@ -24,7 +24,7 @@
 -(void)onEnter
 {
 	CCPhysicsBody *body = self.physicsBody;
-	body.collisionType = @"floater";
+	body.collisionType = @"obstacle";
 	
     _lightingLayer = [LightingLayer sharedLayer];
 	[super onEnter];

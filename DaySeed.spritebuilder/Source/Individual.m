@@ -10,6 +10,10 @@
 
 @implementation Individual
 
+- (void) onEnter {
+    [super onEnter];
+}
+
 -(float)lightRadius
 {
 	return 100.f;
