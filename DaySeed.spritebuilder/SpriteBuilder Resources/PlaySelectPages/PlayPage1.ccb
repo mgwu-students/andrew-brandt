@@ -3875,8 +3875,8 @@
 										<string>Block</string>
 										<key>value</key>
 										<array>
-											<string>playGame</string>
-											<integer>1</integer>
+											<string>playGame:</string>
+											<integer>2</integer>
 										</array>
 									</dict>
 									<dict>
@@ -4130,8 +4130,6 @@
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -5664,6 +5662,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

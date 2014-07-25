@@ -8,9 +8,19 @@
 
 #import "PlaySelect.h"
 
-@implementation PlaySelect
+@implementation PlaySelect {
+    CCNode *_page1;
+    CCNode *_options;
 
-- (void)playGame {
+}
+
+- (void)didLoadFromCCB {
+    _page1 = [CCBReader load:@"PlaySelectPages/PlayPage1"owner:self];
+    [self addChild: _page1];
+}
+
+- (void)playGame: (CCButton *)caller {
+    NSLog(caller.label.string);
     CCScene *_gameplay = [CCBReader loadAsScene:@"Gameplay"];
     [[CCDirector sharedDirector] presentScene:_gameplay];
 }

@@ -13,7 +13,7 @@
 - (void)start {
 
   CCScene *_gameplay = [CCBReader loadAsScene:@"PlaySelect"];
-  [[CCDirector sharedDirector] presentScene:_gameplay];
+  [[CCDirector sharedDirector] replaceScene:_gameplay];
 
 }
 
