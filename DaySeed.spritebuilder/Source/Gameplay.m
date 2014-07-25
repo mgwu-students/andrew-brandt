@@ -12,18 +12,18 @@
 #import "Individual.h"
 #import "LightingLayer.h"
 #import "PnPHelper.h"
+#import "CCActionFollowAxisHorizontal.h"
 
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "CCTexture_Private.h"
 
 @implementation Gameplay {
 
-    CCSprite *_backgroundSprite;
     CCPhysicsNode *_physicsNode;
-    CCPhysicsJoint *_mouseNode;
     
     CCAction *_sideScroll;
     CCNode *_speedEnforcer;
+    CCScene *_level;
     
     LightingLayer *_lightingLayer;
     
@@ -31,6 +31,7 @@
     NSMutableArray *_positionArray;
     NSMutableArray *_capturedArray;
     NSMutableArray *_entityArray;
+    NSMutableArray *_segments;
     
     NSInteger _numberOfComposite;
 }
@@ -41,13 +42,22 @@
     _positionArray = [NSMutableArray array];
     _entityArray = [NSMutableArray array];
     _capturedArray = [NSMutableArray array];
+    _segments = [NSMutableArray array];
     
     _speedEnforcer = [CCNode node];
     _speedEnforcer.physicsBody.collisionMask = @[];
     _speedEnforcer.position = ccp(100,100);
     [_physicsNode addChild: _speedEnforcer];
     
-    [_physicsNode addChild: [CCBReader loadAsScene:@"Levels/Level1a"]];
+    _level = [CCBReader loadAsScene:@"Levels/Level1"];
+    _level.position = ccp(-100,0);
+    [_segments addObject:_level];
+    
+    [_physicsNode addChild: _level];
+    
+    [self spawnIndividual];
+    
+    CGRect worldBounds = CGRectMake(0, 0, [CCDirector sharedDirector].viewSize.width, [CCDirector sharedDirector].viewSize.height);
     
     _numberOfComposite = 0;
 	// This is currently part of the private texture API...
@@ -96,7 +106,7 @@
     _i.position = ccp (250,250);
     
     [self incorporate:_i];
-    _physicsNode.debugDraw = TRUE;
+    //_physicsNode.debugDraw = TRUE;
     _physicsNode.collisionDelegate = self;
     
     
@@ -137,10 +147,16 @@
     self.captureEnabled = NO;
     self.userInteractionEnabled = YES;
     
-    _sideScroll = [CCActionFollow actionWithTarget:_speedEnforcer worldBoundary:self.boundingBox];
-    [_physicsNode runAction:_sideScroll];
-    [_speedEnforcer.physicsBody applyImpulse:ccp(300,0)];
+    CCActionFollowAxisHorizontal* follow = [CCActionFollowAxisHorizontal actionWithTarget:_seed2 worldBoundary:worldBounds];
+    //CCActionFollow *follow = [CCActionFollow actionWithTarget:_seed2 worldBoundary:self.boundingBox];
+    [_physicsNode runAction:follow];
 }
+
+- (void)update:(CCTime)delta
+{
+    
+}
+
 
 #pragma mark - Touch handling
 
@@ -170,17 +186,21 @@
 - (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
     
     BOOL needAction = YES;
-    CGPoint finalPoint = [touch locationInNode: self];
+    CGPoint finalPoint = [touch locationInNode: _physicsNode];
     CCNode *_pos = [CCNode node];
     _pos.position = finalPoint;
     
     [_positionArray addObject:_pos];
     
     for (Entity *i in _entityArray) {
+        
+        NSLog(@"%g",[i convertToWorldSpace: ccp(0,0)].x);
         if (CGRectContainsPoint(i.boundingBox, finalPoint)) {
             [self groupEntitiesAtLoc:finalPoint];
+            needAction = NO;
         }
     }
+    
     
     //TODO: Refactor ungrouping of entity into method(s)
 //    if (_numberOfComposite > 0) {
@@ -276,13 +296,17 @@
 
 }
 
-#pragma mark - Other user input
+#pragma mark - Button based user input
 
 - (void)pause {
 
     //Just reload the scene for now...
     [[CCDirector sharedDirector] presentScene: [CCBReader loadAsScene:@"Gameplay"]];
 
+}
+
+- (void)activateAbility {
+    NSLog(@"Activate ability");
 }
 
 #pragma mark - Capture handling
@@ -311,8 +335,10 @@
 
 #pragma mark - Release handling
 
-- (void)createEntity {
-
+- (void)spawnIndividual {
+    Entity *i = [Entity generateEntity];
+    i.position = ccp(100,100);
+    [self incorporate:i];
 }
 
 @end

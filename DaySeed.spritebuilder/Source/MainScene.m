@@ -12,7 +12,7 @@
 
 - (void)start {
 
-  CCScene *_gameplay = [CCBReader loadAsScene:@"Gameplay"];
+  CCScene *_gameplay = [CCBReader loadAsScene:@"PlaySelect"];
   [[CCDirector sharedDirector] presentScene:_gameplay];
 
 }

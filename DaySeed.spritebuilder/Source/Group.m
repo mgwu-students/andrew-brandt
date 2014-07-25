@@ -27,6 +27,10 @@
     [super onEnter];
 }
 
+- (void)update: (CCTime)dt {
+    [_groupNode.physicsBody applyAngularImpulse:-80];
+}
+
 - (void)addIndividual: (Individual *)node {
     [_entityArray addObject: node];
     [CCPhysicsJoint connectedSpringJointWithBodyA:_groupNode.physicsBody bodyB:node.physicsBody anchorA:ccp(0,0) anchorB:ccp(0,0) restLength:20.f stiffness:800.f damping:30.f];
