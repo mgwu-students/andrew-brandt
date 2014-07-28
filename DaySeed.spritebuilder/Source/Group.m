@@ -14,13 +14,26 @@
     NSMutableArray *_entityArray;
     
     CCNode *_groupNode;
-
+    GroupState _currentState;
+    
     //CCPhysicsJoint *_indivdualSpringJoint;
 }
 
+static const NSString *INDIVIDUAL_SPAWNED = @"Individual spawned";
+
+static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
+
 - (void)didLoadFromCCB {
     _entityArray = [NSMutableArray array];
-    _groupNode.physicsBody.collisionMask = @[];
+    self.physicsBody.collisionMask = @[];
+    self.physicsBody.affectedByGravity = NO;
+    _currentState = GroupWaiting;
+    
+    //Signing up for notification
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeState:) name:HIVE_FINISHED_SPAWN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addIndividualFromMessage:) name:INDIVIDUAL_SPAWNED object:nil];
+
+    
 }
 
 - (void)onEnter {
@@ -28,12 +41,29 @@
 }
 
 - (void)update: (CCTime)dt {
-    [_groupNode.physicsBody applyAngularImpulse:-80];
+    switch(_currentState) {
+        case GroupWaiting:
+            [self.physicsBody applyAngularImpulse:10];
+            break;
+        case GroupReady:
+            break;
+    }
+
+}
+
+- (void)changeState: (NSNotification *)message {
+
+}
+
+- (void)addIndividualFromMessage: (NSNotification *)message {
+    NSLog(@"Received notification!");
+    Individual *i = [message object];
+    [self addIndividual:i];
 }
 
 - (void)addIndividual: (Individual *)node {
     [_entityArray addObject: node];
-    [CCPhysicsJoint connectedSpringJointWithBodyA:_groupNode.physicsBody bodyB:node.physicsBody anchorA:ccp(0,0) anchorB:ccp(0,0) restLength:20.f stiffness:800.f damping:30.f];
+    [CCPhysicsJoint connectedSpringJointWithBodyA:self.physicsBody bodyB:node.physicsBody anchorA:ccp(0,0) anchorB:ccp(0,0) restLength:20.f stiffness:500.f damping:40.f];
 }
 
 - (void)breakupGroup {

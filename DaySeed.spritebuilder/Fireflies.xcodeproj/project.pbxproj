@@ -17,6 +17,7 @@
 		49557F51196D82F5008BE76C /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F50196D82F5008BE76C /* Gameplay.m */; };
 		49557F58196D96DC008BE76C /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49557F57196D96DC008BE76C /* LightingLayer.m */; };
 		4955F3F71982B59E00DFE3EA /* PlaySelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4955F3F61982B59E00DFE3EA /* PlaySelect.m */; };
+		497A06611986A4ED00993488 /* Hive.m in Sources */ = {isa = PBXBuildFile; fileRef = 497A06601986A4ED00993488 /* Hive.m */; };
 		49CE98C01975B329003C7AC9 /* Individual.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE98BF1975B329003C7AC9 /* Individual.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
@@ -87,6 +88,8 @@
 		49557F57196D96DC008BE76C /* LightingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightingLayer.m; path = Source/LightingLayer.m; sourceTree = "<group>"; };
 		4955F3F51982B59E00DFE3EA /* PlaySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaySelect.h; path = Source/PlaySelect.h; sourceTree = "<group>"; };
 		4955F3F61982B59E00DFE3EA /* PlaySelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaySelect.m; path = Source/PlaySelect.m; sourceTree = "<group>"; };
+		497A065F1986A4ED00993488 /* Hive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hive.h; path = Source/Hive.h; sourceTree = "<group>"; };
+		497A06601986A4ED00993488 /* Hive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hive.m; path = Source/Hive.m; sourceTree = "<group>"; };
 		49CE98BE1975B329003C7AC9 /* Individual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Individual.h; path = Source/Individual.h; sourceTree = "<group>"; };
 		49CE98BF1975B329003C7AC9 /* Individual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Individual.m; path = Source/Individual.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -154,6 +157,8 @@
 				4905E3B819799404002FA714 /* Group.m */,
 				49CE98BE1975B329003C7AC9 /* Individual.h */,
 				49CE98BF1975B329003C7AC9 /* Individual.m */,
+				497A065F1986A4ED00993488 /* Hive.h */,
+				497A06601986A4ED00993488 /* Hive.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				4905E3B919799404002FA714 /* Group.m in Sources */,
 				49CE98C01975B329003C7AC9 /* Individual.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				497A06611986A4ED00993488 /* Hive.m in Sources */,
 				4905E3C8197EB216002FA714 /* CCActionFollowAxisVertical.m in Sources */,
 				49557F51196D82F5008BE76C /* Gameplay.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,

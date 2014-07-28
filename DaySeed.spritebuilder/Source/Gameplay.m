@@ -9,6 +9,7 @@
 #import "Gameplay.h"
 #import "Entity.h"
 #import "Group.h"
+#import "Hive.h"
 #import "Individual.h"
 #import "LightingLayer.h"
 #import "PnPHelper.h"
@@ -20,8 +21,9 @@
 @implementation Gameplay {
 
     CCPhysicsNode *_physicsNode;
+    Hive *_hive;
+    Group *_group;
     
-    CCAction *_sideScroll;
     CCNode *_speedEnforcer;
     CCScene *_level;
     
@@ -31,38 +33,37 @@
     NSMutableArray *_positionArray;
     NSMutableArray *_capturedArray;
     NSMutableArray *_entityArray;
-    NSMutableArray *_segments;
-    
-    NSInteger _numberOfComposite;
 }
 
+static NSString *selectedLevel = @"Level1";
+
 - (void)onEnter {
-    CCTexture *caustics = [CCTexture textureWithFile:@"Assets/Caustics.psd"];
+    //CCTexture *caustics = [CCTexture textureWithFile:@"Assets/Caustics.psd"];
 	
     _positionArray = [NSMutableArray array];
     _entityArray = [NSMutableArray array];
     _capturedArray = [NSMutableArray array];
-    _segments = [NSMutableArray array];
     
     _speedEnforcer = [CCNode node];
-    _speedEnforcer.physicsBody.collisionMask = @[];
-    _speedEnforcer.position = ccp(100,100);
+    _speedEnforcer.position = ccp(200,100);
     [_physicsNode addChild: _speedEnforcer];
     
-    _level = [CCBReader loadAsScene:@"Levels/Level1"];
+    _level = [CCBReader loadAsScene:@"Levels/Level1" owner:self];
     _level.position = ccp(-100,0);
-    [_segments addObject:_level];
+    
+    _group = (Group *)[CCBReader load:@"Entities/Group"];
+    _group.position = ccp(100,100);
+    [_physicsNode addChild:_group];
     
     [_physicsNode addChild: _level];
     
-    [self spawnIndividual];
-    
+    [_hive spawnNumber:5 toNode:_physicsNode withContainer:_entityArray];
+
     CGRect worldBounds = CGRectMake(0, 0, [CCDirector sharedDirector].viewSize.width, [CCDirector sharedDirector].viewSize.height);
     
-    _numberOfComposite = 0;
 	// This is currently part of the private texture API...
 	// Need to find a nice way to expose this when loading textures since it's not very friendly to cached textures.
-	caustics.texParameters = &((ccTexParams){GL_LINEAR, GL_LINEAR, GL_REPEAT, GL_REPEAT});
+//	caustics.texParameters = &((ccTexParams){GL_LINEAR, GL_LINEAR, GL_REPEAT, GL_REPEAT});
 //	
 //	_backgroundSprite.shaderUniforms[@"caustics"] = caustics;
 //	_backgroundSprite.shaderUniforms[@"causticsSize"] = [NSValue valueWithCGSize:CC_SIZE_SCALE(caustics.contentSize, 8.0)];
@@ -99,62 +100,24 @@
 //			gl_FragColor = bg + 0.2*(caustics1 + caustics2);
 //		}
 //	)];
-//    
-    Entity *_seed = [Entity generateEntity];
-    
-    Individual *_i = [Individual generateEntity];
-    _i.position = ccp (250,250);
-    
-    [self incorporate:_i];
-    //_physicsNode.debugDraw = TRUE;
-    _physicsNode.collisionDelegate = self;
-    
-    
-    
-    _seed.position = ccp(130,110);
-//    _seed.scaleX = 0.3f;
-//    _seed.scaleY = 0.3f;
-//    
-    [_physicsNode addChild: _seed];
-    //[_lightingLayer addLight:_seed];
-    [_entityArray addObject:_seed];
-    
-    Entity *_seed2 = (Entity *)[CCBReader load:@"Entities/Individual" ];
-    
-    _seed2.position = ccp(200,170);
-    [_physicsNode addChild: _seed2];
-    //[_lightingLayer addLight:_seed2];
-    [_entityArray addObject:_seed2];
-    
-//    Box *_box = (Box *)[CCBReader load:@"Obstacles/Box"];
-//    _box.position = ccp(130,220);
-//    _box.scaleX = 0.6f;
-//    _box.scaleY = 0.6f;
-//    
-//    [_physicsNode addChild :_box];
-//    [_lightingLayer addOccluder:_box];
-//    
-//    Box *_box2 = (Box *)[CCBReader load:@"Obstacles/Box"];
-//    _box2.position = ccp(260,100);
-//    _box2.scaleX = 0.6f;
-//    _box2.scaleY = 0.6f;
-//    
-//    [_physicsNode addChild :_box2];
-//    [_lightingLayer addOccluder:_box2];
+//
     
     [super onEnter];
     
     self.captureEnabled = NO;
     self.userInteractionEnabled = YES;
     
-    CCActionFollowAxisHorizontal* follow = [CCActionFollowAxisHorizontal actionWithTarget:_seed2 worldBoundary:worldBounds];
-    //CCActionFollow *follow = [CCActionFollow actionWithTarget:_seed2 worldBoundary:self.boundingBox];
+    _physicsNode.debugDraw = YES;
+    
+    CCActionFollowAxisHorizontal* follow =
+        [CCActionFollowAxisHorizontal actionWithTarget:_speedEnforcer worldBoundary:worldBounds];
+    //CCActionFollow *follow = [CCActionFollow actionWithTarget:_speedEnforcer worldBoundary:worldBounds];
     [_physicsNode runAction:follow];
 }
 
 - (void)update:(CCTime)delta
 {
-    
+    //_speedEnforcer.position = ccpAdd(ccp(3,0),_speedEnforcer.position);
 }
 
 
@@ -301,7 +264,7 @@
 - (void)pause {
 
     //Just reload the scene for now...
-    [[CCDirector sharedDirector] presentScene: [CCBReader loadAsScene:@"Gameplay"]];
+    [[CCDirector sharedDirector] presentScene: [CCBReader loadAsScene:@"PlaySelect"]];
 
 }
 
@@ -339,6 +302,10 @@
     Entity *i = [Entity generateEntity];
     i.position = ccp(100,100);
     [self incorporate:i];
+}
+
+- (void)selectLevel: (NSString *)name {
+    selectedLevel = name;
 }
 
 @end

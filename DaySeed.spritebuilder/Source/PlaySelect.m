@@ -7,6 +7,7 @@
 //
 
 #import "PlaySelect.h"
+#import "Gameplay.h"
 
 @implementation PlaySelect {
     CCNode *_page1;
@@ -20,8 +21,9 @@
 }
 
 - (void)playGame: (CCButton *)caller {
-    NSLog(caller.label.string);
-    CCScene *_gameplay = [CCBReader loadAsScene:@"Gameplay"];
+    NSLog(caller.title);
+    Gameplay *_gameplay = (Gameplay *)[CCBReader loadAsScene:@"Gameplay"];
+    
     [[CCDirector sharedDirector] presentScene:_gameplay];
 }
 

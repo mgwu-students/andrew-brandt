@@ -19,7 +19,7 @@
         NSMutableArray *_entitiesJoined;
 }
 
-static const GLKVector4 AlgaeBaseColor = {{0.00f,	0.99f,	0.27f, 1.0f}};
+//static const GLKVector4 AlgaeBaseColor = {{0.00f,	0.99f,	0.27f, 1.0f}};
 static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 
 -(void)onEnter
@@ -30,7 +30,7 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
     [_lightingLayer addLight:self];
     
     _entitiesJoined = [NSMutableArray array];
-    _currentState = EntityIdle;
+    _currentState = EntityAppearing;
     timeSinceAction = 0;
     
 	CCPhysicsBody *body = self.physicsBody;
@@ -53,11 +53,14 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 	_phase += dt;
     timeSinceAction += dt;
     
-    if (timeSinceAction >= 3.0f && _currentState != EntityIdle
-    ) {
+    if (timeSinceAction >= 3.0f && _currentState != EntityIdle) {
         [self setState:EntityIdle];
     }
 	
+    if (_currentState == EntityAppearing) {
+        [self.physicsBody applyImpulse:ccp(0,50)];
+        [self setState:EntityIdle];
+    }
 //	float speed = ccpLength(self.physicsBody.velocity);
 //	float intensity = clampf(speed/100.0f + 0.3f*(0.5f + 0.5*sinf(_phase)), 0.0f, 1.0f);
 //	
