@@ -95,7 +95,7 @@ static const GLKVector4 WaterBaseColor = {{0.62f,	0.92f,	1.00f, 1.0f}};
 
 - (void)lift{
     NSLog(@"Upward bound!");
-    [self.physicsBody applyImpulse: ccp(10,50)];
+    [self.physicsBody applyForce: ccp(100,500)];
 }
 
 #pragma mark - State handling

@@ -37,7 +37,13 @@
     BOOL _gameStart;
 }
 
+static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
 static NSString *selectedLevel = @"Level1";
+
+- (void)didLoadFromCCB {
+    //Register for notification
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startGame:) name:HIVE_FINISHED_SPAWN object:nil];
+}
 
 - (void)onEnter {
     //CCTexture *caustics = [CCTexture textureWithFile:@"Assets/Caustics.psd"];
@@ -46,7 +52,7 @@ static NSString *selectedLevel = @"Level1";
     _entityArray = [NSMutableArray array];
     _capturedArray = [NSMutableArray array];
     
-    
+    _gameStart = NO;
     _speedEnforcer = [CCNode node];
     _speedEnforcer.position = ccp(200,100);
     [_physicsNode addChild: _speedEnforcer];
@@ -119,7 +125,9 @@ static NSString *selectedLevel = @"Level1";
 
 - (void)update:(CCTime)delta
 {
-    //_speedEnforcer.position = ccpAdd(ccp(3,0),_speedEnforcer.position);
+    if(_gameStart) {
+        _speedEnforcer.position = ccpAdd(ccp(3,0),_speedEnforcer.position);
+    }
 }
 
 
@@ -192,6 +200,13 @@ static NSString *selectedLevel = @"Level1";
 
 - (void)selectLevel: (NSString *)name {
     selectedLevel = name;
+}
+
+#pragma mark - Notification listening
+
+- (void)startGame: (NSNotification *)message {
+    NSLog(@"Starting game...");
+    _gameStart = YES;
 }
 
 @end
