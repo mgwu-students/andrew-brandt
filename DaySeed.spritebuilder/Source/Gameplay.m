@@ -33,6 +33,8 @@
     NSMutableArray *_positionArray;
     NSMutableArray *_capturedArray;
     NSMutableArray *_entityArray;
+    
+    BOOL _gameStart;
 }
 
 static NSString *selectedLevel = @"Level1";
@@ -43,6 +45,7 @@ static NSString *selectedLevel = @"Level1";
     _positionArray = [NSMutableArray array];
     _entityArray = [NSMutableArray array];
     _capturedArray = [NSMutableArray array];
+    
     
     _speedEnforcer = [CCNode node];
     _speedEnforcer.position = ccp(200,100);
@@ -107,11 +110,10 @@ static NSString *selectedLevel = @"Level1";
     self.captureEnabled = NO;
     self.userInteractionEnabled = YES;
     
-    _physicsNode.debugDraw = YES;
+    //_physicsNode.debugDraw = YES;
     
     CCActionFollowAxisHorizontal* follow =
         [CCActionFollowAxisHorizontal actionWithTarget:_speedEnforcer worldBoundary:worldBounds];
-    //CCActionFollow *follow = [CCActionFollow actionWithTarget:_speedEnforcer worldBoundary:worldBounds];
     [_physicsNode runAction:follow];
 }
 
@@ -137,11 +139,6 @@ static NSString *selectedLevel = @"Level1";
     CGPoint currentPoint = [touch locationInNode: self];
     CCNode *_pos = [CCNode node];
     _pos.position = currentPoint;
-    
-    if (!_captureEnabled && ccpDistance(originPoint, currentPoint) > 30) {
-        NSLog(@"Capture enabled!");
-        self.captureEnabled = YES;
-    }
     [_positionArray addObject:_pos];
 
 }
@@ -155,93 +152,6 @@ static NSString *selectedLevel = @"Level1";
     
     [_positionArray addObject:_pos];
     
-    for (Entity *i in _entityArray) {
-        
-        NSLog(@"%g",[i convertToWorldSpace: ccp(0,0)].x);
-        if (CGRectContainsPoint(i.boundingBox, finalPoint)) {
-            [self groupEntitiesAtLoc:finalPoint];
-            needAction = NO;
-        }
-    }
-    
-    
-    //TODO: Refactor ungrouping of entity into method(s)
-//    if (_numberOfComposite > 0) {
-//        for (Entity *_obj in _entityArray) {
-//            if (_obj.entitiesPresent > 1 && CGRectContainsPoint([_obj boundingBox], finalPoint)) {
-//                NSLog(@"Breaking up entity.");
-//                needAction = NO;
-//                for (int i = 0; i < _obj.entitiesPresent; i++) {
-//                    Entity *_small = [Entity generateEntity];
-//                    _small.entitiesPresent = 1;
-//                    _small.position = finalPoint;
-//                    [_physicsNode addChild:_small];
-//                    [_entityArray addObject:_small];
-//                }
-//                [_entityArray removeObject:_obj];
-//                [_physicsNode removeChild:_obj];
-//            }
-//        }
-//    }
-    
-    //TODO: Refactor grouping of entities into method(s)
-    if (_captureEnabled) {
-        if (ccpDistance(originPoint, finalPoint) < 100) {
-            NSLog(@"Capture in progress!");
-        
-            int num = _positionArray.count;
-            int i = 0;
-            
-            float vertx[num];
-            float verty[num];
-            
-            for (CCNode *node in _positionArray) {
-            
-                vertx[i] = node.position.x;
-                verty[i] = node.position.y;
-                i++;
-            
-            }
-            
-            for (Entity *_obj in _entityArray) {
-            
-                NSLog(@"Checking for entity...");
-                
-                if (pointInPoly(num, vertx, verty, [_obj position].x, [_obj position].y)) {
-                
-                    NSLog(@"Entity captured!");
-                    [_capturedArray addObject:_obj];
-                }
-            
-            }
-            
-            if (_capturedArray.count >= 2) {
-            
-                NSInteger num = 0;
-                NSLog(@"Joining objects!");
-                for (Entity *_obj in _capturedArray) {
-                    [_physicsNode removeChild:_obj];
-                    [_entityArray removeObject:_obj];
-                    num++;
-                    NSLog(@"Entity removed.");
-                }
-                
-//                Large *_lg = [Large generateEntity];
-//                _lg.position = finalPoint;
-//                _lg.entitiesPresent = num;
-//                [_physicsNode addChild:_lg];
-//                [_entityArray addObject:_lg];
-//                _numberOfComposite++;
-            
-            }
-            
-            [_capturedArray removeAllObjects];
-        }
-        
-        NSLog(@"Capture disabled.");
-        self.captureEnabled = NO;
-        needAction = NO;
-    }
     if (needAction) {
         for  (Entity *obj in _entityArray) {
             [obj lift];
@@ -270,30 +180,6 @@ static NSString *selectedLevel = @"Level1";
 
 - (void)activateAbility {
     NSLog(@"Activate ability");
-}
-
-#pragma mark - Capture handling
-
-- (void)groupEntitiesAtLoc: (CGPoint)point {
-    NSLog(@"Grouping stuff...");
-    
-//    for (Entity *e in _entityArray) {
-//        [e encourage:point];
-//    }
-//    Creates spring to pull entities together... not very effective
-    Group *group = (Group *)[CCBReader load:@"Entities/Group"];
-    group.position = point;
-    [_physicsNode addChild:group];
-    for (Individual *i in _entityArray) {
-        [group addIndividual:i];
-    }
-
-}
-
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair entity:(Individual *)nodeA entity:(Individual *)nodeB {
-    [[_physicsNode space] addPostStepBlock:^{
-        [nodeA tryJoinWithSpring:nodeB];
-    } key:nodeA];
 }
 
 #pragma mark - Release handling
