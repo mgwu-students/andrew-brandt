@@ -19,6 +19,8 @@
 		4955F3F71982B59E00DFE3EA /* PlaySelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4955F3F61982B59E00DFE3EA /* PlaySelect.m */; };
 		497A06611986A4ED00993488 /* Hive.m in Sources */ = {isa = PBXBuildFile; fileRef = 497A06601986A4ED00993488 /* Hive.m */; };
 		49CE98C01975B329003C7AC9 /* Individual.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE98BF1975B329003C7AC9 /* Individual.m */; };
+		49F07B5F198AB58C00A7C539 /* Predator.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F07B5E198AB58C00A7C539 /* Predator.m */; };
+		49F07B63198AB5A700A7C539 /* HangingSpider.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F07B62198AB5A700A7C539 /* HangingSpider.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -92,6 +94,10 @@
 		497A06601986A4ED00993488 /* Hive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hive.m; path = Source/Hive.m; sourceTree = "<group>"; };
 		49CE98BE1975B329003C7AC9 /* Individual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Individual.h; path = Source/Individual.h; sourceTree = "<group>"; };
 		49CE98BF1975B329003C7AC9 /* Individual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Individual.m; path = Source/Individual.m; sourceTree = "<group>"; };
+		49F07B5D198AB58C00A7C539 /* Predator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Predator.h; path = Source/Predator.h; sourceTree = "<group>"; };
+		49F07B5E198AB58C00A7C539 /* Predator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Predator.m; path = Source/Predator.m; sourceTree = "<group>"; };
+		49F07B61198AB5A700A7C539 /* HangingSpider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HangingSpider.h; path = Source/HangingSpider.h; sourceTree = "<group>"; };
+		49F07B62198AB5A700A7C539 /* HangingSpider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HangingSpider.m; path = Source/HangingSpider.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -185,6 +191,15 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		49F07B64198AB5AD00A7C539 /* Predators */ = {
+			isa = PBXGroup;
+			children = (
+				49F07B61198AB5A700A7C539 /* HangingSpider.h */,
+				49F07B62198AB5A700A7C539 /* HangingSpider.m */,
+			);
+			name = Predators;
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +214,8 @@
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				49557F4F196D82F5008BE76C /* Gameplay.h */,
+				49F07B5D198AB58C00A7C539 /* Predator.h */,
+				49F07B5E198AB58C00A7C539 /* Predator.m */,
 				49557F50196D82F5008BE76C /* Gameplay.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
@@ -212,6 +229,7 @@
 				49042DA719705D9900A64DE1 /* Entity.m */,
 				49042DA919705DE400A64DE1 /* Entities */,
 				49042DAA19705DF100A64DE1 /* Obstacles */,
+				49F07B64198AB5AD00A7C539 /* Predators */,
 				49042DAB19705E8B00A64DE1 /* Util */,
 			);
 			name = Source;
@@ -430,6 +448,7 @@
 				49CE98C01975B329003C7AC9 /* Individual.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				497A06611986A4ED00993488 /* Hive.m in Sources */,
+				49F07B5F198AB58C00A7C539 /* Predator.m in Sources */,
 				4905E3C8197EB216002FA714 /* CCActionFollowAxisVertical.m in Sources */,
 				49557F51196D82F5008BE76C /* Gameplay.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
@@ -438,6 +457,7 @@
 				4905E3BD19799479002FA714 /* Box.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49557F58196D96DC008BE76C /* LightingLayer.m in Sources */,
+				49F07B63198AB5A700A7C539 /* HangingSpider.m in Sources */,
 				4905E3C5197EB15F002FA714 /* CCActionFollowAxisHorizontal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

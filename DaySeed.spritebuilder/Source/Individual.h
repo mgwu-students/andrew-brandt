@@ -9,6 +9,11 @@
 #import "Entity.h"
 #import "LightingLayer.h"
 
+typedef NS_ENUM(NSInteger, IndividualState) {
+    IndividualAppearing,
+    IndividualReady
+};
+
 @interface Individual : Entity
 
 + (Individual *)generateEntity;

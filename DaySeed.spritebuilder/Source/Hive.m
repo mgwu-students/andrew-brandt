@@ -40,9 +40,10 @@ static const NSString *INDIVIDUAL_SPAWNED = @"Individual spawned";
 
 - (Individual *)spawnIndividual {
     Individual *i = [Individual generateEntity];
-    i.position = [self convertToWorldSpace:ccp(0,0)];
+    i.position = [_target convertToNodeSpace:self.position];
     [_arr addObject: i];
     [_target addChild:i];
+    [i lift];
     [[NSNotificationCenter defaultCenter] postNotificationName:INDIVIDUAL_SPAWNED object:i];
     return i;
 }

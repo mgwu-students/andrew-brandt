@@ -31,7 +31,6 @@
     
     CGPoint originPoint;    
     NSMutableArray *_positionArray;
-    NSMutableArray *_capturedArray;
     NSMutableArray *_entityArray;
     
     BOOL _gameStart;
@@ -50,7 +49,6 @@ static NSString *selectedLevel = @"Level1";
 	
     _positionArray = [NSMutableArray array];
     _entityArray = [NSMutableArray array];
-    _capturedArray = [NSMutableArray array];
     
     _gameStart = NO;
     _speedEnforcer = [CCNode node];
@@ -116,11 +114,16 @@ static NSString *selectedLevel = @"Level1";
     self.captureEnabled = NO;
     self.userInteractionEnabled = YES;
     
-    //_physicsNode.debugDraw = YES;
+    _physicsNode.debugDraw = YES;
     
     CCActionFollowAxisHorizontal* follow =
         [CCActionFollowAxisHorizontal actionWithTarget:_speedEnforcer worldBoundary:worldBounds];
     [_physicsNode runAction:follow];
+}
+
+- (void)onExit {
+    [_entityArray removeAllObjects];
+    [super onExit];
 }
 
 - (void)update:(CCTime)delta
@@ -182,7 +185,7 @@ static NSString *selectedLevel = @"Level1";
 - (void)pause {
 
     //Just reload the scene for now...
-    [[CCDirector sharedDirector] presentScene: [CCBReader loadAsScene:@"PlaySelect"]];
+    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"PlaySelect"]];
 
 }
 
