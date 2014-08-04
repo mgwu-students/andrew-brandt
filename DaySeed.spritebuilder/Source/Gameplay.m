@@ -59,7 +59,7 @@ static NSString *selectedLevel = @"Level1";
     _level.position = ccp(-100,0);
     
     _group = (Group *)[CCBReader load:@"Entities/Group"];
-    _group.position = ccp(100,100);
+    _group.position = ccp(200,200);
     [_physicsNode addChild:_group];
     
     [_physicsNode addChild: _level];
@@ -117,8 +117,10 @@ static NSString *selectedLevel = @"Level1";
     _physicsNode.debugDraw = YES;
     
     CCActionFollowAxisHorizontal* follow =
-        [CCActionFollowAxisHorizontal actionWithTarget:_speedEnforcer worldBoundary:worldBounds];
+        [CCActionFollowAxisHorizontal actionWithTarget:_group worldBoundary:worldBounds];
     [_physicsNode runAction:follow];
+    
+    NSLog(@"%.2f",CC_RADIANS_TO_DEGREES(ccpToAngle(ccpSub(ccp(45,55), ccp(10,20)))));
 }
 
 - (void)onExit {
@@ -129,7 +131,7 @@ static NSString *selectedLevel = @"Level1";
 - (void)update:(CCTime)delta
 {
     if(_gameStart) {
-        _speedEnforcer.position = ccpAdd(ccp(3,0),_speedEnforcer.position);
+        _speedEnforcer.position = ccpAdd(ccp(2,0),_speedEnforcer.position);
     }
 }
 
@@ -162,10 +164,10 @@ static NSString *selectedLevel = @"Level1";
     _pos.position = finalPoint;
     
     [_positionArray addObject:_pos];
-    
+    [_group lift];
     if (needAction) {
         for  (Entity *obj in _entityArray) {
-            [obj lift];
+            //[obj lift];
         }
     }
     

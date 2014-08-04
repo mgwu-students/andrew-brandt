@@ -20,6 +20,7 @@
 	CCRenderState *_shadowRenderState;
 	CCRenderState *_lightRenderState;
     
+    CGRect _display;
 }
 
 static LightingLayer *_sharedLayer;
@@ -31,7 +32,8 @@ static LightingLayer *_sharedLayer;
 		_lights = [NSMutableArray array];
         
         _sharedLayer = self;
-		
+		_display = CGRectMake(0, 0, [CCDirector sharedDirector].viewSize.width, [CCDirector sharedDirector].viewSize.height);
+    
 		_shadowRenderState = [CCRenderState renderStateWithBlendMode:[CCBlendMode disabledMode] shader:[CCShader positionColorShader] mainTexture:[CCTexture none]];
 		
 		CCBlendMode *lightBlend = [CCBlendMode blendModeWithOptions:@{

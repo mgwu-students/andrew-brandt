@@ -17,6 +17,7 @@
 }
 
 static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
+static const float GRAVITY_CONSTANT = -1000.f;
 
 - (void)didLoadFromCCB {
     //Signing up for notification
@@ -53,7 +54,7 @@ static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
     switch(newState) {
         case IndividualReady:
             //NSLog(@"Changing velocity function!!!");
-            self.physicsBody.body.body->velocity_func = playerUpdateVelocity;
+            self.physicsBody.body.body->velocity_func = playerUpdateGravity;
             break;
         case IndividualAppearing:
             break;
@@ -70,7 +71,7 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
     
     float x = body->v.x;
 	//body->v.x = clampf(body->v.x,-50.0f,100.0f);
-    if (x > 60.0f)
+    if (x > 70.0f)
     {
         NSLog(@"%.2f",x);
         x *= 0.99;
@@ -84,6 +85,26 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
     //body->v.y = 0.0f;
 }
 
+static void
+playerUpdateGravity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt) {
+    cpBodyUpdateVelocity(body, gravity, damping, dt);
+    //get initial velocity
+    float vx = body->v.x;
+    float vy = body->v.y;
+    //get acceleration vector
+    float a = GRAVITY_CONSTANT * dt;
+    float px = 200;
+    float py = 200;
+    //calculate acceleration vector position
+    float x = body->p.x;
+    float y = body->p.y;
+    float dx = a * cos(ccpToAngle(ccpSub(ccp(x,y), ccp(px,py))));
+    float dy = a * sin(ccpToAngle(ccpSub(ccp(x,y), ccp(px,py))));
+    //evaluate new velocity
+    body->v.x = vx + dx;
+    body->v.y = vy + dy;
+}
+
 #pragma mark - Notification listening
 
 - (void)gameplayStart: (NSNotification *)message {
@@ -93,10 +114,8 @@ playerUpdateVelocity(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
 #pragma mark - Factory method
 
 + (Individual *)generateEntity {
-
     Individual *_obj = (Individual *)[CCBReader load:@"Entities/Individual"];
     return _obj;
-
 }
 
 @end

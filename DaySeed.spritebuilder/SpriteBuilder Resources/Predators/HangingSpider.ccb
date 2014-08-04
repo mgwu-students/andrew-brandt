@@ -15,6 +15,8 @@
 	<false/>
 	<key>currentResolution</key>
 	<integer>0</integer>
+	<key>currentSequenceId</key>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -38,13 +40,78 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string></string>
+		<string>HangingSpider</string>
 		<key>displayName</key>
-		<string>CCSprite</string>
+		<string>SpiderSprite</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
 		<integer>1</integer>
+		<key>physicsBody</key>
+		<dict>
+			<key>affectedByGravity</key>
+			<true/>
+			<key>allowsRotation</key>
+			<true/>
+			<key>bodyShape</key>
+			<integer>0</integer>
+			<key>collisionCategories</key>
+			<array/>
+			<key>collisionMask</key>
+			<array/>
+			<key>collisionType</key>
+			<string></string>
+			<key>cornerRadius</key>
+			<real>0.0</real>
+			<key>density</key>
+			<real>1</real>
+			<key>dynamic</key>
+			<true/>
+			<key>elasticity</key>
+			<real>0.30000001192092896</real>
+			<key>friction</key>
+			<real>0.30000001192092896</real>
+			<key>points</key>
+			<array>
+				<array>
+					<real>19.039031982421875</real>
+					<real>19.726547241210938</real>
+				</array>
+				<array>
+					<real>19.179656982421875</real>
+					<real>45.828109741210938</real>
+				</array>
+				<array>
+					<real>42.957000732421875</real>
+					<real>44.898422241210938</real>
+				</array>
+				<array>
+					<real>43.117156982421875</real>
+					<real>19.374984741210938</real>
+				</array>
+			</array>
+			<key>polygons</key>
+			<array>
+				<array>
+					<array>
+						<real>43.117156982421875</real>
+						<real>19.374984741210938</real>
+					</array>
+					<array>
+						<real>42.957000732421875</real>
+						<real>44.898422241210938</real>
+					</array>
+					<array>
+						<real>19.179656982421875</real>
+						<real>45.828109741210938</real>
+					</array>
+					<array>
+						<real>19.039031982421875</real>
+						<real>19.726547241210938</real>
+					</array>
+				</array>
+			</array>
+		</dict>
 		<key>properties</key>
 		<array>
 			<dict>
@@ -101,7 +168,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string></string>
+					<string>Assets/black-spider-down.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -150,6 +217,45 @@
 			<real>2</real>
 			<key>width</key>
 			<integer>0</integer>
+		</dict>
+	</array>
+	<key>sequences</key>
+	<array>
+		<dict>
+			<key>autoPlay</key>
+			<true/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>12</integer>
+			</dict>
+			<key>chainedSequenceId</key>
+			<integer>-1</integer>
+			<key>length</key>
+			<real>10</real>
+			<key>name</key>
+			<string>Default Timeline</string>
+			<key>offset</key>
+			<real>0.0</real>
+			<key>position</key>
+			<real>0.0</real>
+			<key>resolution</key>
+			<real>30</real>
+			<key>scale</key>
+			<real>128</real>
+			<key>sequenceId</key>
+			<integer>0</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>isExpanded</key>
+				<false/>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
 		</dict>
 	</array>
 	<key>stageBorder</key>

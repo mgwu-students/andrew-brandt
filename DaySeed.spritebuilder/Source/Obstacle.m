@@ -27,6 +27,7 @@
 	body.collisionType = @"obstacle";
 	
     _lightingLayer = [LightingLayer sharedLayer];
+    [_lightingLayer addOccluder:self];
 	[super onEnter];
 	
 	// Ooof

@@ -52,10 +52,10 @@ static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
 - (void)update: (CCTime)dt {
     switch(_currentState) {
         case GroupWaiting:
-            [self.physicsBody applyAngularImpulse:10];
+            //[self.physicsBody applyAngularImpulse:10];
             break;
         case GroupReady:
-            [self.physicsBody applyAngularImpulse:-35];
+            //[self.physicsBody applyAngularImpulse:-35];
             break;
     }
 }
@@ -64,7 +64,7 @@ static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
     switch (newState) {
         case GroupReady:
             NSLog(@"Changing velocity function!!!");
-            self.physicsBody.body.body->velocity_func = playerUpdateVelocity;
+            //self.physicsBody.body.body->velocity_func = playerUpdateVelocity;
             break;
         case GroupWaiting:
             break;
@@ -86,7 +86,7 @@ static const NSString *HIVE_FINISHED_SPAWN = @"Hive completed spawning";
 
 - (void)addIndividual: (Individual *)node {
     [_entityArray addObject: node];
-    [CCPhysicsJoint connectedSpringJointWithBodyA:self.physicsBody bodyB:node.physicsBody anchorA:ccp(0,0) anchorB:ccp(0.5,0.5) restLength:30.f stiffness:600.f damping:30.f];
+    //[CCPhysicsJoint connectedSpringJointWithBodyA:self.physicsBody bodyB:node.physicsBody anchorA:ccp(0,0) anchorB:ccp(0.5,0.5) restLength:30.f stiffness:600.f damping:30.f];
 }
 
 #pragma mark - Velocity Function
