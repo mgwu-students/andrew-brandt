@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>docDimensionsType</key>
 	<integer>2</integer>
 	<key>fileType</key>
@@ -74,8 +74,8 @@
 							<real>209</real>
 							<real>215</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>1</integer>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -138,8 +138,8 @@
 							<real>383</real>
 							<real>218</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>1</integer>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -164,10 +164,6 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -336,20 +332,7 @@
 								<key>type</key>
 								<string>Float</string>
 								<key>value</key>
-								<real>0.0</real>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>color</string>
-								<key>type</key>
-								<string>Color3</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-									<real>0.0</real>
-								</array>
+								<real>1</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -513,7 +496,7 @@
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>drag</string>
+						<string>connect</string>
 						<key>memberVarAssignmentName</key>
 						<string></string>
 						<key>memberVarAssignmentType</key>
@@ -535,7 +518,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>298</real>
+									<real>290</real>
 									<real>0.36000001430511475</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -573,7 +556,7 @@
 								<string>Text</string>
 								<key>value</key>
 								<array>
-									<string>drag.</string>
+									<string>connect.</string>
 									<false/>
 								</array>
 							</dict>
@@ -612,20 +595,7 @@
 								<key>type</key>
 								<string>Float</string>
 								<key>value</key>
-								<real>0.0</real>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>color</string>
-								<key>type</key>
-								<string>Color3</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-									<real>0.0</real>
-								</array>
+								<real>1</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -811,7 +781,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>391</real>
+									<real>371</real>
 									<real>0.36000001430511475</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -888,20 +858,7 @@
 								<key>type</key>
 								<string>Float</string>
 								<key>value</key>
-								<real>0.0</real>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>color</string>
-								<key>type</key>
-								<string>Color3</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-									<real>0.0</real>
-								</array>
+								<real>1</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -1080,6 +1037,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1228,9 +1187,9 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>1.0494790077209473</real>
 			<key>position</key>
-			<real>3.9333333969116211</real>
+			<real>5.6666665077209473</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -1266,7 +1225,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1.1333333253860474</real>
+			<real>3</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

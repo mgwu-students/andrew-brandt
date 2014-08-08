@@ -71,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>221.99996948242188</real>
-							<real>197.99998474121094</real>
+							<real>221.99998474121094</real>
+							<real>197.99996948242188</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>1</integer>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -133,11 +133,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>389.99993896484375</real>
-							<real>196.99998474121094</real>
+							<real>389.99996948242188</real>
+							<real>197</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>1</integer>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
