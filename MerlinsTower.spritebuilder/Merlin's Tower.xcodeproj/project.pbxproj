@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		4973041E1993F69E0059C082 /* GreenEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973041D1993F69E0059C082 /* GreenEntity.m */; };
 		49730421199416A20059C082 /* LevelSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49730420199416A20059C082 /* LevelSelect.m */; };
-		497304261994596E0059C082 /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 497304251994596E0059C082 /* LightingLayer.m */; };
+		4973043119951D710059C082 /* BlueEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973042C19951D710059C082 /* BlueEntity.m */; };
+		4973043219951D710059C082 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973042E19951D710059C082 /* Level.m */; };
+		4973043319951D710059C082 /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973043019951D710059C082 /* LightingLayer.m */; };
 		49E01162199133150075FF24 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01161199133150075FF24 /* Gameplay.m */; };
 		49E01166199133E80075FF24 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01165199133E80075FF24 /* GameState.m */; };
 		49E0117019913C960075FF24 /* RedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0116F19913C960075FF24 /* RedEntity.m */; };
 		49E0117419913CBA0075FF24 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0117319913CBA0075FF24 /* Entity.m */; };
-		49E0117919915DCE0075FF24 /* BlueEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0117819915DCE0075FF24 /* BlueEntity.m */; };
-		49E0117C1991609F0075FF24 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0117B1991609F0075FF24 /* Level.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -69,8 +69,12 @@
 		4973041D1993F69E0059C082 /* GreenEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GreenEntity.m; path = Source/GreenEntity.m; sourceTree = "<group>"; };
 		4973041F199416A20059C082 /* LevelSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelect.h; path = Source/LevelSelect.h; sourceTree = "<group>"; };
 		49730420199416A20059C082 /* LevelSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelect.m; path = Source/LevelSelect.m; sourceTree = "<group>"; };
-		497304241994596E0059C082 /* LightingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightingLayer.h; sourceTree = "<group>"; };
-		497304251994596E0059C082 /* LightingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightingLayer.m; sourceTree = "<group>"; };
+		4973042B19951D710059C082 /* BlueEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueEntity.h; path = Source/BlueEntity.h; sourceTree = "<group>"; };
+		4973042C19951D710059C082 /* BlueEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueEntity.m; path = Source/BlueEntity.m; sourceTree = "<group>"; };
+		4973042D19951D710059C082 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Source/Level.h; sourceTree = "<group>"; };
+		4973042E19951D710059C082 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
+		4973042F19951D710059C082 /* LightingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightingLayer.h; path = Source/LightingLayer.h; sourceTree = "<group>"; };
+		4973043019951D710059C082 /* LightingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightingLayer.m; path = Source/LightingLayer.m; sourceTree = "<group>"; };
 		49E01160199133150075FF24 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		49E01161199133150075FF24 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		49E01164199133E80075FF24 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameState.h; path = Source/GameState.h; sourceTree = "<group>"; };
@@ -79,10 +83,6 @@
 		49E0116F19913C960075FF24 /* RedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedEntity.m; path = Source/RedEntity.m; sourceTree = "<group>"; };
 		49E0117219913CBA0075FF24 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Source/Entity.h; sourceTree = "<group>"; };
 		49E0117319913CBA0075FF24 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Source/Entity.m; sourceTree = "<group>"; };
-		49E0117719915DCE0075FF24 /* BlueEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueEntity.h; sourceTree = "<group>"; };
-		49E0117819915DCE0075FF24 /* BlueEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueEntity.m; sourceTree = "<group>"; };
-		49E0117A1991609F0075FF24 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		49E0117B1991609F0075FF24 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -144,10 +144,10 @@
 		49E0117119913C9D0075FF24 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				4973042B19951D710059C082 /* BlueEntity.h */,
+				4973042C19951D710059C082 /* BlueEntity.m */,
 				49E0116E19913C960075FF24 /* RedEntity.h */,
 				49E0116F19913C960075FF24 /* RedEntity.m */,
-				49E0117719915DCE0075FF24 /* BlueEntity.h */,
-				49E0117819915DCE0075FF24 /* BlueEntity.m */,
 				4973041C1993F69E0059C082 /* GreenEntity.h */,
 				4973041D1993F69E0059C082 /* GreenEntity.m */,
 			);
@@ -173,10 +173,10 @@
 				49E01161199133150075FF24 /* Gameplay.m */,
 				49E01164199133E80075FF24 /* GameState.h */,
 				49E01165199133E80075FF24 /* GameState.m */,
-				497304241994596E0059C082 /* LightingLayer.h */,
-				497304251994596E0059C082 /* LightingLayer.m */,
-				49E0117A1991609F0075FF24 /* Level.h */,
-				49E0117B1991609F0075FF24 /* Level.m */,
+				4973042D19951D710059C082 /* Level.h */,
+				4973042E19951D710059C082 /* Level.m */,
+				4973042F19951D710059C082 /* LightingLayer.h */,
+				4973043019951D710059C082 /* LightingLayer.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 				4973041F199416A20059C082 /* LevelSelect.h */,
@@ -397,14 +397,14 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				4973041E1993F69E0059C082 /* GreenEntity.m in Sources */,
 				49E01162199133150075FF24 /* Gameplay.m in Sources */,
-				49E0117C1991609F0075FF24 /* Level.m in Sources */,
-				497304261994596E0059C082 /* LightingLayer.m in Sources */,
+				4973043119951D710059C082 /* BlueEntity.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49E01166199133E80075FF24 /* GameState.m in Sources */,
-				49E0117919915DCE0075FF24 /* BlueEntity.m in Sources */,
 				49E0117019913C960075FF24 /* RedEntity.m in Sources */,
+				4973043219951D710059C082 /* Level.m in Sources */,
 				49730421199416A20059C082 /* LevelSelect.m in Sources */,
+				4973043319951D710059C082 /* LightingLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
