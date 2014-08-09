@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4903D46419955D7A00D56E58 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903D46319955D7A00D56E58 /* libz.dylib */; };
+		4903D46719955D8600D56E58 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903D46619955D8600D56E58 /* MessageUI.framework */; };
+		4903D46919955D9200D56E58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903D46819955D9200D56E58 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4903D46B19955D9C00D56E58 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903D46A19955D9C00D56E58 /* StoreKit.framework */; };
+		4903D46D19955DBE00D56E58 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903D46C19955DBE00D56E58 /* SystemConfiguration.framework */; };
+		4903D46F19955F7000D56E58 /* mgwuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903D46E19955F7000D56E58 /* mgwuSDK.framework */; };
 		4973041E1993F69E0059C082 /* GreenEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973041D1993F69E0059C082 /* GreenEntity.m */; };
 		49730421199416A20059C082 /* LevelSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49730420199416A20059C082 /* LevelSelect.m */; };
 		4973043119951D710059C082 /* BlueEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973042C19951D710059C082 /* BlueEntity.m */; };
@@ -65,6 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4903D46319955D7A00D56E58 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4903D46619955D8600D56E58 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4903D46819955D9200D56E58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4903D46A19955D9C00D56E58 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4903D46C19955DBE00D56E58 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4903D46E19955F7000D56E58 /* mgwuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mgwuSDK.framework; sourceTree = "<group>"; };
 		4973041C1993F69E0059C082 /* GreenEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreenEntity.h; path = Source/GreenEntity.h; sourceTree = "<group>"; };
 		4973041D1993F69E0059C082 /* GreenEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GreenEntity.m; path = Source/GreenEntity.m; sourceTree = "<group>"; };
 		4973041F199416A20059C082 /* LevelSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelect.h; path = Source/LevelSelect.h; sourceTree = "<group>"; };
@@ -124,6 +136,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4903D46D19955DBE00D56E58 /* SystemConfiguration.framework in Frameworks */,
+				4903D46B19955D9C00D56E58 /* StoreKit.framework in Frameworks */,
+				4903D46919955D9200D56E58 /* Social.framework in Frameworks */,
+				4903D46719955D8600D56E58 /* MessageUI.framework in Frameworks */,
+				4903D46F19955F7000D56E58 /* mgwuSDK.framework in Frameworks */,
+				4903D46419955D7A00D56E58 /* libz.dylib in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
@@ -238,6 +256,12 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4903D46E19955F7000D56E58 /* mgwuSDK.framework */,
+				4903D46C19955DBE00D56E58 /* SystemConfiguration.framework */,
+				4903D46A19955D9C00D56E58 /* StoreKit.framework */,
+				4903D46819955D9200D56E58 /* Social.framework */,
+				4903D46619955D8600D56E58 /* MessageUI.framework */,
+				4903D46319955D7A00D56E58 /* libz.dylib */,
 				8392007918EE8E3300B6C429 /* GLKit.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
 				B77F1B3117B978D7009739AE /* QuartzCore.framework */,
@@ -301,7 +325,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Apportable;
+				ORGANIZATIONNAME = "Dory Studios";
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
 						DevelopmentTeam = WHZ8QVFPRG;
@@ -486,6 +510,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -498,7 +526,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -519,6 +547,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -530,7 +562,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",

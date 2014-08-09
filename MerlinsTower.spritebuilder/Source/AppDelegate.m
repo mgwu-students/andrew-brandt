@@ -49,6 +49,9 @@
     // Configure CCFileUtils to work with SpriteBuilder
     [CCBReader configureCCFileUtils];
     
+    //MGWU sdk setup
+    [MGWU loadMGWU:@"DXPOOKJ1QSDRRPTFV"];
+    
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
     

@@ -85,8 +85,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.75</real>
-							<real>0.75</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -100,8 +100,6 @@
 						<string>Entities/BlueEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -188,8 +186,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.75</real>
-							<real>0.75</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -203,6 +201,8 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -250,8 +250,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.75</real>
-							<real>0.75</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -312,8 +312,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.75</real>
-							<real>0.75</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>

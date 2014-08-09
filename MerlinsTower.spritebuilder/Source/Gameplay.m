@@ -43,7 +43,7 @@ static NSString *_currentLevel = @"Level1";
     [super onEnter];
     [self startGameplay];
     self.userInteractionEnabled = YES;
-    //_contentNode.debugDraw = YES;
+    _contentNode.debugDraw = YES;
     _contentNode.collisionDelegate = self;
 }
 
@@ -75,6 +75,8 @@ static NSString *_currentLevel = @"Level1";
 - (void)endGameplay {
     CCNode *o = [CCBReader load:@"Recap" owner:self];
     o.name = @"Recap";
+    [MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
+    NSLog(@"%@ complete", _state.selectedLevel);
     [self addChild:o];
 }
 

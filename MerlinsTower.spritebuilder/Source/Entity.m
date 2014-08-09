@@ -30,7 +30,7 @@
         _phase = 2.0*M_PI*CCRANDOM_0_1();
         _lightingLayer = [LightingLayer sharedLayer];
         
-        _appear = [CCActionScaleTo actionWithDuration:0.25f scale:0.5f];
+        _appear = [CCActionScaleTo actionWithDuration:0.25f scale:1.0f];
         _disappear = [CCActionScaleTo actionWithDuration:0.25f scale:0.0f];
         _return = [CCActionCallFunc actionWithTarget:self selector:@selector(resetSpawnPoint)];
         self.physicsBody.collisionMask = @[@"obstacle"];
@@ -44,9 +44,9 @@
     [super onEnter];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center postNotificationName:@"Entity created!" object:self];
-    [self runAction:_appear];
+    _startLocation = [self convertToWorldSpace:ccp(0,0)];
+//    [self runAction:_appear];
     [_lightingLayer addLight:self];
-    _startLocation = self.position;
 }
 
 - (void)onExit {
