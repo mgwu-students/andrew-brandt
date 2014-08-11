@@ -85,7 +85,7 @@ static NSString *_currentLevel = @"Level1";
         [_contentNode removeAllChildren];
     }
     [self removeChildByName:@"Recap"];
-    _state.selectedLevel = [NSString stringWithFormat:@"Level%ld",_currentLevel.nextLevel];
+    _state.selectedLevel = [NSString stringWithFormat:@"Level%ld",(long)_currentLevel.nextLevel];
     [self startGameplay];
 }
 
@@ -191,30 +191,15 @@ static NSString *_currentLevel = @"Level1";
         }
     } key:nil];
 }
-//
-//-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair red:(Entity *)nodeA red:(Entity *)nodeB {
-//    [[_contentNode space] addPostStepBlock:^{
-//        NSLog(@"Two red magics collided!");
-//        [nodeA clear];
-//        [nodeB clear];
-//    } key:nil];
-//}
-//
-//-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair blue:(Entity *)nodeA blue:(Entity *)nodeB {
-//    [[_contentNode space] addPostStepBlock:^{
-//        NSLog(@"Two blue magics collided!");
-//        [nodeA clear];
-//        [nodeB clear];
-//    } key:nil];
-//}
-//
-//-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair red:(Entity *)nodeA wildcard:(Entity *)nodeB {
-//    [[_contentNode space] addPostStepBlock:^{
-//        NSLog(@"Two different magics collided!");
-//        [nodeA returnToSpawnPoint];
-//        [nodeB returnToSpawnPoint];
-//    } key:nil];
-//}
+
+- (void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair entity:(Entity *)nodeA obstacle:(Entity *)nodeB {
+    nodeA.canPerfomAction = NO;
+    //nodeA.actionsCleared = NO;
+    [[_contentNode space] addPostStepBlock:^{
+        [nodeA returnToSpawnPoint];
+    } key:nil];
+}
+
 
 #pragma mark - Tutorial methods
 

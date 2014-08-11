@@ -28,6 +28,7 @@
         //self.scaleX = 0.0f;
         //self.scaleY = 0.0f;
         _phase = 2.0*M_PI*CCRANDOM_0_1();
+        _canPerfomAction = YES;
         _lightingLayer = [LightingLayer sharedLayer];
         
         _appear = [CCActionScaleTo actionWithDuration:0.25f scale:1.0f];
@@ -66,7 +67,9 @@
 }
 
 - (void)move: (CCNode *)location {
-    self.position = location.position;
+    if (_canPerfomAction) {
+        self.position = location.position;
+    }
 }
 
 - (void)returnToSpawnPoint {

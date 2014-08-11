@@ -164,8 +164,6 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -258,7 +256,7 @@
 								<key>value</key>
 								<array>
 									<real>216</real>
-									<real>0.36000001430511475</real>
+									<real>0.35739585757255554</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -305,7 +303,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Helvetica</string>
+								<string>GillSans</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -1134,6 +1132,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

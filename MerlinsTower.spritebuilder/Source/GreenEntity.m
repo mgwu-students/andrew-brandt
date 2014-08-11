@@ -10,7 +10,7 @@
 
 @implementation GreenEntity
 
-static const GLKVector4 GreenMagicBaseColor =     {{0.00f,	0.99f,	0.00f, 1.0f}};
+static const GLKVector4 GreenMagicBaseColor =     {{0.10f,	0.99f,	0.10f, 1.0f}};
 
 - (void)didLoadFromCCB {
     self.magicType = GreenMagic;

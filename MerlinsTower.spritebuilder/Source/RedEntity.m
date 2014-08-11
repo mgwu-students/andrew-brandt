@@ -10,7 +10,7 @@
 
 @implementation RedEntity
 
-static const GLKVector4 RedMagicBaseColor =    {{1.00f,    0.00f,	0.00f, 1.0f}};
+static const GLKVector4 RedMagicBaseColor =    {{1.00f,    0.10f,	0.10f, 1.0f}};
 
 - (void)didLoadFromCCB {
     self.magicType = RedMagic;
