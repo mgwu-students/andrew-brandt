@@ -117,6 +117,8 @@ static NSString *_currentLevel = @"Level1";
     _target = [self hasHitEntityAt:p];
     if (_target != nil) {
         _startDrag = YES;
+        CGPoint loc = [touch locationInWorld];
+        [_touches addObject:[NSValue valueWithCGPoint:loc]];
     }
     else {
         _startDrag = NO;
@@ -126,18 +128,19 @@ static NSString *_currentLevel = @"Level1";
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_startDrag) {
-        CCNode *o = [CCNode node];
+        CGPoint loc = [touch locationInWorld];
+        [_touches addObject:[NSValue valueWithCGPoint:loc]];
         CCParticleSystem *tracer = (CCParticleSystem *)[CCBReader load:@"Effects/Tracer"];
         tracer.autoRemoveOnFinish = YES;
-        tracer.position = [touch locationInWorld];
-        o.position = [touch locationInWorld];
+        tracer.position = loc;
         [_contentNode addChild:tracer];
-        [_touches addObject:o];
     }
 }
 
 - (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_startDrag) {
+        CGPoint loc = [touch locationInWorld];
+        [_touches addObject:[NSValue valueWithCGPoint:loc]];
         [_target startMove:_touches];
         [_touches removeAllObjects];
         if (_currentLevel.hasTutorial & !_tutorialPresented) {

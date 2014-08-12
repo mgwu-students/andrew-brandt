@@ -255,8 +255,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>216</real>
-									<real>0.35739585757255554</real>
+									<real>210</real>
+									<real>0.36000001430511475</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -303,7 +303,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>GillSans</string>
+								<string>Zapfino</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -518,7 +518,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>290</real>
+									<real>285</real>
 									<real>0.36000001430511475</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -566,7 +566,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Helvetica</string>
+								<string>Zapfino</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -781,7 +781,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>371</real>
+									<real>360</real>
 									<real>0.36000001430511475</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -819,7 +819,7 @@
 								<string>Text</string>
 								<key>value</key>
 								<array>
-									<string>release.</string>
+									<string>release</string>
 									<false/>
 								</array>
 							</dict>
@@ -829,7 +829,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Helvetica</string>
+								<string>Zapfino</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -1037,6 +1037,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1161,8 +1163,6 @@
 						<string>Entities/HelperEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

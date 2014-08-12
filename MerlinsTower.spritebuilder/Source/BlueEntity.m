@@ -18,4 +18,12 @@ static const GLKVector4 BlueMagicBaseColor =   {{0.10f,	0.10f,	1.00f, 1.0f}};
     self.physicsBody.collisionType = @"entity";
 }
 
+- (void)startClear {
+    [super startClear];
+    CCParticleSystem *exit = (CCParticleSystem *)[CCBReader load:@"Effects/BlueClear"];
+    exit.autoRemoveOnFinish = YES;
+    exit.position = self.position;
+    [self.parent addChild: exit];
+}
+
 @end

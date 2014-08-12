@@ -16,8 +16,8 @@
     CGPoint _startLocation;
     CGFloat _mergeTimer;
     
-    float _phase;
-    BOOL _goodMerge;
+    float _phase, _lightRadius;
+    BOOL _goodMerge, _clearing;
 }
 
 - (id)init {
@@ -27,8 +27,10 @@
         //self.scaleX = 0.0f;
         //self.scaleY = 0.0f;
         _phase = 2.0*M_PI*CCRANDOM_0_1();
+        _lightRadius = 180.0f;
         _lightingLayer = [LightingLayer sharedLayer];
         _isMerged = NO;
+        _clearing = NO;
         _mergeTimer = 0.0f;
         
         _appear = [CCActionScaleTo actionWithDuration:0.25f scale:1.0f];
@@ -52,11 +54,14 @@
 }
 
 - (void)onExit {
+    
     [_lightingLayer removeLight:self];
     [super onExit];
 }
 
 - (void)update: (CCTime)dt {
+    
+    //Merge logic is here
     if (self.isMerged) {
         _mergeTimer += dt;
     }
@@ -66,7 +71,12 @@
     }
     if (_goodMerge && _mergeTimer > 2.0f) {
         _mergeTimer = 0.0f;
-        [self clear];
+        [self startClear];
+    }
+    
+    //Fade out logic is here
+    if (_clearing) {
+        _lightRadius *= 0.97f;
     }
 }
 
@@ -74,15 +84,15 @@
     NSLog(@"Moving");
     CGFloat delay = 0.05f;
     CGFloat offset = 0.05f;
-    for (CCNode *o in instructions) {
+    for (NSValue *o in instructions) {
         [self performSelector:@selector(move:) withObject:o afterDelay:delay];
         delay += offset;
     }
     [self performSelector:@selector(returnToSpawnPoint) withObject:nil afterDelay:delay];
 }
 
-- (void)move: (CCNode *)location {
-    self.position = location.position;
+- (void)move: (NSValue *)location {
+    self.position = [location CGPointValue];
 }
 
 - (void)returnToSpawnPoint {
@@ -97,6 +107,14 @@
 
 - (void)haltActions {
     [CCAction cancelPreviousPerformRequestsWithTarget:self];
+}
+
+- (void)startClear {
+    _clearing = YES;
+    CCAction *fade = [CCActionFadeOut actionWithDuration:1.0f];
+    CCAction *clear = [CCActionCallFunc actionWithTarget:self selector:@selector(clear)];
+    CCAction *sequence = [CCActionSequence actions:fade, clear, nil];
+    [self runAction:sequence];
 }
 
 - (void)clear {
@@ -123,7 +141,7 @@
 
 -(float)lightRadius
 {
-	return 180.f;
+	return _lightRadius;
 }
 
 -(GLKVector4)lightColor

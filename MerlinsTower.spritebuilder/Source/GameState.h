@@ -11,7 +11,7 @@
 @interface GameState : CCNode
 
 @property (nonatomic, strong) NSString *selectedLevel;
-@property (nonatomic, strong) NSString *topLevel;
+@property (nonatomic, assign) NSString *topLevel;
 
 + (GameState *)sharedState;
 

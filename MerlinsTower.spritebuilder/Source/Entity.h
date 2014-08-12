@@ -23,6 +23,7 @@ typedef NS_ENUM(NSInteger, EntityType) {
 - (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)point;
 - (void)haltActions;
 - (void)returnToSpawnPoint;
+- (void)startClear;
 - (void)clear;
 
 @end

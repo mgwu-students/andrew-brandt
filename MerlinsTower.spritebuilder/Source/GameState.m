@@ -26,6 +26,7 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
 
 - (void)loadDefaults {
     _topLevel = [[NSUserDefaults standardUserDefaults] objectForKey:TOP_LEVEL_KEY];
+    //_topLevel = [[NSUserDefaults standardUserDefaults] objectForKey:TOP_LEVEL_KEY];
     if (_topLevel == nil) {
         NSLog(@"New game started, setting default.");
         _topLevel = @"Level1";
