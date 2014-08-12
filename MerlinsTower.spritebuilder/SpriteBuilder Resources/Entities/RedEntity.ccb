@@ -325,8 +325,6 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -436,7 +434,7 @@
 				<key>type</key>
 				<string>Float</string>
 				<key>value</key>
-				<real>0.80000001192092896</real>
+				<real>0.60000002384185791</real>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -448,10 +446,12 @@
 					<real>1</real>
 					<real>1</real>
 					<real>1</real>
-					<real>0.80000001192092896</real>
+					<real>0.60000002384185791</real>
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
