@@ -17,9 +17,11 @@ typedef NS_ENUM(NSInteger, EntityType) {
 
 @property (nonatomic, assign) EntityType magicType;
 @property (nonatomic, assign) GLKVector4 lightColor;
-@property (nonatomic, assign) BOOL canPerfomAction;
+@property (nonatomic, assign) BOOL isMerged;
 
 - (void)startMove: (NSMutableArray *)instructions;
+- (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)point;
+- (void)haltActions;
 - (void)returnToSpawnPoint;
 - (void)clear;
 

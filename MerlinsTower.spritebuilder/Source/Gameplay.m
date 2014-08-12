@@ -43,7 +43,7 @@ static NSString *_currentLevel = @"Level1";
     [super onEnter];
     [self startGameplay];
     self.userInteractionEnabled = YES;
-    _contentNode.debugDraw = YES;
+    //_contentNode.debugDraw = YES;
     _contentNode.collisionDelegate = self;
 }
 
@@ -68,14 +68,13 @@ static NSString *_currentLevel = @"Level1";
     if (_currentLevel.hasTutorial) {
         CCAnimationManager *mgr = [_currentLevel animationManager];
         [mgr runAnimationsForSequenceNamed:@"Tutorial"];
-        
     }
 }
 
 - (void)endGameplay {
     CCNode *o = [CCBReader load:@"Recap" owner:self];
     o.name = @"Recap";
-    [MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
+    //[MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
     NSLog(@"%@ complete", _state.selectedLevel);
     [self addChild:o];
 }
@@ -120,14 +119,19 @@ static NSString *_currentLevel = @"Level1";
         _startDrag = YES;
     }
     else {
-        //TODO react to other touch
+        _startDrag = NO;
+        _target = nil;
     }
 }
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_startDrag) {
         CCNode *o = [CCNode node];
+        CCParticleSystem *tracer = (CCParticleSystem *)[CCBReader load:@"Effects/Tracer"];
+        tracer.autoRemoveOnFinish = YES;
+        tracer.position = [touch locationInWorld];
         o.position = [touch locationInWorld];
+        [_contentNode addChild:tracer];
         [_touches addObject:o];
     }
 }
@@ -179,23 +183,34 @@ static NSString *_currentLevel = @"Level1";
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair entity:(Entity *)nodeA entity:(Entity *)nodeB {
     [[_contentNode space] addPostStepBlock:^{
-        if (nodeA.magicType == nodeB.magicType) {
-            NSLog(@"Similar magic collided!");
-            [nodeA clear];
-            [nodeB clear];
-        }
-        else {
-            NSLog(@"Different magic collided");
-            [nodeA returnToSpawnPoint];
-            [nodeB returnToSpawnPoint];
-        }
+            [nodeA haltActions];
+            [nodeB haltActions];
+            CGPoint target = ccpMidpoint(nodeA.position, nodeB.position);
+            [nodeA mergeWithEntity:nodeB atLoc:target];
+            [nodeB mergeWithEntity:nodeA atLoc:target];
+//        if (nodeA.magicType == nodeB.magicType) {
+//            NSLog(@"Similar magic collided!");
+//            [nodeA clear];
+//            [nodeB clear];
+//            [nodeA haltActions];
+//            [nodeB haltActions];
+//            CGPoint target = ccpMidpoint(nodeA.position, nodeB.position);
+//            [nodeA mergeWithEntity:nodeB atLoc:target];
+//            [nodeB mergeWithEntity:nodeA atLoc:target];
+//        }
+//        else {
+//            NSLog(@"Different magic collided");
+//            [nodeA haltActions];
+//            [nodeB haltActions];
+//            [nodeA returnToSpawnPoint];
+//            [nodeB returnToSpawnPoint];
+//        }
     } key:nil];
 }
 
 - (void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair entity:(Entity *)nodeA obstacle:(Entity *)nodeB {
-    nodeA.canPerfomAction = NO;
-    //nodeA.actionsCleared = NO;
     [[_contentNode space] addPostStepBlock:^{
+        [nodeA haltActions];
         [nodeA returnToSpawnPoint];
     } key:nil];
 }

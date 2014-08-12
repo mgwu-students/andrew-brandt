@@ -20,6 +20,7 @@
 		4973043319951D710059C082 /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973043019951D710059C082 /* LightingLayer.m */; };
 		49AABF7519991D5D00657242 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7419991D5D00657242 /* Obstacle.m */; };
 		49AABF7919991EC100657242 /* SmallBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7819991EC100657242 /* SmallBlock.m */; };
+		49AABF7D199933B000657242 /* HelperEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7C199933B000657242 /* HelperEntity.m */; };
 		49E01162199133150075FF24 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01161199133150075FF24 /* Gameplay.m */; };
 		49E01166199133E80075FF24 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01165199133E80075FF24 /* GameState.m */; };
 		49E0117019913C960075FF24 /* RedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0116F19913C960075FF24 /* RedEntity.m */; };
@@ -93,6 +94,8 @@
 		49AABF7419991D5D00657242 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Obstacle.m; path = Source/Obstacle.m; sourceTree = "<group>"; };
 		49AABF7719991EC100657242 /* SmallBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallBlock.h; sourceTree = "<group>"; };
 		49AABF7819991EC100657242 /* SmallBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallBlock.m; sourceTree = "<group>"; };
+		49AABF7B199933B000657242 /* HelperEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperEntity.h; path = Source/HelperEntity.h; sourceTree = "<group>"; };
+		49AABF7C199933B000657242 /* HelperEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperEntity.m; path = Source/HelperEntity.m; sourceTree = "<group>"; };
 		49E01160199133150075FF24 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		49E01161199133150075FF24 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		49E01164199133E80075FF24 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameState.h; path = Source/GameState.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				49E0116F19913C960075FF24 /* RedEntity.m */,
 				4973041C1993F69E0059C082 /* GreenEntity.h */,
 				4973041D1993F69E0059C082 /* GreenEntity.m */,
+				49AABF7B199933B000657242 /* HelperEntity.h */,
+				49AABF7C199933B000657242 /* HelperEntity.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				4973041E1993F69E0059C082 /* GreenEntity.m in Sources */,
 				49AABF7519991D5D00657242 /* Obstacle.m in Sources */,
+				49AABF7D199933B000657242 /* HelperEntity.m in Sources */,
 				49E01162199133150075FF24 /* Gameplay.m in Sources */,
 				4973043119951D710059C082 /* BlueEntity.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,

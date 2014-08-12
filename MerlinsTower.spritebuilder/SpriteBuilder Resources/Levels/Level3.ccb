@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>99.999984741210938</real>
-							<real>297.99996948242188</real>
+							<real>112.03364562988281</real>
+							<real>313.37631225585938</real>
 							<integer>0</integer>
 							<integer>1</integer>
 							<integer>1</integer>
@@ -100,6 +100,8 @@
 						<string>Entities/GreenEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -658,8 +660,6 @@
 						<string>Obstacles/SmallBlock.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

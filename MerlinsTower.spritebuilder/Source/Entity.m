@@ -10,15 +10,14 @@
 #import "LightingLayer.h"
 
 @implementation Entity {
-    CGPoint _startLocation;
-    
     LightingLayer *_lightingLayer;
+    CCAction *_appear, *_disappear, *_wait, *_return;
     
-    CCActionScaleTo *_appear;
-    CCActionScaleTo *_disappear;
-    CCActionCallFunc *_return;
+    CGPoint _startLocation;
+    CGFloat _mergeTimer;
     
     float _phase;
+    BOOL _goodMerge;
 }
 
 - (id)init {
@@ -28,11 +27,13 @@
         //self.scaleX = 0.0f;
         //self.scaleY = 0.0f;
         _phase = 2.0*M_PI*CCRANDOM_0_1();
-        _canPerfomAction = YES;
         _lightingLayer = [LightingLayer sharedLayer];
+        _isMerged = NO;
+        _mergeTimer = 0.0f;
         
         _appear = [CCActionScaleTo actionWithDuration:0.25f scale:1.0f];
         _disappear = [CCActionScaleTo actionWithDuration:0.25f scale:0.0f];
+        _wait = [CCActionDelay actionWithDuration:0.1f];
         _return = [CCActionCallFunc actionWithTarget:self selector:@selector(resetSpawnPoint)];
         self.physicsBody.collisionMask = @[@"obstacle"];
         NSLog(@"Ready!");
@@ -55,6 +56,20 @@
     [super onExit];
 }
 
+- (void)update: (CCTime)dt {
+    if (self.isMerged) {
+        _mergeTimer += dt;
+    }
+    if (!_goodMerge && _mergeTimer > 0.5f) {
+        _mergeTimer = 0.0f;
+        [self returnToSpawnPoint];
+    }
+    if (_goodMerge && _mergeTimer > 2.0f) {
+        _mergeTimer = 0.0f;
+        [self clear];
+    }
+}
+
 - (void)startMove: (NSMutableArray *)instructions {
     NSLog(@"Moving");
     CGFloat delay = 0.05f;
@@ -67,9 +82,7 @@
 }
 
 - (void)move: (CCNode *)location {
-    if (_canPerfomAction) {
-        self.position = location.position;
-    }
+    self.position = location.position;
 }
 
 - (void)returnToSpawnPoint {
@@ -78,12 +91,35 @@
 
 - (void)resetSpawnPoint {
     self.position = _startLocation;
+    _isMerged = NO;
+    self.physicsBody.sensor = NO;
+}
+
+- (void)haltActions {
+    [CCAction cancelPreviousPerformRequestsWithTarget:self];
 }
 
 - (void)clear {
     [self removeFromParent];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Entity cleared!" object:self];
 }
+
+- (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)loc {
+    CCAction *move = [CCActionMoveTo actionWithDuration:0.2f position:loc];
+    self.physicsBody.sensor = YES;
+    self.isMerged = YES;
+    if (self.magicType == target.magicType) {
+        NSLog(@"Similar magic collided!");
+        _goodMerge = YES;
+    }
+    else {
+        NSLog(@"Different magic collided");
+        _goodMerge = NO;
+    }
+    [self runAction:move];
+}
+
+#pragma mark - Shader methods
 
 -(float)lightRadius
 {
