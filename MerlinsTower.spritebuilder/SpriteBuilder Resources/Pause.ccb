@@ -247,7 +247,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Assets/fonts/Curse Casual.ttf</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -419,8 +419,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.47999998927116394</real>
+									<real>0.76666665077209473</real>
+									<real>0.32374995946884155</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -468,8 +468,8 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>40</real>
-									<real>40</real>
+									<real>50</real>
+									<real>80</real>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -514,7 +514,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Assets/button-green@4x.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -525,7 +525,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonHighlighted.png</string>
+									<string>Assets/button- green-pressed@4x.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -568,7 +568,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Assets/button- green-pressed@4x.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -585,7 +585,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Helvetica</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -745,8 +745,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.20999999344348907</real>
+									<real>0.30000001192092896</real>
+									<real>0.45374998450279236</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -1038,6 +1038,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1198,8 +1200,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

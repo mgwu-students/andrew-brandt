@@ -13,7 +13,7 @@
     BOOL _lightIncreasing;
 }
 
-const float LIGHT_MAX = 100;
+const float LIGHT_MAX = 80;
 const float LIGHT_MIN = 25;
 
 static const GLKVector4 HelperBaseColor =   {{0.60f,	0.60f,	0.60f,  0.9f}};
@@ -21,9 +21,9 @@ static const GLKVector4 HelperBaseColor =   {{0.60f,	0.60f,	0.60f,  0.9f}};
 - (void)update: (CCTime)dt {
     if (_lightIncreasing) {
         if (_lightRadius < LIGHT_MIN) {
-            _lightRadius *= 1.05;
+            _lightRadius *= 1.1;
         }
-        _lightRadius *= 1.01;
+        _lightRadius *= 1.05;
     }
     else {
         _lightRadius *= 0.995;

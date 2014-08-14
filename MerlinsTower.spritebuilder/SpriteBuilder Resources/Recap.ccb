@@ -178,7 +178,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Helvetica</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -187,7 +187,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>12</real>
+									<real>28</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -206,9 +206,9 @@
 								<string>Color3</string>
 								<key>value</key>
 								<array>
-									<real>0.12469203770160675</real>
-									<real>0.12469203770160675</real>
-									<real>0.12469203770160675</real>
+									<real>0.98361319303512573</real>
+									<real>0.98361319303512573</real>
+									<real>0.98361319303512573</real>
 									<real>1</real>
 								</array>
 							</dict>
@@ -248,9 +248,9 @@
 								<string>Color4</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
+									<real>0.98241376876831055</real>
+									<real>0.98241376876831055</real>
+									<real>0.98241376876831055</real>
 									<real>1</real>
 								</array>
 							</dict>
@@ -264,7 +264,7 @@
 									<real>0.0</real>
 									<real>0.0</real>
 									<real>0.0</real>
-									<real>0.0</real>
+									<real>1</real>
 								</array>
 							</dict>
 							<dict>
@@ -274,7 +274,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
+									<real>2</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -433,7 +433,7 @@
 								<string>String</string>
 								<key>value</key>
 								<array>
-									<string>NEXT LEVEL</string>
+									<string>CONTINUE</string>
 									<false/>
 								</array>
 							</dict>
@@ -445,7 +445,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Assets/button-green@4x.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -456,7 +456,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonHighlighted.png</string>
+									<string>Assets/button- green-pressed@4x.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -499,7 +499,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/ccbButtonNormal.png</string>
+									<string>Assets/button- green-pressed@4x.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -516,7 +516,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Helvetica</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -552,7 +552,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>10</real>
+									<real>20</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -563,7 +563,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
+									<real>5</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -643,6 +643,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -805,8 +807,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

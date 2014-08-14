@@ -303,7 +303,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Zapfino</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -312,7 +312,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>18</real>
+									<real>22</real>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -518,7 +518,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>285</real>
+									<real>282</real>
 									<real>0.36000001430511475</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -566,7 +566,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Zapfino</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -575,7 +575,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>18</real>
+									<real>22</real>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -702,6 +702,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -819,7 +821,7 @@
 								<string>Text</string>
 								<key>value</key>
 								<array>
-									<string>release</string>
+									<string>release.</string>
 									<false/>
 								</array>
 							</dict>
@@ -829,7 +831,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Zapfino</string>
+								<string>Assets/fonts/NewRocker-Regular.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -838,7 +840,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>18</real>
+									<real>22</real>
 									<integer>1</integer>
 								</array>
 							</dict>
@@ -1037,8 +1039,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

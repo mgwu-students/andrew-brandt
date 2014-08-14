@@ -82,13 +82,15 @@
 
 - (void)startMove: (NSMutableArray *)instructions {
     NSLog(@"Moving");
-    CGFloat delay = 0.05f;
-    CGFloat offset = 0.05f;
+    NSMutableArray *actionList = [NSMutableArray array];
     for (NSValue *o in instructions) {
-        [self performSelector:@selector(move:) withObject:o afterDelay:delay];
-        delay += offset;
+        CCAction *act = [CCActionMoveTo actionWithDuration:0.1f position:[o CGPointValue]];
+        [actionList addObject:act];
     }
-    [self performSelector:@selector(returnToSpawnPoint) withObject:nil afterDelay:delay];
+    CCActionCallFunc *returnCall = [CCActionCallFunc actionWithTarget:self selector:@selector(returnToSpawnPoint)];
+    [actionList addObject:returnCall];
+    CCActionSequence *sequence = [CCActionSequence actionWithArray:actionList];
+    [self runAction:sequence];
 }
 
 - (void)move: (NSValue *)location {
@@ -106,7 +108,8 @@
 }
 
 - (void)haltActions {
-    [CCAction cancelPreviousPerformRequestsWithTarget:self];
+    [self stopAllActions];
+    self.physicsBody.sensor = YES;
 }
 
 - (void)startClear {

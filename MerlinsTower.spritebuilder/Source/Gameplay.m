@@ -19,12 +19,9 @@
     Level *_currentLevel;
     LightingLayer *_lightingLayer;
     
-    NSMutableArray *_touches;
-    NSMutableArray *_entities;
+    NSMutableArray *_touches, *_entities;
     
-    BOOL _startDrag;
-    BOOL _clearCheck;
-    BOOL _tutorialPresented;
+    BOOL _startDrag, _leftOrb, _clearCheck, _tutorialPresented;
 }
 
 static NSString *_currentLevel = @"Level1";
@@ -34,6 +31,7 @@ static NSString *_currentLevel = @"Level1";
     _startDrag = NO;
     _clearCheck = NO;
     _tutorialPresented = NO;
+    _leftOrb = NO;
     _entities = [NSMutableArray array];
     _touches = [NSMutableArray array];
     [self registerNotifications];
@@ -129,11 +127,18 @@ static NSString *_currentLevel = @"Level1";
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_startDrag) {
         CGPoint loc = [touch locationInWorld];
-        [_touches addObject:[NSValue valueWithCGPoint:loc]];
-        CCParticleSystem *tracer = (CCParticleSystem *)[CCBReader load:@"Effects/Tracer"];
-        tracer.autoRemoveOnFinish = YES;
-        tracer.position = loc;
-        [_contentNode addChild:tracer];
+//        if (!_leftOrb) {
+//            if (!CGRectContainsPoint(_target.boundingBox, loc)) {
+//                _leftOrb = YES;
+//            }
+//        }
+//        else {
+            [_touches addObject:[NSValue valueWithCGPoint:loc]];
+            CCParticleSystem *tracer = (CCParticleSystem *)[CCBReader load:@"Effects/Tracer"];
+            tracer.autoRemoveOnFinish = YES;
+            tracer.position = loc;
+            [_contentNode addChild:tracer];
+//        }
     }
 }
 
@@ -147,6 +152,7 @@ static NSString *_currentLevel = @"Level1";
             [self addTutorialContent];
             _tutorialPresented = YES;
         }
+        _leftOrb = NO;
     }
 }
 
@@ -191,23 +197,6 @@ static NSString *_currentLevel = @"Level1";
             CGPoint target = ccpMidpoint(nodeA.position, nodeB.position);
             [nodeA mergeWithEntity:nodeB atLoc:target];
             [nodeB mergeWithEntity:nodeA atLoc:target];
-//        if (nodeA.magicType == nodeB.magicType) {
-//            NSLog(@"Similar magic collided!");
-//            [nodeA clear];
-//            [nodeB clear];
-//            [nodeA haltActions];
-//            [nodeB haltActions];
-//            CGPoint target = ccpMidpoint(nodeA.position, nodeB.position);
-//            [nodeA mergeWithEntity:nodeB atLoc:target];
-//            [nodeB mergeWithEntity:nodeA atLoc:target];
-//        }
-//        else {
-//            NSLog(@"Different magic collided");
-//            [nodeA haltActions];
-//            [nodeB haltActions];
-//            [nodeA returnToSpawnPoint];
-//            [nodeB returnToSpawnPoint];
-//        }
     } key:nil];
 }
 

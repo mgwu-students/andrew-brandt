@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>docDimensionsType</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -66,8 +66,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>-77</real>
-										<real>-78</real>
+										<real>-0.13556337356567383</real>
+										<real>-0.24375000596046448</real>
 									</array>
 								</dict>
 								<dict>
@@ -84,8 +84,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>-83.667274475097656</real>
-										<real>-14.660867691040039</real>
+										<real>-0.14730153977870941</real>
+										<real>-0.045815210789442062</real>
 									</array>
 								</dict>
 							</array>
@@ -121,8 +121,8 @@
 					<dict>
 						<key>baseValue</key>
 						<array>
-							<real>-77</real>
-							<real>-78</real>
+							<real>-0.14735914766788483</real>
+							<real>-0.045937500894069672</real>
 						</array>
 						<key>name</key>
 						<string>position</string>
@@ -130,11 +130,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-83.667274475097656</real>
-							<real>-14.660867691040039</real>
+							<real>-0.14735914766788483</real>
+							<real>-0.045937500894069672</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -212,8 +212,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>362.33181762695312</real>
-										<real>-1627.69482421875</real>
+										<real>0.63790810108184814</real>
+										<real>-5.0865464210510254</real>
 									</array>
 								</dict>
 								<dict>
@@ -230,8 +230,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>362.33181762695312</real>
-										<real>-1345.800048828125</real>
+										<real>0.63790810108184814</real>
+										<real>-4.205625057220459</real>
 									</array>
 								</dict>
 								<dict>
@@ -248,8 +248,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>362.33181762695312</real>
-										<real>123.71578216552734</real>
+										<real>0.63790810108184814</real>
+										<real>0.38661181926727295</real>
 									</array>
 								</dict>
 							</array>
@@ -267,7 +267,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCBFile</string>
+				<string>Tower</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -285,8 +285,8 @@
 					<dict>
 						<key>baseValue</key>
 						<array>
-							<real>362.33181762695312</real>
-							<real>-719.69476318359375</real>
+							<real>0.63790810108184814</real>
+							<real>0.38656249642372131</real>
 						</array>
 						<key>name</key>
 						<string>position</string>
@@ -294,11 +294,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>362.33181762695312</real>
-							<real>123.71578216552734</real>
+							<real>0.63790810108184814</real>
+							<real>0.38656249642372131</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -323,8 +323,6 @@
 						<string>Tower.ccb</string>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -374,6 +372,73 @@
 							<integer>10</integer>
 						</dict>
 					</dict>
+					<key>1</key>
+					<dict>
+						<key>scale</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>scale</string>
+									<key>time</key>
+									<real>0.0</real>
+									<key>type</key>
+									<integer>4</integer>
+									<key>value</key>
+									<array>
+										<real>1</real>
+										<real>1</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>scale</string>
+									<key>time</key>
+									<real>1</real>
+									<key>type</key>
+									<integer>4</integer>
+									<key>value</key>
+									<array>
+										<real>1.2999999523162842</real>
+										<real>1.2999999523162842</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>scale</string>
+									<key>time</key>
+									<real>2</real>
+									<key>type</key>
+									<integer>4</integer>
+									<key>value</key>
+									<array>
+										<real>1</real>
+										<real>1</real>
+									</array>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>scale</string>
+							<key>type</key>
+							<integer>4</integer>
+						</dict>
+					</dict>
 				</dict>
 				<key>baseClass</key>
 				<string>CCLabelTTF</string>
@@ -382,7 +447,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>Title</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -404,11 +469,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>293</real>
-							<real>264</real>
+							<real>0.50898128747940063</real>
+							<real>0.83718317747116089</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -423,14 +488,19 @@
 						</array>
 					</dict>
 					<dict>
+						<key>baseValue</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+						</array>
 						<key>name</key>
 						<string>scale</string>
 						<key>type</key>
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.1200000047683716</real>
+							<real>1.1200000047683716</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -452,7 +522,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Assets/fonts/old_london/OldLondon.ttf</string>
+						<string>Assets/fonts/NewRocker-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -490,8 +560,8 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>0.027019098401069641</real>
+							<real>0.57152813673019409</real>
+							<real>0.015442174859344959</real>
 							<real>0.0</real>
 							<real>1</real>
 						</array>
@@ -605,6 +675,60 @@
 			<dict>
 				<key>UUID</key>
 				<integer>4</integer>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>position</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>opt</key>
+										<real>0.30000001192092896</real>
+										<key>type</key>
+										<integer>6</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>4.3000001907348633</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>0.49647888541221619</real>
+										<real>-0.075000002980232239</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>5</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>0.5</real>
+										<real>0.43437498807907104</real>
+									</array>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>position</string>
+							<key>type</key>
+							<integer>3</integer>
+						</dict>
+					</dict>
+				</dict>
 				<key>baseClass</key>
 				<string>CCButton</string>
 				<key>children</key>
@@ -628,14 +752,19 @@
 						<string></string>
 					</dict>
 					<dict>
+						<key>baseValue</key>
+						<array>
+							<real>0.5035211443901062</real>
+							<real>0.40312498807907104</real>
+						</array>
 						<key>name</key>
 						<string>position</string>
 						<key>type</key>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.5035211443901062</real>
+							<real>0.40312498807907104</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -729,7 +858,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -740,7 +869,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -764,7 +893,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -783,7 +912,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -800,7 +929,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Assets/fonts/NewRocker-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -809,7 +938,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>17</real>
+							<real>20</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -927,6 +1056,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1055,12 +1186,29 @@
 			<key>callbackChannel</key>
 			<dict>
 				<key>keyframes</key>
-				<array/>
+				<array>
+					<dict>
+						<key>easing</key>
+						<dict>
+							<key>type</key>
+							<integer>0</integer>
+						</dict>
+						<key>time</key>
+						<real>4.6666665077209473</real>
+						<key>type</key>
+						<integer>12</integer>
+						<key>value</key>
+						<array>
+							<string>setStartFlag</string>
+							<integer>1</integer>
+						</array>
+					</dict>
+				</array>
 				<key>type</key>
 				<integer>11</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>length</key>
 			<real>5</real>
 			<key>name</key>
@@ -1068,7 +1216,7 @@
 			<key>offset</key>
 			<real>0.3828125</real>
 			<key>position</key>
-			<real>5</real>
+			<real>4.1999998092651367</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -1096,15 +1244,15 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>2</real>
 			<key>name</key>
 			<string>Waiting</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1.6000000238418579</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

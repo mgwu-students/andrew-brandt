@@ -10,4 +10,6 @@
 
 @interface MainScene : CCNode
 
+@property (nonatomic, assign) BOOL startWaiting;
+
 @end
