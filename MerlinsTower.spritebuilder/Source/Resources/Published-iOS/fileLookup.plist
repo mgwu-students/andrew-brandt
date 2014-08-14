@@ -6,6 +6,8 @@
 	<dict>
 		<key>Assets/LightAttenuation.psd</key>
 		<string>Assets/LightAttenuation.png</string>
+		<key>Assets/sounds/bgm1.wav</key>
+		<string>Assets/sounds/bgm1.m4a</string>
 	</dict>
 	<key>metadata</key>
 	<dict>

@@ -9,11 +9,18 @@
 #import "MainScene.h"
 #import "Gameplay.h"
 
-@implementation MainScene
+@implementation MainScene {
+    OALSimpleAudio *bgm;
+}
 
 - (void)onEnter {
+    [super onEnter];
     self.userInteractionEnabled = YES;
     _startWaiting = NO;
+    
+    //start bgm
+    bgm = [OALSimpleAudio sharedInstance];
+    [bgm preloadBg:@"Assets/sounds/bgm1.wav"];
 }
 
 - (void)startGame {
@@ -35,6 +42,7 @@
 
 - (void)setStartFlag {
     _startWaiting = YES;
+    [bgm playBgWithLoop:YES];
 }
 
 @end
