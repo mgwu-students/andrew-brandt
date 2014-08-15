@@ -64,7 +64,7 @@ static NSString *_currentLevel = @"Level1";
 - (void)startGameplay {
     NSString *levelString = [NSString stringWithFormat:@"Levels/%@", _state.selectedLevel];
     _currentLevel = (Level *)[CCBReader load:levelString owner:self];
-    [MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
+    //[MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
     [_contentNode addChild:_currentLevel];
     if (_currentLevel.hasTutorial) {
         CCAnimationManager *mgr = [_currentLevel animationManager];
@@ -75,7 +75,8 @@ static NSString *_currentLevel = @"Level1";
 - (void)endGameplay {
     CCNode *o = [CCBReader load:@"Recap" owner:self];
     o.name = @"Recap";
-    [MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
+    _pauseButton.state = CCControlStateDisabled;
+    //[MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
     NSLog(@"%@ complete", _state.selectedLevel);
     [self addChild:o];
 }
@@ -84,6 +85,7 @@ static NSString *_currentLevel = @"Level1";
     if (_tutorialPresented) {
         [_contentNode removeAllChildren];
     }
+    
     [self removeChildByName:@"Recap"];
     _state.selectedLevel = [NSString stringWithFormat:@"Level%ld",(long)_currentLevel.nextLevel];
     [self startGameplay];
