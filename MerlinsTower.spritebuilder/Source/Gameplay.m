@@ -66,6 +66,7 @@ static NSString *_currentLevel = @"Level1";
     _currentLevel = (Level *)[CCBReader load:levelString owner:self];
     //[MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
     [_contentNode addChild:_currentLevel];
+    _pauseButton.state = CCControlStateNormal;
     if (_currentLevel.hasTutorial) {
         CCAnimationManager *mgr = [_currentLevel animationManager];
         [mgr runAnimationsForSequenceNamed:@"Tutorial"];
@@ -80,6 +81,7 @@ static NSString *_currentLevel = @"Level1";
     NSLog(@"%@ complete", _state.selectedLevel);
     [self addChild:o];
 }
+
 
 - (void)nextLevel {
     if (_tutorialPresented) {
@@ -110,7 +112,15 @@ static NSString *_currentLevel = @"Level1";
 }
 
 - (void)levelSelect {
+    [_contentNode removeAllChildren];
     [[CCDirector sharedDirector] presentScene:[CCBReader loadAsScene:@"LevelSelect"]];
+}
+
+- (void)restartGameplay {
+    _state.selectedLevel = @"Level1";
+    [_contentNode removeAllChildren];
+    CCTransition *fade = [CCTransition transitionFadeWithDuration:1.0f];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"] withTransition:fade];
 }
 
 #pragma mark - Touch listening
@@ -200,8 +210,8 @@ static NSString *_currentLevel = @"Level1";
             [nodeA haltActions];
             [nodeB haltActions];
             CGPoint target = ccpMidpoint(nodeA.position, nodeB.position);
-            [nodeA mergeWithEntity:nodeB atLoc:target];
-            [nodeB mergeWithEntity:nodeA atLoc:target];
+            [nodeA mergeWithEntity:nodeB atLoc:target playSFX:YES];
+            [nodeB mergeWithEntity:nodeA atLoc:target playSFX:NO];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"Merging!" object:nil];
     } key:nil];
 }

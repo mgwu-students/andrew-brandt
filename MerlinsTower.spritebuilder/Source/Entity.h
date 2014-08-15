@@ -8,6 +8,7 @@
 
 #import "CCSprite.h"
 #import "LightingLayer.h"
+#import "GameState.h"
 
 typedef NS_ENUM(NSInteger, EntityType) {
     RedMagic, BlueMagic, GreenMagic
@@ -20,7 +21,7 @@ typedef NS_ENUM(NSInteger, EntityType) {
 @property (nonatomic, assign) BOOL isMerged;
 
 - (void)startMove: (NSMutableArray *)instructions;
-- (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)point;
+- (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)point playSFX: (BOOL)val;
 - (void)haltActions;
 - (void)returnToSpawnPoint;
 - (void)startClear;

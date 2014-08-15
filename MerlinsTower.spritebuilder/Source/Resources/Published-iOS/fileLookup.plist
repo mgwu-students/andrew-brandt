@@ -8,16 +8,20 @@
 		<string>Assets/LightAttenuation.png</string>
 		<key>Assets/sounds/160420__relenzo2__icespell.wav</key>
 		<string>Assets/sounds/160420__relenzo2__icespell.caf</string>
-		<key>Assets/sounds/166185__drminky__mystical-object-aura.wav</key>
-		<string>Assets/sounds/166185__drminky__mystical-object-aura.m4a</string>
 		<key>Assets/sounds/bgm1.wav</key>
 		<string>Assets/sounds/bgm1.caf</string>
+		<key>Assets/sounds/blue-clear.wav</key>
+		<string>Assets/sounds/blue-clear.caf</string>
 		<key>Assets/sounds/fizzle1.wav</key>
 		<string>Assets/sounds/fizzle1.caf</string>
 		<key>Assets/sounds/green-clear.wav</key>
 		<string>Assets/sounds/green-clear.caf</string>
 		<key>Assets/sounds/red-clear.wav</key>
 		<string>Assets/sounds/red-clear.caf</string>
+		<key>Assets/sounds/touched1.wav</key>
+		<string>Assets/sounds/touched1.m4a</string>
+		<key>Assets/sounds/woosh1.wav</key>
+		<string>Assets/sounds/woosh1.caf</string>
 	</dict>
 	<key>metadata</key>
 	<dict>

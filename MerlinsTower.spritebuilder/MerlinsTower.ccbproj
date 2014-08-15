@@ -85,6 +85,17 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Assets/sounds/160420__relenzo2__icespell.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>0</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
+		</dict>
 		<key>Assets/sounds/33987__erh__slow-atmosphere-4.wav</key>
 		<dict>
 			<key>format_android_sound</key>
@@ -95,21 +106,6 @@
 			<integer>1</integer>
 			<key>format_ios_sound_quality</key>
 			<integer>0</integer>
-			<key>isDirty</key>
-			<true/>
-		</dict>
-		<key>Assets/sounds/79643__deadlymustard__sp0000.wav</key>
-		<dict>
-			<key>format_android_sound</key>
-			<integer>0</integer>
-			<key>format_android_sound_quality</key>
-			<integer>0</integer>
-			<key>format_ios_sound</key>
-			<integer>0</integer>
-			<key>format_ios_sound_quality</key>
-			<integer>0</integer>
-			<key>isDirty</key>
-			<true/>
 		</dict>
 		<key>Assets/sounds/bgm1.wav</key>
 		<dict>
@@ -121,8 +117,50 @@
 			<integer>0</integer>
 			<key>format_ios_sound_quality</key>
 			<integer>0</integer>
-			<key>isDirty</key>
-			<true/>
+		</dict>
+		<key>Assets/sounds/fizzle1.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>0</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
+		</dict>
+		<key>Assets/sounds/green-clear.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>0</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
+		</dict>
+		<key>Assets/sounds/red-clear.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>0</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
+		</dict>
+		<key>Assets/sounds/touched1.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>1</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
 		</dict>
 		<key>Sprites</key>
 		<dict/>

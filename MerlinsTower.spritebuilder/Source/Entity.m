@@ -7,17 +7,17 @@
 //
 
 #import "Entity.h"
-#import "LightingLayer.h"
 
 @implementation Entity {
     LightingLayer *_lightingLayer;
+    GameState *_state;
     CCAction *_appear, *_disappear, *_wait, *_return;
     
     CGPoint _startLocation;
     CGFloat _mergeTimer;
     
     float _phase, _lightRadius;
-    BOOL _goodMerge, _clearing;
+    BOOL _goodMerge, _clearing, _playSFX;
 }
 
 - (id)init {
@@ -29,6 +29,7 @@
         _phase = 2.0*M_PI*CCRANDOM_0_1();
         _lightRadius = 180.0f;
         _lightingLayer = [LightingLayer sharedLayer];
+        _state = [GameState sharedState];
         _isMerged = NO;
         _clearing = NO;
         _mergeTimer = 0.0f;
@@ -114,6 +115,9 @@
 
 - (void)startClear {
     _clearing = YES;
+    if (_playSFX) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Entity cleared effect!" object:self];
+    }
     CCAction *fade = [CCActionFadeOut actionWithDuration:1.0f];
     CCAction *clear = [CCActionCallFunc actionWithTarget:self selector:@selector(clear)];
     CCAction *sequence = [CCActionSequence actions:fade, clear, nil];
@@ -123,12 +127,14 @@
 - (void)clear {
     [self removeFromParent];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Entity cleared!" object:self];
+    //[_state playClearMagic:self];
 }
 
-- (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)loc {
+- (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)loc playSFX: (BOOL)val{
     CCAction *move = [CCActionMoveTo actionWithDuration:0.2f position:loc];
     self.physicsBody.sensor = YES;
     self.isMerged = YES;
+    _playSFX = val;
     if (self.magicType == target.magicType) {
         NSLog(@"Similar magic collided!");
         _goodMerge = YES;

@@ -7,6 +7,7 @@
 //
 
 #import "CCNode.h"
+#import "Entity.h"
 
 @interface GameState : CCNode
 
