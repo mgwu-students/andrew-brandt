@@ -22,7 +22,6 @@
 		49AABF7519991D5D00657242 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7419991D5D00657242 /* Obstacle.m */; };
 		49AABF7919991EC100657242 /* SmallBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7819991EC100657242 /* SmallBlock.m */; };
 		49AABF7D199933B000657242 /* HelperEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7C199933B000657242 /* HelperEntity.m */; };
-		49DB0731199DE53800D942CF /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DB0730199DE53800D942CF /* SoundManager.m */; };
 		49E01162199133150075FF24 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01161199133150075FF24 /* Gameplay.m */; };
 		49E01166199133E80075FF24 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01165199133E80075FF24 /* GameState.m */; };
 		49E0117019913C960075FF24 /* RedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0116F19913C960075FF24 /* RedEntity.m */; };
@@ -100,8 +99,6 @@
 		49AABF7819991EC100657242 /* SmallBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallBlock.m; sourceTree = "<group>"; };
 		49AABF7B199933B000657242 /* HelperEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperEntity.h; path = Source/HelperEntity.h; sourceTree = "<group>"; };
 		49AABF7C199933B000657242 /* HelperEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperEntity.m; path = Source/HelperEntity.m; sourceTree = "<group>"; };
-		49DB072F199DE53800D942CF /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Source/SoundManager.h; sourceTree = "<group>"; };
-		49DB0730199DE53800D942CF /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Source/SoundManager.m; sourceTree = "<group>"; };
 		49E01160199133150075FF24 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		49E01161199133150075FF24 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		49E01164199133E80075FF24 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameState.h; path = Source/GameState.h; sourceTree = "<group>"; };
@@ -221,14 +218,12 @@
 				49E01165199133E80075FF24 /* GameState.m */,
 				4973042D19951D710059C082 /* Level.h */,
 				4973042E19951D710059C082 /* Level.m */,
+				4973041F199416A20059C082 /* LevelSelect.h */,
+				49730420199416A20059C082 /* LevelSelect.m */,
 				4973042F19951D710059C082 /* LightingLayer.h */,
-				49DB072F199DE53800D942CF /* SoundManager.h */,
-				49DB0730199DE53800D942CF /* SoundManager.m */,
 				4973043019951D710059C082 /* LightingLayer.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
-				4973041F199416A20059C082 /* LevelSelect.h */,
-				49730420199416A20059C082 /* LevelSelect.m */,
 				49AABF7319991D5D00657242 /* Obstacle.h */,
 				49AABF7419991D5D00657242 /* Obstacle.m */,
 				49AABF7A19991EC600657242 /* Obstacles */,
@@ -480,7 +475,6 @@
 				49E01166199133E80075FF24 /* GameState.m in Sources */,
 				49E0117019913C960075FF24 /* RedEntity.m in Sources */,
 				4973043219951D710059C082 /* Level.m in Sources */,
-				49DB0731199DE53800D942CF /* SoundManager.m in Sources */,
 				49730421199416A20059C082 /* LevelSelect.m in Sources */,
 				4973043319951D710059C082 /* LightingLayer.m in Sources */,
 			);

@@ -30,15 +30,6 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
     return self;
 }
 
-- (void)playFizzle {
-    if (_playSFX) {
-        [_audioMgr playEffect:@"Assets/sounds/fizzle1.wav"];
-    }
-}
-
-- (void)playClearMagic: (EntityType)color {
-    
-}
 
 #pragma mark - Setup methods
 
@@ -56,6 +47,16 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
 - (void)setupAudio {
     _audioMgr = [OALSimpleAudio sharedInstance];
     [_audioMgr preloadEffect:@"Assets/sounds/fizzle1.wav"];
+}
+
+- (void)playFizzle {
+    if (_playSFX) {
+        [_audioMgr playEffect:@"Assets/sounds/fizzle1.wav"];
+    }
+}
+
+- (void)playClearMagic: (EntityType)color {
+    
 }
 #pragma mark - Singleton method
 

@@ -20,6 +20,7 @@
     LightingLayer *_lightingLayer;
     
     NSMutableArray *_touches, *_entities;
+    NSNotificationCenter *_postman;
     
     BOOL _startDrag, _leftOrb, _clearCheck, _tutorialPresented;
 }
@@ -34,6 +35,7 @@ static NSString *_currentLevel = @"Level1";
     _leftOrb = NO;
     _entities = [NSMutableArray array];
     _touches = [NSMutableArray array];
+    _postman = [NSNotificationCenter defaultCenter];
     [self registerNotifications];
 }
 
