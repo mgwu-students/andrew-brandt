@@ -100,6 +100,8 @@
 						<string>Entities/GreenEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -133,7 +135,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>134</real>
+							<real>127</real>
 							<real>224</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -195,9 +197,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.10359153896570206</real>
-							<real>0.87304162979125977</real>
-							<integer>0</integer>
+							<real>0.085985898971557617</real>
+							<real>0.10091670602560043</real>
+							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -265,7 +267,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.20971831679344177</real>
+							<real>0.22556334733963013</real>
 							<real>0.098312534391880035</real>
 							<integer>1</integer>
 							<integer>2</integer>
@@ -327,9 +329,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.85929566621780396</real>
-							<real>0.84699994325637817</real>
-							<integer>0</integer>
+							<real>0.14070436358451843</real>
+							<real>0.15300004184246063</real>
+							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -459,7 +461,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.35387313365936279</real>
+							<real>0.34859147667884827</real>
 							<real>0.2213541716337204</real>
 							<integer>1</integer>
 							<integer>2</integer>
@@ -496,8 +498,6 @@
 						<string>Obstacles/Groups/SmallBlockLine.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

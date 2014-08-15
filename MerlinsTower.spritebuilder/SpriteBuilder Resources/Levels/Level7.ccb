@@ -345,7 +345,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>146</real>
+						<real>150</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -415,7 +415,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-34</real>
+						<real>-30</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -459,8 +459,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.29929575324058533</real>
-							<real>0.35156252980232239</real>
+							<real>0.28169012069702148</real>
+							<real>0.2994791567325592</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -481,6 +481,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>90</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ccbFile</string>
 						<key>type</key>
 						<string>CCBFile</string>
@@ -488,8 +496,6 @@
 						<string>Obstacles/Groups/SmallBlock4Square.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -523,8 +529,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.33978885412216187</real>
-							<real>0.3880208432674408</real>
+							<real>0.30457755923271179</real>
+							<real>0.3619791567325592</real>
 							<integer>3</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -545,6 +551,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>-90</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ccbFile</string>
 						<key>type</key>
 						<string>CCBFile</string>
@@ -552,6 +566,8 @@
 						<string>Obstacles/Groups/SmallBlock4Square.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

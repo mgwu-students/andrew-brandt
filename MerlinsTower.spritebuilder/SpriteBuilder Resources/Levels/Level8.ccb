@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>205</real>
-							<real>63.999984741210938</real>
+							<real>305</real>
+							<real>83.999984741210938</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -133,8 +133,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>468.99993896484375</real>
-							<real>240.99998474121094</real>
+							<real>493.99993896484375</real>
+							<real>260</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -162,6 +162,8 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -195,8 +197,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>312</real>
-							<real>182.99998474121094</real>
+							<real>305</real>
+							<real>249.99998474121094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -257,8 +259,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>475</real>
-							<real>93.999984741210938</real>
+							<real>494</real>
+							<real>82.999984741210938</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -319,8 +321,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.36091545224189758</real>
-							<real>0.0625</real>
+							<real>0.34330976009368896</real>
+							<real>0.5</real>
 							<integer>3</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -345,7 +347,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>225</real>
+						<real>180</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -356,8 +358,6 @@
 						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
