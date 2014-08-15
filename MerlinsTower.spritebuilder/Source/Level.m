@@ -10,4 +10,9 @@
 
 @implementation Level
 
+- (void)onExit {
+    NSLog(@"Clearing level!");
+    [super onExit];
+}
+
 @end

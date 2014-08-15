@@ -62,6 +62,7 @@ static NSString *_currentLevel = @"Level1";
 - (void)startGameplay {
     NSString *levelString = [NSString stringWithFormat:@"Levels/%@", _state.selectedLevel];
     _currentLevel = (Level *)[CCBReader load:levelString owner:self];
+    [MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
     [_contentNode addChild:_currentLevel];
     if (_currentLevel.hasTutorial) {
         CCAnimationManager *mgr = [_currentLevel animationManager];
@@ -72,7 +73,7 @@ static NSString *_currentLevel = @"Level1";
 - (void)endGameplay {
     CCNode *o = [CCBReader load:@"Recap" owner:self];
     o.name = @"Recap";
-    //[MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
+    [MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
     NSLog(@"%@ complete", _state.selectedLevel);
     [self addChild:o];
 }
@@ -197,6 +198,7 @@ static NSString *_currentLevel = @"Level1";
             CGPoint target = ccpMidpoint(nodeA.position, nodeB.position);
             [nodeA mergeWithEntity:nodeB atLoc:target];
             [nodeB mergeWithEntity:nodeA atLoc:target];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"Merging!" object:nil];
     } key:nil];
 }
 
@@ -204,6 +206,7 @@ static NSString *_currentLevel = @"Level1";
     [[_contentNode space] addPostStepBlock:^{
         [nodeA haltActions];
         [nodeA returnToSpawnPoint];
+        [_state playFizzle];
     } key:nil];
 }
 

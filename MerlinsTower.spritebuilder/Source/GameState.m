@@ -7,8 +7,13 @@
 //
 
 #import "GameState.h"
+#import "Entity.h"
 
-@implementation GameState
+@implementation GameState {
+    OALSimpleAudio *_audioMgr;
+
+    BOOL _sfxPlaying;
+}
 
 static GameState *_sharedState;
 
@@ -19,10 +24,23 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
     
     if (self != nil) {
         [self loadDefaults];
+        [self setupAudio];
     }
     
     return self;
 }
+
+- (void)playFizzle {
+    if (_playSFX) {
+        [_audioMgr playEffect:@"Assets/sounds/fizzle1.wav"];
+    }
+}
+
+- (void)playClearMagic: (EntityType)color {
+    
+}
+
+#pragma mark - Setup methods
 
 - (void)loadDefaults {
     _topLevel = [[NSUserDefaults standardUserDefaults] objectForKey:TOP_LEVEL_KEY];
@@ -30,9 +48,15 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
         NSLog(@"New game started, setting default.");
         _topLevel = @"Level1";
         _selectedLevel = _topLevel;
+        _playBGM = YES;
+        _playSFX = YES;
     }
 }
 
+- (void)setupAudio {
+    _audioMgr = [OALSimpleAudio sharedInstance];
+    [_audioMgr preloadEffect:@"Assets/sounds/fizzle1.wav"];
+}
 #pragma mark - Singleton method
 
 + (GameState *)sharedState {

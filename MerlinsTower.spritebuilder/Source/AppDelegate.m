@@ -24,7 +24,7 @@
  */
 
 #import "cocos2d.h"
-
+#import <Crashlytics/Crashlytics.h>
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 
@@ -51,6 +51,9 @@
     
     //MGWU sdk setup
     [MGWU loadMGWU:@"DXPOOKJ1QSDRRPTFV"];
+    
+    //Crashlytics sdk setup
+    [Crashlytics startWithAPIKey:@"544316ad86c403e878126843ada5947cbb14dc33"];
     
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];

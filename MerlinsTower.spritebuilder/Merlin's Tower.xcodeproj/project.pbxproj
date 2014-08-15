@@ -18,9 +18,11 @@
 		4973043119951D710059C082 /* BlueEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973042C19951D710059C082 /* BlueEntity.m */; };
 		4973043219951D710059C082 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973042E19951D710059C082 /* Level.m */; };
 		4973043319951D710059C082 /* LightingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973043019951D710059C082 /* LightingLayer.m */; };
+		49930D8E199D9ABA008D1644 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49930D8D199D9ABA008D1644 /* Crashlytics.framework */; };
 		49AABF7519991D5D00657242 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7419991D5D00657242 /* Obstacle.m */; };
 		49AABF7919991EC100657242 /* SmallBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7819991EC100657242 /* SmallBlock.m */; };
 		49AABF7D199933B000657242 /* HelperEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AABF7C199933B000657242 /* HelperEntity.m */; };
+		49DB0731199DE53800D942CF /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DB0730199DE53800D942CF /* SoundManager.m */; };
 		49E01162199133150075FF24 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01161199133150075FF24 /* Gameplay.m */; };
 		49E01166199133E80075FF24 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E01165199133E80075FF24 /* GameState.m */; };
 		49E0117019913C960075FF24 /* RedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E0116F19913C960075FF24 /* RedEntity.m */; };
@@ -91,12 +93,15 @@
 		4973042E19951D710059C082 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
 		4973042F19951D710059C082 /* LightingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightingLayer.h; path = Source/LightingLayer.h; sourceTree = "<group>"; };
 		4973043019951D710059C082 /* LightingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightingLayer.m; path = Source/LightingLayer.m; sourceTree = "<group>"; };
+		49930D8D199D9ABA008D1644 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		49AABF7319991D5D00657242 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = Source/Obstacle.h; sourceTree = "<group>"; };
 		49AABF7419991D5D00657242 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Obstacle.m; path = Source/Obstacle.m; sourceTree = "<group>"; };
 		49AABF7719991EC100657242 /* SmallBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallBlock.h; sourceTree = "<group>"; };
 		49AABF7819991EC100657242 /* SmallBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallBlock.m; sourceTree = "<group>"; };
 		49AABF7B199933B000657242 /* HelperEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperEntity.h; path = Source/HelperEntity.h; sourceTree = "<group>"; };
 		49AABF7C199933B000657242 /* HelperEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperEntity.m; path = Source/HelperEntity.m; sourceTree = "<group>"; };
+		49DB072F199DE53800D942CF /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Source/SoundManager.h; sourceTree = "<group>"; };
+		49DB0730199DE53800D942CF /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Source/SoundManager.m; sourceTree = "<group>"; };
 		49E01160199133150075FF24 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		49E01161199133150075FF24 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		49E01164199133E80075FF24 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameState.h; path = Source/GameState.h; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
+				49930D8E199D9ABA008D1644 /* Crashlytics.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
 				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
@@ -216,6 +222,8 @@
 				4973042D19951D710059C082 /* Level.h */,
 				4973042E19951D710059C082 /* Level.m */,
 				4973042F19951D710059C082 /* LightingLayer.h */,
+				49DB072F199DE53800D942CF /* SoundManager.h */,
+				49DB0730199DE53800D942CF /* SoundManager.m */,
 				4973043019951D710059C082 /* LightingLayer.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
@@ -281,6 +289,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49930D8D199D9ABA008D1644 /* Crashlytics.framework */,
 				4903D46E19955F7000D56E58 /* mgwuSDK.framework */,
 				4903D46C19955DBE00D56E58 /* SystemConfiguration.framework */,
 				4903D46A19955D9C00D56E58 /* StoreKit.framework */,
@@ -333,6 +342,7 @@
 				B77F1B2A17B978D7009739AE /* Sources */,
 				B77F1B2B17B978D7009739AE /* Frameworks */,
 				B77F1B2C17B978D7009739AE /* Resources */,
+				49930D8B199D9A93008D1644 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -423,6 +433,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49930D8B199D9A93008D1644 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 544316ad86c403e878126843ada5947cbb14dc33 d394c82c62b095c32a82cbed0248da3f2957ef468d551b996dabb259ac324473\n";
+		};
 		D2E0167A18D782EC00927430 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,6 +480,7 @@
 				49E01166199133E80075FF24 /* GameState.m in Sources */,
 				49E0117019913C960075FF24 /* RedEntity.m in Sources */,
 				4973043219951D710059C082 /* Level.m in Sources */,
+				49DB0731199DE53800D942CF /* SoundManager.m in Sources */,
 				49730421199416A20059C082 /* LevelSelect.m in Sources */,
 				4973043319951D710059C082 /* LightingLayer.m in Sources */,
 			);

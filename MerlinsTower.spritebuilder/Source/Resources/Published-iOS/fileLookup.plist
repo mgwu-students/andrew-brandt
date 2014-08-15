@@ -7,7 +7,9 @@
 		<key>Assets/LightAttenuation.psd</key>
 		<string>Assets/LightAttenuation.png</string>
 		<key>Assets/sounds/bgm1.wav</key>
-		<string>Assets/sounds/bgm1.m4a</string>
+		<string>Assets/sounds/bgm1.caf</string>
+		<key>Assets/sounds/fizzle1.wav</key>
+		<string>Assets/sounds/fizzle1.caf</string>
 	</dict>
 	<key>metadata</key>
 	<dict>
