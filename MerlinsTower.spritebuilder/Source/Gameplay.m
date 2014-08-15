@@ -54,6 +54,15 @@ static NSString *_currentLevel = @"Level1";
 
 - (void)update: (CCTime)dt {
     if (_clearCheck) {
+        BOOL canClear = YES;
+        for (Entity *e in _entities) {
+            if (!e.isMerged) {
+                canClear = NO;
+            }
+        }
+        if (canClear) {
+            [_postman postNotificationName:@"Can clear!" object:nil];
+        }
         if (_entitiesRemaining == 0) {
             [self endGameplay];
         }
@@ -95,6 +104,7 @@ static NSString *_currentLevel = @"Level1";
 
 - (void)pause {
     _pauseButton.state = CCControlStateDisabled;
+    _contentNode.paused = YES;
     CCNode *o = [CCBReader load:@"Pause" owner:self];
     o.name = @"Pause";
     [self addChild:o];
@@ -107,6 +117,7 @@ static NSString *_currentLevel = @"Level1";
     [a setCompletedAnimationCallbackBlock:^(id sender){
         [self removeChildByName:@"Pause"];
         _pauseButton.state = CCControlStateNormal;
+        _contentNode.paused = NO;
     }];
     [a runAnimationsForSequenceNamed:@"Exit"];
 }
@@ -213,6 +224,11 @@ static NSString *_currentLevel = @"Level1";
             [nodeA mergeWithEntity:nodeB atLoc:target playSFX:YES];
             [nodeB mergeWithEntity:nodeA atLoc:target playSFX:NO];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"Merging!" object:nil];
+            _clearCheck = YES;
+            CCParticleSystem *merge = (CCParticleSystem *)[CCBReader load: @"Effects/Merging"];
+            merge.position = target;
+            merge.autoRemoveOnFinish = YES;
+            [nodeA.parent addChild:merge];
     } key:nil];
 }
 

@@ -17,7 +17,7 @@
     CGFloat _mergeTimer;
     
     float _phase, _lightRadius;
-    BOOL _goodMerge, _clearing, _playSFX;
+    BOOL _goodMerge, _clearing, _playSFX, _canClear;
 }
 
 - (id)init {
@@ -32,6 +32,7 @@
         _state = [GameState sharedState];
         _isMerged = NO;
         _clearing = NO;
+        _canClear = NO;
         _mergeTimer = 0.0f;
         
         _appear = [CCActionScaleTo actionWithDuration:0.25f scale:1.0f];
@@ -49,13 +50,14 @@
     [super onEnter];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center postNotificationName:@"Entity created!" object:self];
+    [center addObserver:self selector:@selector(setClearFlag:) name:@"Can clear!" object:nil];
     _startLocation = [self convertToWorldSpace:ccp(0,0)];
 //    [self runAction:_appear];
     [_lightingLayer addLight:self];
 }
 
 - (void)onExit {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_lightingLayer removeLight:self];
     [super onExit];
 }
@@ -70,10 +72,15 @@
         _mergeTimer = 0.0f;
         [self returnToSpawnPoint];
     }
-    if (_goodMerge && _mergeTimer > 2.0f) {
+    else if (!_canClear && _goodMerge && _mergeTimer > 2.0f) {
+        _mergeTimer = 0.0f;
+        [self returnToSpawnPoint];
+    }
+    else if (_canClear && _goodMerge && _mergeTimer > 2.0f) {
         _mergeTimer = 0.0f;
         [self startClear];
     }
+
     
     //Fade out logic is here
     if (_clearing) {
@@ -128,6 +135,10 @@
     [self removeFromParent];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Entity cleared!" object:self];
     //[_state playClearMagic:self];
+}
+
+- (void)setClearFlag: (NSNotification *)message {
+    _canClear = YES;
 }
 
 - (void)mergeWithEntity: (Entity *)target atLoc: (CGPoint)loc playSFX: (BOOL)val{

@@ -643,8 +643,6 @@
 								<string>Entities/HelperEntity.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1031,6 +1029,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1215,9 +1215,9 @@
 			<key>name</key>
 			<string>Tutorial</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.3828125</real>
 			<key>position</key>
-			<real>3</real>
+			<real>5</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
