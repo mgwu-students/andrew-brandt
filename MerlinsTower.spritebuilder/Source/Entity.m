@@ -35,6 +35,7 @@
         _canClear = NO;
         _mergeTimer = 0.0f;
         
+      
         _appear = [CCActionScaleTo actionWithDuration:0.25f scale:1.0f];
         _disappear = [CCActionScaleTo actionWithDuration:0.25f scale:0.0f];
         _wait = [CCActionDelay actionWithDuration:0.1f];
@@ -47,6 +48,10 @@
 }
 
 - (void)onEnter {
+
+    self.position = [self.parent convertPositionToPoints:self.position type:self.positionType];
+    self.positionType = CCPositionTypeUIPoints;
+
     [super onEnter];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center postNotificationName:@"Entity created!" object:self];

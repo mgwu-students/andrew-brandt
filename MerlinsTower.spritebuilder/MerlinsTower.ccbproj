@@ -118,6 +118,17 @@
 			<key>format_ios_sound_quality</key>
 			<integer>0</integer>
 		</dict>
+		<key>Assets/sounds/blue-clear.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>0</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
+		</dict>
 		<key>Assets/sounds/fizzle1.wav</key>
 		<dict>
 			<key>format_android_sound</key>
@@ -159,6 +170,17 @@
 			<integer>0</integer>
 			<key>format_ios_sound</key>
 			<integer>1</integer>
+			<key>format_ios_sound_quality</key>
+			<integer>0</integer>
+		</dict>
+		<key>Assets/sounds/woosh1.wav</key>
+		<dict>
+			<key>format_android_sound</key>
+			<integer>0</integer>
+			<key>format_android_sound_quality</key>
+			<integer>0</integer>
+			<key>format_ios_sound</key>
+			<integer>0</integer>
 			<key>format_ios_sound_quality</key>
 			<integer>0</integer>
 		</dict>
