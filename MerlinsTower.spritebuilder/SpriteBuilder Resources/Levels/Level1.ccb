@@ -71,7 +71,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.36795774102210999</real>
+							<real>0.29929569363594055</real>
 							<real>0.55989581346511841</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -112,8 +112,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>RedEntity</string>
-				<key>hidden</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -135,11 +133,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>383</real>
-							<real>218</real>
+							<real>0.70070421695709229</real>
+							<real>0.55989581346511841</real>
 							<integer>0</integer>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -1318,8 +1316,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -1411,7 +1407,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>3</real>
+			<real>2.7000000476837158</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

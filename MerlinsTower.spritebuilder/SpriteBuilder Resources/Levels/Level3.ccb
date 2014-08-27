@@ -71,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>115.03364562988281</real>
-							<real>282.37631225585938</real>
+							<real>0.20252402126789093</real>
+							<real>0.7353549599647522</real>
 							<integer>0</integer>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -133,11 +133,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>432.38192749023438</real>
-							<real>109.28097534179688</real>
+							<real>0.76123577356338501</real>
+							<real>0.2845858633518219</real>
 							<integer>0</integer>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -162,6 +162,8 @@
 						<string>Entities/GreenEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -356,8 +358,6 @@
 						<string>Obstacles/Groups/SmallBlockLine.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

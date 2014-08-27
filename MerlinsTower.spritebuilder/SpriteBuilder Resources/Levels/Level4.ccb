@@ -71,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>110</real>
-							<real>125</real>
+							<real>0.19366197288036346</real>
+							<real>0.3255208432674408</real>
 							<integer>0</integer>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -133,11 +133,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>470.99993896484375</real>
-							<real>301.99996948242188</real>
+							<real>0.82922524213790894</real>
+							<real>0.78645825386047363</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -232,6 +232,8 @@
 						<string>Obstacles/Groups/SmallBlockLine.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -467,8 +469,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

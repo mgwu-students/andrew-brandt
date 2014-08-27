@@ -71,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>80</real>
-							<real>158.99998474121094</real>
+							<real>0.14084507524967194</real>
+							<real>0.49687495827674866</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -100,6 +100,8 @@
 						<string>Entities/GreenEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -133,11 +135,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>372</real>
-							<real>159.99998474121094</real>
+							<real>0.65492957830429077</real>
+							<real>0.49999994039535522</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -286,8 +288,6 @@
 						<string>Obstacles/Groups/SmallBlockLine.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -391,11 +391,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>229.99996948242188</real>
-							<real>116.99998474121094</real>
+							<real>0.404929518699646</real>
+							<real>0.36562496423721313</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -453,11 +453,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>225.99996948242188</real>
-							<real>207.99998474121094</real>
+							<real>0.39788725972175598</real>
+							<real>0.64999997615814209</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>

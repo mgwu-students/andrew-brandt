@@ -71,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>55.999969482421875</real>
-							<real>54.999984741210938</real>
+							<real>0.098591499030590057</real>
+							<real>0.17187495529651642</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -100,6 +100,8 @@
 						<string>Entities/BlueEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -133,11 +135,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>324.99996948242188</real>
-							<real>94.999984741210938</real>
+							<real>0.57218307256698608</real>
+							<real>0.29687494039535522</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -195,11 +197,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>59.999984741210938</real>
-							<real>136.99998474121094</real>
+							<real>0.10563377290964127</real>
+							<real>0.42812496423721313</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -257,11 +259,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>57.999984741210938</real>
-							<real>221.99998474121094</real>
+							<real>0.10211265087127686</real>
+							<real>0.69374996423721313</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -356,8 +358,6 @@
 						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

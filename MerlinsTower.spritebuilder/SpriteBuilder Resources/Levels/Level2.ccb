@@ -138,11 +138,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>84.999946594238281</real>
-							<real>178</real>
+							<real>0.1496477872133255</real>
+							<real>0.4635416567325592</real>
 							<integer>0</integer>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -617,8 +617,8 @@
 									<real>345.95608520507812</real>
 									<real>142.06578063964844</real>
 									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
+									<integer>1</integer>
+									<integer>1</integer>
 								</array>
 							</dict>
 							<dict>
@@ -643,6 +643,8 @@
 								<string>Entities/HelperEntity.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1124,8 +1126,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -1215,9 +1215,9 @@
 			<key>name</key>
 			<string>Tutorial</string>
 			<key>offset</key>
-			<real>0.3828125</real>
+			<real>0.0</real>
 			<key>position</key>
-			<real>5</real>
+			<real>3</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

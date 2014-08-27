@@ -71,11 +71,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>305</real>
-							<real>83.999984741210938</real>
+							<real>0.5369718074798584</real>
+							<real>0.26249995827674866</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -100,6 +100,8 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -133,11 +135,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>493.99993896484375</real>
-							<real>260</real>
+							<real>0.86971819400787354</real>
+							<real>0.8125</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -162,8 +164,6 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -197,11 +197,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>305</real>
-							<real>249.99998474121094</real>
+							<real>0.5369718074798584</real>
+							<real>0.78124994039535522</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -259,11 +259,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>494</real>
-							<real>82.999984741210938</real>
+							<real>0.86971831321716309</real>
+							<real>0.2593749463558197</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>

@@ -93,10 +93,7 @@ static NSString *_currentLevel = @"Level1";
 
 
 - (void)nextLevel {
-    if (_tutorialPresented) {
-        [_contentNode removeAllChildren];
-    }
-    
+    [_contentNode removeChild:_currentLevel];
     [self removeChildByName:@"Recap"];
     _state.selectedLevel = [NSString stringWithFormat:@"Level%ld",(long)_currentLevel.nextLevel];
     [self startGameplay];
@@ -123,13 +120,13 @@ static NSString *_currentLevel = @"Level1";
 }
 
 - (void)levelSelect {
-    [_contentNode removeAllChildren];
+    [_contentNode removeChild:_currentLevel];
     [[CCDirector sharedDirector] presentScene:[CCBReader loadAsScene:@"LevelSelect"]];
 }
 
 - (void)restartGameplay {
     _state.selectedLevel = @"Level1";
-    [_contentNode removeAllChildren];
+    [_contentNode removeChild:_currentLevel];
     CCTransition *fade = [CCTransition transitionFadeWithDuration:1.0f];
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"] withTransition:fade];
 }
