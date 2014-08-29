@@ -50,7 +50,7 @@
 - (void)onEnter {
 
     self.position = [self.parent convertPositionToPoints:self.position type:self.positionType];
-    self.positionType = CCPositionTypeUIPoints;
+    self.positionType = CCPositionTypePoints;
 
     [super onEnter];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];

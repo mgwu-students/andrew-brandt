@@ -76,11 +76,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>462.99993896484375</real>
-							<real>174</real>
+							<real>0.81514072418212891</real>
+							<real>0.453125</real>
 							<integer>0</integer>
-							<integer>1</integer>
-							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -643,8 +643,6 @@
 								<string>Entities/HelperEntity.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1126,6 +1124,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

@@ -286,8 +286,6 @@
 						<string>Entities/BlueEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -331,8 +329,8 @@
 									<real>204.83999633789062</real>
 									<real>202.79998779296875</real>
 									<integer>0</integer>
-									<integer>1</integer>
-									<integer>1</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -357,6 +355,8 @@
 								<string>Entities/HelperEntity.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -563,8 +563,8 @@
 									<real>206.00001525878906</real>
 									<real>210.79998779296875</real>
 									<integer>0</integer>
-									<integer>1</integer>
-									<integer>1</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
