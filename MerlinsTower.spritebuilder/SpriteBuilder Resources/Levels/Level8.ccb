@@ -71,7 +71,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5369718074798584</real>
+							<real>0.5510563850402832</real>
 							<real>0.26249995827674866</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -100,8 +100,6 @@
 						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -135,7 +133,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.86971819400787354</real>
+							<real>0.89964765310287476</real>
 							<real>0.8125</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -197,7 +195,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5369718074798584</real>
+							<real>0.5510563850402832</real>
 							<real>0.78124994039535522</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -259,7 +257,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.86971831321716309</real>
+							<real>0.89964783191680908</real>
 							<real>0.2593749463558197</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -321,7 +319,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.34330976009368896</real>
+							<real>0.24999989569187164</real>
 							<real>0.5</real>
 							<integer>3</integer>
 							<integer>2</integer>
@@ -391,8 +389,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.29401412606239319</real>
-							<real>0.068750001490116119</real>
+							<real>0.25</real>
+							<real>0.065624997019767761</real>
 							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -523,6 +521,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

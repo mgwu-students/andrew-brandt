@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>BlueEntity</string>
+				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -71,9 +71,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.14964786171913147</real>
-							<real>0.20000000298023224</real>
-							<integer>0</integer>
+							<real>-0.059859208762645721</real>
+							<real>0.30000001192092896</real>
+							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -97,7 +97,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/BlueEntity.ccb</string>
+						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -111,7 +111,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>BlueEntity</string>
+				<string>CCBFile</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -133,9 +133,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.38028174638748169</real>
-							<real>0.19999995827674866</real>
-							<integer>3</integer>
+							<real>0.28521126508712769</real>
+							<real>0.29999995231628418</real>
+							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -159,13 +159,13 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/BlueEntity.ccb</string>
+						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
 					</dict>
 				</array>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>3</integer>
+				<integer>4</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -195,9 +195,71 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.49999994039535522</real>
-							<real>-0.16875001788139343</real>
+							<real>0.5035211443901062</real>
+							<real>0.30000001192092896</real>
+							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Obstacles/Groups/SmallBlockLine.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>5</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCBFile</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.77816879749298096</real>
+							<real>0.30000004172325134</real>
+							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -221,7 +283,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-90</real>
+						<real>90</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -229,13 +291,13 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
+						<string>Obstacles/Groups/SmallBlockLine.ccb</string>
 					</dict>
 				</array>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>4</integer>
+				<integer>6</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -243,7 +305,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>RedEntity</string>
+				<string>GreenEntity</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -265,8 +327,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.33978870511054993</real>
-							<real>0.20000000298023224</real>
+							<real>0.62323939800262451</real>
+							<real>0.50624996423721313</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -291,13 +353,13 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/RedEntity.ccb</string>
+						<string>Entities/GreenEntity.ccb</string>
 					</dict>
 				</array>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>5</integer>
+				<integer>7</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -305,7 +367,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>RedEntity</string>
+				<string>GreenEntity</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -327,9 +389,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.17957751452922821</real>
-							<real>0.20000000298023224</real>
-							<integer>3</integer>
+							<real>0.13732391595840454</real>
+							<real>0.13125009834766388</real>
+							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -353,7 +415,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/RedEntity.ccb</string>
+						<string>Entities/GreenEntity.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -370,7 +432,7 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>value</key>
-				<string>13</string>
+				<string>19</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -451,6 +513,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
