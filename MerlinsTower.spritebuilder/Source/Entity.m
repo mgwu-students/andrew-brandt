@@ -7,6 +7,8 @@
 //
 
 #import "Entity.h"
+#define CP_ALLOW_PRIVATE_ACCESS 1
+#import "CCPhysics+ObjectiveChipmunk.h"
 
 @implementation Entity {
     LightingLayer *_lightingLayer;
@@ -53,11 +55,11 @@
     self.positionType = CCPositionTypePoints;
 
     [super onEnter];
+    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center postNotificationName:@"Entity created!" object:self];
     [center addObserver:self selector:@selector(setClearFlag:) name:@"Can clear!" object:nil];
     _startLocation = [self convertToWorldSpace:ccp(0,0)];
-//    [self runAction:_appear];
     [_lightingLayer addLight:self];
 }
 
@@ -111,6 +113,7 @@
 }
 
 - (void)returnToSpawnPoint {
+    self.physicsBody.velocity = ccp(0,0);
     [self runAction: [CCActionSequence actions:_disappear,_return,_appear, nil]];
 }
 

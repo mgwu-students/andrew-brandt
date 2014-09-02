@@ -95,7 +95,7 @@ static NSString *_currentLevel = @"Level1";
 - (void)nextLevel {
     [_contentNode removeChild:_currentLevel];
     [self removeChildByName:@"Recap"];
-    _state.selectedLevel = [NSString stringWithFormat:@"Level%ld",(long)_currentLevel.nextLevel];
+    _state.selectedLevel = [NSString stringWithFormat:@"Level %ld",(long)_currentLevel.nextLevel];
     [self startGameplay];
 }
 
