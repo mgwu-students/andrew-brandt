@@ -286,8 +286,6 @@
 						<string>Entities/BlueEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -445,11 +443,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>175.99996948242188</real>
-							<real>216.99998474121094</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>0.30985909700393677</real>
+							<real>0.29062503576278687</real>
+							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -474,6 +472,8 @@
 						<string>Obstacles/Groups/SmallBlock4Square.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -507,11 +507,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>309</real>
-							<real>215.99998474121094</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>0.36971831321716309</real>
+							<real>0.29062503576278687</real>
+							<integer>2</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -569,11 +569,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>177.99996948242188</real>
-							<real>65.999992370605469</real>
+							<real>0.31338024139404297</real>
+							<real>0.20624998211860657</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -631,11 +631,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>313.99993896484375</real>
-							<real>65.999992370605469</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>0.36971840262413025</real>
+							<real>0.20624998211860657</real>
+							<integer>3</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>

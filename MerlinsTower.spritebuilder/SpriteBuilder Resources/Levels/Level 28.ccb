@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>23</integer>
+	<integer>29</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.16373236477375031</real>
-							<real>0.22812497615814209</real>
+							<real>0.22535207867622375</real>
+							<real>0.13749997317790985</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -133,8 +133,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.33978870511054993</real>
-							<real>0.22812497615814209</real>
+							<real>0.5</real>
+							<real>0.13749997317790985</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -195,8 +195,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.16373236477375031</real>
-							<real>0.47812500596046448</real>
+							<real>0.22535207867622375</real>
+							<real>0.5</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -259,9 +259,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.32218307256698608</real>
-							<real>0.50937497615814209</real>
-							<integer>0</integer>
+							<real>0.22535210847854614</real>
+							<real>0.13750000298023224</real>
+							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -321,9 +321,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.48063379526138306</real>
-							<real>0.22812497615814209</real>
-							<integer>0</integer>
+							<real>0.22535210847854614</real>
+							<real>0.13749997317790985</real>
+							<integer>3</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -383,9 +383,133 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.16373236477375031</real>
-							<real>0.72812497615814209</real>
+							<real>0.22535207867622375</real>
+							<real>0.13750000298023224</real>
+							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Entities/RedEntity.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>23</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>RedEntity</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.49999994039535522</real>
+							<real>0.13750000298023224</real>
+							<integer>1</integer>
+							<integer>2</integer>
+							<integer>2</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>Entities/RedEntity.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>26</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>RedEntity</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.2253522127866745</real>
+							<real>0.5</real>
+							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
