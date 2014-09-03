@@ -71,7 +71,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.10387321561574936</real>
+							<real>0.096830956637859344</real>
 							<real>0.5</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -133,7 +133,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.87676042318344116</real>
+							<real>0.92957723140716553</real>
 							<real>0.5</real>
 							<integer>0</integer>
 							<integer>2</integer>
@@ -162,8 +162,6 @@
 						<string>Entities/BlueEntity.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -200,7 +198,7 @@
 									<key>name</key>
 									<string>rotation</string>
 									<key>time</key>
-									<real>2.5</real>
+									<real>2.3333332538604736</real>
 									<key>type</key>
 									<integer>2</integer>
 									<key>value</key>
@@ -230,7 +228,7 @@
 									<key>name</key>
 									<string>rotation</string>
 									<key>time</key>
-									<real>5.5</real>
+									<real>5.3333334922790527</real>
 									<key>type</key>
 									<integer>2</integer>
 									<key>value</key>
@@ -281,7 +279,7 @@
 								<key>value</key>
 								<array>
 									<real>0.38908445835113525</real>
-									<real>0.12500008940696716</real>
+									<real>0.15000009536743164</real>
 									<integer>1</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -343,7 +341,7 @@
 								<key>value</key>
 								<array>
 									<real>0.39788731932640076</real>
-									<real>0.12499990314245224</real>
+									<real>0.14999990165233612</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -404,7 +402,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.279929518699646</real>
+									<real>0.30105632543563843</real>
 									<real>0.68749988079071045</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -474,8 +472,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.27992960810661316</real>
-									<real>0.125</real>
+									<real>0.30105641484260559</real>
+									<real>0.15000000596046448</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -503,6 +501,8 @@
 								<string>Obstacles/Groups/SmallBlock4Square.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -536,8 +536,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.27992963790893555</real>
-									<real>0.125</real>
+									<real>0.30105641484260559</real>
+									<real>0.15000000596046448</real>
 									<integer>1</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -606,8 +606,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.27992969751358032</real>
-									<real>0.125</real>
+									<real>0.30105644464492798</real>
+									<real>0.15312500298023224</real>
 									<integer>3</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -676,8 +676,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.2800000011920929</real>
-									<real>0.125</real>
+									<real>0.30112671852111816</real>
+									<real>0.15000000596046448</real>
 									<integer>2</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -792,11 +792,9 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>360</real>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -959,9 +957,9 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>1.3828125</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>5.3333334922790527</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

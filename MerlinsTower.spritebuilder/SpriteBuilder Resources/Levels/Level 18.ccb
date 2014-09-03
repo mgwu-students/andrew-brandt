@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>36</integer>
+	<integer>32</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -18,7 +18,7 @@
 	<key>currentSequenceId</key>
 	<integer>0</integer>
 	<key>docDimensionsType</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>fileType</key>
 	<string>CocosBuilder</string>
 	<key>fileVersion</key>
@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>GreenEntity</string>
+				<string>RedEntity</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.48415488004684448</real>
-							<real>0.83333325386047363</real>
+							<real>0.5510563850402832</real>
+							<real>0.26249995827674866</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -97,7 +97,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/GreenEntity.ccb</string>
+						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -111,7 +111,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>GreenEntity</string>
+				<string>RedEntity</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -133,8 +133,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.50528162717819214</real>
-							<real>0.18749995529651642</real>
+							<real>0.89964765310287476</real>
+							<real>0.8125</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -159,7 +159,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/GreenEntity.ccb</string>
+						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -173,7 +173,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>GreenEntity</string>
+				<string>RedEntity</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -195,8 +195,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.89612668752670288</real>
-							<real>0.55989575386047363</real>
+							<real>0.5510563850402832</real>
+							<real>0.78124994039535522</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -221,7 +221,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/GreenEntity.ccb</string>
+						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -235,7 +235,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>GreenEntity</string>
+				<string>RedEntity</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -257,8 +257,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.13556332886219025</real>
-							<real>0.49479159712791443</real>
+							<real>0.89964783191680908</real>
+							<real>0.2593749463558197</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -283,7 +283,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Entities/GreenEntity.ccb</string>
+						<string>Entities/RedEntity.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -319,9 +319,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.065140843391418457</real>
-							<real>0.067708335816860199</real>
-							<integer>2</integer>
+							<real>0.24999989569187164</real>
+							<real>0.5</real>
+							<integer>3</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -345,7 +345,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>150</real>
+						<real>180</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -389,79 +389,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.056337974965572357</real>
-							<real>0.067708291113376617</real>
-							<integer>0</integer>
+							<real>0.25</real>
+							<real>0.065624997019767761</real>
 							<integer>2</integer>
-							<integer>2</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>-30</real>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>32</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>0.28169012069702148</real>
-							<real>0.2994791567325592</real>
-							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -493,81 +423,9 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Obstacles/Groups/SmallBlock4Square.ccb</string>
+						<string>Obstacles/Groups/SmallBlockLineLong.ccb</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>33</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>0.30457755923271179</real>
-							<real>0.3619791567325592</real>
-							<integer>3</integer>
-							<integer>2</integer>
-							<integer>2</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>-90</real>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Obstacles/Groups/SmallBlock4Square.ccb</string>
-					</dict>
-				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -582,7 +440,7 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>value</key>
-				<string>8</string>
+				<string>19</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -663,6 +521,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -674,9 +534,9 @@
 			<key>ext</key>
 			<string>phone</string>
 			<key>height</key>
-			<integer>384</integer>
+			<integer>320</integer>
 			<key>name</key>
-			<string>Phone</string>
+			<string>Phone Landscape</string>
 			<key>scale</key>
 			<real>1</real>
 			<key>width</key>
@@ -690,11 +550,25 @@
 			<key>height</key>
 			<integer>384</integer>
 			<key>name</key>
-			<string>Tablet</string>
+			<string>Tablet Landscape</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
-			<integer>568</integer>
+			<integer>512</integer>
+		</dict>
+		<dict>
+			<key>centeredOrigin</key>
+			<false/>
+			<key>ext</key>
+			<string>phone</string>
+			<key>height</key>
+			<integer>320</integer>
+			<key>name</key>
+			<string>Phone Landscape (short)</string>
+			<key>scale</key>
+			<real>1</real>
+			<key>width</key>
+			<integer>480</integer>
 		</dict>
 	</array>
 	<key>sequences</key>

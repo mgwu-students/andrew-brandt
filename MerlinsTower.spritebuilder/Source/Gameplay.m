@@ -73,7 +73,7 @@ static NSString *_currentLevel = @"Level1";
 - (void)startGameplay {
     NSString *levelString = [NSString stringWithFormat:@"Levels/%@", _state.selectedLevel];
     _currentLevel = (Level *)[CCBReader load:levelString owner:self];
-    //[MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
+    [MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
     [_contentNode addChild:_currentLevel];
     _pauseButton.state = CCControlStateNormal;
     if (_currentLevel.hasTutorial) {
@@ -86,7 +86,7 @@ static NSString *_currentLevel = @"Level1";
     CCNode *o = [CCBReader load:@"Recap" owner:self];
     o.name = @"Recap";
     _pauseButton.state = CCControlStateDisabled;
-    //[MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
+    [MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
     NSLog(@"%@ complete", _state.selectedLevel);
     [self addChild:o];
 }
