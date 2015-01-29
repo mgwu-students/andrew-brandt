@@ -63,6 +63,9 @@ typedef struct CCSpriteVertexes {
 /** The currently displayed spriteFrame. */
 @property (nonatomic,strong) CCSpriteFrame* spriteFrame;
 
+/** Added to (hopefully) be compatible with new Spritebuilder **/
+@property (nonatomic,strong) CCSpriteFrame *normalMapSpriteFrame;
+
 /** Whether or not the sprite is flipped horizontally.
  It only flips the texture of the sprite, and not the texture of the sprite's children.
  Also, flipping the texture doesn't alter the anchorPoint.

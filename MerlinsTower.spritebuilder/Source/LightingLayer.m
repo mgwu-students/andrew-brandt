@@ -49,7 +49,15 @@ static LightingLayer *_sharedLayer;
 	// This is currently a private method. CCRenderTextures default to being "aliased" (nearest neighbor filtering) for v2.x compatibility.
 	// Will be making a proper method to set this up soon since this is not very texture cache friendly.
 	[_lightMapBuffer.texture setAntiAliasTexParameters];
-	
+    
+    //for new version of cocos2d... consider using after learning how to properly implement
+//    ccTexParams texParams;
+//    texParams.wrapS = GL_REPEAT;
+//    texParams.wrapT = GL_MIRRORED_REPEAT;
+//    texParams.magFilter = GL_NEAREST;
+//    texParams.minFilter = GL_LINEAR_MIPMAP_LINEAR;
+//	[_lightMapBuffer.texture setTexParameters:&texParams];
+    
 	_lightMapBuffer.projection = GLKMatrix4MakeOrtho(CGRectGetMinX(viewport), CGRectGetMaxX(viewport), CGRectGetMinY(viewport), CGRectGetMaxY(viewport), -1024, 1024);
 	
 	CCSprite *rtSprite = _lightMapBuffer.sprite;

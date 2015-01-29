@@ -12,7 +12,7 @@
 @interface GameState : CCNode
 
 @property (nonatomic, strong) NSString *selectedLevel;
-@property (nonatomic, assign) NSString *topLevel;
+@property (nonatomic, assign) NSNumber *topLevel;
 @property (nonatomic, assign) BOOL playBGM;
 @property (nonatomic, assign) BOOL playSFX;
 

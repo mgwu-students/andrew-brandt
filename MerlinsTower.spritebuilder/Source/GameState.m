@@ -8,6 +8,12 @@
 
 #import "GameState.h"
 
+@interface GameState ()
+
+@property (nonatomic, readonly) BOOL completedIAP;
+
+@end
+
 @implementation GameState {
     OALSimpleAudio *_audioMgr;
 
@@ -17,6 +23,7 @@
 static GameState *_sharedState;
 
 static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
+static const NSString *IAP_UNLOCK_KEY = @"Merlin's Tower IAP";
 
 - (id)init {
     self = [super init];
@@ -25,6 +32,7 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
         [self loadDefaults];
         [self setupAudio];
         [self registerNotifications];
+        [self addObserver:self forKeyPath:@"topLevel" options:NSKeyValueObservingOptionNew context:nil];
     }
     
     return self;
@@ -34,14 +42,18 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
 #pragma mark - Setup methods
 
 - (void)loadDefaults {
-    _topLevel = [[NSUserDefaults standardUserDefaults] objectForKey:TOP_LEVEL_KEY];
+    //_topLevel = [[NSUserDefaults standardUserDefaults] objectForKey:TOP_LEVEL_KEY];
+    _topLevel = [MGWU objectForKey:TOP_LEVEL_KEY];
     if (_topLevel == nil) {
         NSLog(@"New game started, setting default.");
-        _topLevel = @"Level 1";
-        _selectedLevel = _topLevel;
-        _playBGM = YES;
-        _playSFX = YES;
+        _topLevel = @1;
+        _completedIAP = NO;
+    } else {
+        _completedIAP = [MGWU objectForKey:IAP_UNLOCK_KEY];
     }
+    _selectedLevel = [NSString stringWithFormat:@"Level %@",_topLevel];
+    _playBGM = YES;
+    _playSFX = YES;
 }
 
 - (void)setupAudio {
@@ -98,11 +110,20 @@ static const NSString *TOP_LEVEL_KEY = @"Merlin's Tower Top Level";
 }
 
 - (void)playGrabbed {
-    [_audioMgr playEffect:@"Assets/sounds/touched1.wav" volume:1.0f pitch:1.0f pan:1.0f loop:NO];
+    [_audioMgr playEffect:@"Assets/sounds/touched1.wav" volume:10.0f pitch:1.0f pan:1.0f loop:NO];
 }
 
 - (void)playMerging {
     [_audioMgr playEffect:@"Assets/sounds/woosh1.wav"];
+}
+
+#pragma mark - KVO callback method
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(@"noticed new value for %@", keyPath);
+    if ([keyPath isEqualToString:@"topLevel"]) {
+        [MGWU setObject:_topLevel forKey:TOP_LEVEL_KEY];
+    }
 }
 
 @end

@@ -25,7 +25,7 @@
     BOOL _startDrag, _leftOrb, _clearCheck, _tutorialPresented;
 }
 
-static NSString *_currentLevel = @"Level1";
+static NSString *_currentLevel = @"Level 1";
 
 - (void)didLoadFromCCB {
     _state = [GameState sharedState];
@@ -71,6 +71,7 @@ static NSString *_currentLevel = @"Level1";
 }
 
 - (void)startGameplay {
+
     NSString *levelString = [NSString stringWithFormat:@"Levels/%@", _state.selectedLevel];
     _currentLevel = (Level *)[CCBReader load:levelString owner:self];
     [MGWU logEvent: [NSString stringWithFormat:@"%@ started", _state.selectedLevel]];
@@ -95,6 +96,10 @@ static NSString *_currentLevel = @"Level1";
 - (void)nextLevel {
     [_contentNode removeChild:_currentLevel];
     [self removeChildByName:@"Recap"];
+    if ([_state.topLevel intValue] < _currentLevel.nextLevel) {
+        NSLog(@"set higher level");
+        _state.topLevel = [NSNumber numberWithInt:_currentLevel.nextLevel];
+    }
     _state.selectedLevel = [NSString stringWithFormat:@"Level %ld",(long)_currentLevel.nextLevel];
     [self startGameplay];
 }
@@ -133,6 +138,7 @@ static NSString *_currentLevel = @"Level1";
 
 #pragma mark - Touch listening
 
+//- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint p = [touch locationInWorld];
     _target = [self hasHitEntityAt:p];
@@ -147,6 +153,7 @@ static NSString *_currentLevel = @"Level1";
     }
 }
 
+//- (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_startDrag) {
         CGPoint loc = [touch locationInWorld];
@@ -165,6 +172,7 @@ static NSString *_currentLevel = @"Level1";
     }
 }
 
+//- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
 - (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_startDrag) {
         CGPoint loc = [touch locationInWorld];

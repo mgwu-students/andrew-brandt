@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>filenames</key>
+	<dict>
+		<key>Assets/LightAttenuation.psd</key>
+		<string>Assets/LightAttenuation.png</string>
+		<key>Assets/sounds/160420__relenzo2__icespell.wav</key>
+		<string>Assets/sounds/160420__relenzo2__icespell.ogg</string>
+		<key>Assets/sounds/bgm1.wav</key>
+		<string>Assets/sounds/bgm1.ogg</string>
+		<key>Assets/sounds/blue-clear.wav</key>
+		<string>Assets/sounds/blue-clear.ogg</string>
+		<key>Assets/sounds/fizzle1.wav</key>
+		<string>Assets/sounds/fizzle1.ogg</string>
+		<key>Assets/sounds/green-clear.wav</key>
+		<string>Assets/sounds/green-clear.ogg</string>
+		<key>Assets/sounds/red-clear.wav</key>
+		<string>Assets/sounds/red-clear.ogg</string>
+		<key>Assets/sounds/touched1.wav</key>
+		<string>Assets/sounds/touched1.ogg</string>
+		<key>Assets/sounds/woosh1.wav</key>
+		<string>Assets/sounds/woosh1.ogg</string>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>version</key>
+		<integer>1</integer>
+	</dict>
+</dict>
+</plist>
