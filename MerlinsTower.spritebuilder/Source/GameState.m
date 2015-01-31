@@ -8,12 +8,6 @@
 
 #import "GameState.h"
 
-@interface GameState ()
-
-@property (nonatomic, readonly) BOOL completedIAP;
-
-@end
-
 @implementation GameState {
     OALSimpleAudio *_audioMgr;
 
@@ -45,11 +39,13 @@ static const NSString *IAP_UNLOCK_KEY = @"Merlin's Tower IAP";
     //_topLevel = [[NSUserDefaults standardUserDefaults] objectForKey:TOP_LEVEL_KEY];
     _topLevel = [MGWU objectForKey:TOP_LEVEL_KEY];
     if (_topLevel == nil) {
+        #if DEBUG
         NSLog(@"New game started, setting default.");
+        #endif
         _topLevel = @1;
         _completedIAP = NO;
     } else {
-        _completedIAP = [MGWU objectForKey:IAP_UNLOCK_KEY];
+        _completedIAP = [[MGWU objectForKey:IAP_UNLOCK_KEY] boolValue];
     }
     _selectedLevel = [NSString stringWithFormat:@"Level %@",_topLevel];
     _playBGM = YES;
@@ -58,6 +54,7 @@ static const NSString *IAP_UNLOCK_KEY = @"Merlin's Tower IAP";
 
 - (void)setupAudio {
     _audioMgr = [OALSimpleAudio sharedInstance];
+    [_audioMgr preloadBg:@"Assets/sounds/bgm1.wav"];
     [_audioMgr preloadEffect:@"Assets/sounds/fizzle1.wav"];
     [_audioMgr preloadEffect:@"Assets/sounds/red-clear.wav"];
     [_audioMgr preloadEffect:@"Assets/sounds/green-clear.wav"];
@@ -117,13 +114,27 @@ static const NSString *IAP_UNLOCK_KEY = @"Merlin's Tower IAP";
     [_audioMgr playEffect:@"Assets/sounds/woosh1.wav"];
 }
 
+- (void)startBGM {
+    //[bgm preloadBg:@"Assets/sounds/bgm1.wav"];
+    [_audioMgr playBgWithLoop:YES];
+}
+
 #pragma mark - KVO callback method
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    #if DEBUG
     NSLog(@"noticed new value for %@", keyPath);
+    #endif
     if ([keyPath isEqualToString:@"topLevel"]) {
         [MGWU setObject:_topLevel forKey:TOP_LEVEL_KEY];
     }
+}
+
+#pragma mark - Update IAP method
+
+- (void)userPerformIAP {
+    _completedIAP = TRUE;
+    [MGWU setObject:[NSNumber numberWithBool:_completedIAP] forKey:IAP_UNLOCK_KEY];
 }
 
 @end

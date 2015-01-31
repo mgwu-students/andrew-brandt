@@ -88,20 +88,32 @@ static NSString *_currentLevel = @"Level 1";
     o.name = @"Recap";
     _pauseButton.state = CCControlStateDisabled;
     [MGWU logEvent: [NSString stringWithFormat:@"%@ complete", _state.selectedLevel]];
+    #if DEBUG
     NSLog(@"%@ complete", _state.selectedLevel);
+    #endif
     [self addChild:o];
 }
 
 
 - (void)nextLevel {
-    [_contentNode removeChild:_currentLevel];
     [self removeChildByName:@"Recap"];
+    BOOL advance = YES;
     if ([_state.topLevel intValue] < _currentLevel.nextLevel) {
         NSLog(@"set higher level");
-        _state.topLevel = [NSNumber numberWithInt:_currentLevel.nextLevel];
+        if (_currentLevel.nextLevel > 10 && !_state.completedIAP ) {
+            advance = NO;
+        } else {
+            _state.topLevel = [NSNumber numberWithInt:_currentLevel.nextLevel];
+        }
     }
-    _state.selectedLevel = [NSString stringWithFormat:@"Level %ld",(long)_currentLevel.nextLevel];
-    [self startGameplay];
+    if (advance) {
+        [_contentNode removeChild:_currentLevel];
+        _state.selectedLevel = [NSString stringWithFormat:@"Level %ld",(long)_currentLevel.nextLevel];
+        [self startGameplay];
+    } else {
+        CCNode *iap = [CCBReader load:@"IAPDialog" owner:self];
+        [self addChild:iap z:10 name:@"IAPDialog"];
+    }
 }
 
 - (void)pause {
@@ -256,6 +268,61 @@ static NSString *_currentLevel = @"Level 1";
     }
 }
 
+#pragma mark - IAP methods
 
+- (void)acceptPurchase: (CCButton *)sender {
+    #if DEBUG
+    NSLog(@"selected IAP prompt");
+    #endif
+    [MGWU testBuyProduct:@"doryStudiosMerlinsTower001" withCallback:@selector(tryPurchase:) onTarget:self];
+}
+
+- (void)refusePurchase: (CCButton *)sender {
+    #if DEBUG
+    NSLog(@"refused IAP, lame!");
+    #endif
+    [self removeChildByName:@"IAPDialog"];
+    [self levelSelect];
+}
+
+- (void)restorePurchase: (CCButton *)sender {
+    #if DEBUG
+    NSLog(@"Try to restore purchase");
+    #endif
+    [MGWU testRestoreProducts:@[@"doryStudiosMerlinsTower001"] withCallback:@selector(tryRestore:) onTarget:self];
+}
+
+- (void)tryPurchase: (NSString *)str {
+    if (str) {
+        #if DEBUG
+        NSLog(@"purchased successfully");
+        #endif
+        [_state userPerformIAP];
+        [self removeChildByName:@"IAPDialog"];
+        [_contentNode removeChild:_currentLevel];
+        _state.selectedLevel = [NSString stringWithFormat:@"Level %ld",(long)_currentLevel.nextLevel];
+        [self startGameplay];
+    } else {
+        #if DEBUG
+        NSLog(@"did not purchase, booo!");
+        #endif
+    }
+}
+
+- (void)tryRestore: (NSArray *)arr {
+    if (arr) {
+        #if DEBUG
+        NSLog(@"restored successfully");
+        #endif
+        [_state userPerformIAP];
+        [_contentNode removeChild:_currentLevel];
+        _state.selectedLevel = [NSString stringWithFormat:@"Level %ld",(long)_currentLevel.nextLevel];
+        [self startGameplay];
+    } else {
+        #if DEBUG
+        NSLog(@"could not restore");
+        #endif
+    }
+}
 
 @end

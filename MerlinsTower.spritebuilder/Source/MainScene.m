@@ -7,20 +7,22 @@
 //
 
 #import "MainScene.h"
+#import "GameState.h"
 #import "Gameplay.h"
 
 @implementation MainScene {
-    OALSimpleAudio *bgm;
+    //OALSimpleAudio *bgm;
+    
+    GameState *_state;
 }
 
 - (void)onEnter {
     [super onEnter];
     self.userInteractionEnabled = YES;
     _startWaiting = NO;
-    
+    _state = [GameState sharedState];
     //start bgm
-    bgm = [OALSimpleAudio sharedInstance];
-    [bgm preloadBg:@"Assets/sounds/bgm1.wav"];
+    //bgm = [OALSimpleAudio sharedInstance];
 }
 
 - (void)startGame {
@@ -42,7 +44,8 @@
 
 - (void)setStartFlag {
     _startWaiting = YES;
-    [bgm playBgWithLoop:YES];
+    //[bgm playBgWithLoop:YES];
+    [_state playBGM];
 }
 
 @end

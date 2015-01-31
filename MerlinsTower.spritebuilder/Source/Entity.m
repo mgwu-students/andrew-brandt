@@ -43,7 +43,9 @@
         _wait = [CCActionDelay actionWithDuration:0.1f];
         _return = [CCActionCallFunc actionWithTarget:self selector:@selector(resetSpawnPoint)];
         self.physicsBody.collisionMask = @[@"obstacle"];
+        #if DEBUG
         NSLog(@"Ready!");
+        #endif
     }
     
     return self;
@@ -96,7 +98,9 @@
 }
 
 - (void)startMove: (NSMutableArray *)instructions {
+    #if DEBUG
     NSLog(@"Moving");
+    #endif
     NSMutableArray *actionList = [NSMutableArray array];
     for (NSValue *o in instructions) {
         CCAction *act = [CCActionMoveTo actionWithDuration:0.1f position:[o CGPointValue]];
@@ -155,11 +159,15 @@
     self.isMerged = YES;
     _playSFX = val;
     if (self.magicType == target.magicType) {
+        #if DEBUG
         NSLog(@"Similar magic collided!");
+        #endif
         _goodMerge = YES;
     }
     else {
+        #if DEBUG
         NSLog(@"Different magic collided");
+        #endif
         _goodMerge = NO;
     }
     [self runAction:move];

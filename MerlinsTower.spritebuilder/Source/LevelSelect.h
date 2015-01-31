@@ -8,6 +8,6 @@
 
 #import "CCNode.h"
 
-@interface LevelSelect : CCNode
+@interface LevelSelect : CCNode <CCScrollViewDelegate>
 
 @end

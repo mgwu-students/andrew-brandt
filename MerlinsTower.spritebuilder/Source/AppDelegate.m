@@ -51,6 +51,7 @@
     
     //MGWU sdk setup
     [MGWU loadMGWU:@"DXPOOKJ1QSDRRPTFV"];
+    [MGWU useIAPs];
     
     //Crashlytics sdk setup
     [Crashlytics startWithAPIKey:@"544316ad86c403e878126843ada5947cbb14dc33"];

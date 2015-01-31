@@ -11,7 +11,9 @@
 @implementation Level
 
 - (void)onExit {
+    #if DEBUG
     NSLog(@"Clearing level!");
+    #endif
     [super onExit];
 }
 
