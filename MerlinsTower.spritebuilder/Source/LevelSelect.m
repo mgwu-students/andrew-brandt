@@ -12,6 +12,7 @@
 @implementation LevelSelect {
     CCScrollView *_scrollView;
     CCScrollView *_parallaxView;
+    CCNode *_contentNode;
     GameState *state;
 }
 
@@ -22,8 +23,12 @@
     state = [GameState sharedState];
     //CCNode *backgroundNode = [CCBReader load:@"Backgrounds/ExteriorBackground"];
     CCSprite *background = [CCSprite spriteWithImageNamed:@"Assets/Halloween-BK@4x.png"];
-    [_parallaxView.contentNode addChild:background];
     
+    background.position = ccp([CCDirector sharedDirector].viewSize.width/2,[CCDirector sharedDirector].viewSize.height/2);
+    background.scale = 1.5f;
+    //background.anchorPoint = ccp(0,0);
+    //[_parallaxView.contentNode addChild:background];
+    [_contentNode addChild:background];
     //[backgroundNode addChild:background];
     //_parallaxView.contentNode = backgroundNode;
     [self setupButtons];

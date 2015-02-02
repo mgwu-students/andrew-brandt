@@ -177,7 +177,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -201,7 +201,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -220,7 +220,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -237,7 +237,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Assets/fonts/NewRocker-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -364,8 +364,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -505,7 +503,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -529,7 +527,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -548,7 +546,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -565,7 +563,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Assets/fonts/NewRocker-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -831,7 +829,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -855,7 +853,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -874,7 +872,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string></string>
 						</array>
 					</dict>
 					<dict>
@@ -891,7 +889,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Assets/fonts/NewRocker-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -900,7 +898,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>17</real>
+							<real>20</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1052,7 +1050,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.60000002384185791</real>
+							<real>0.68000000715255737</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1100,7 +1098,7 @@ Support the game and play 20 more levels!</string>
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Assets/fonts/NewRocker-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1109,7 +1107,7 @@ Support the game and play 20 more levels!</string>
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>12</real>
+							<real>24</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1226,6 +1224,8 @@ Support the game and play 20 more levels!</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

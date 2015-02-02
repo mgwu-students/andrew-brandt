@@ -274,7 +274,9 @@ static NSString *_currentLevel = @"Level 1";
     #if DEBUG
     NSLog(@"selected IAP prompt");
     #endif
-    [MGWU testBuyProduct:@"doryStudiosMerlinsTower001" withCallback:@selector(tryPurchase:) onTarget:self];
+    //[MGWU testBuyProduct:@"doryStudiosMerlinsTower001" withCallback:@selector(tryPurchase:) onTarget:self];
+    [MGWU buyProduct:@"doryStudiosMerlinsTower001" withCallback:@selector(tryPurchase:) onTarget:self];
+    
 }
 
 - (void)refusePurchase: (CCButton *)sender {
@@ -289,7 +291,8 @@ static NSString *_currentLevel = @"Level 1";
     #if DEBUG
     NSLog(@"Try to restore purchase");
     #endif
-    [MGWU testRestoreProducts:@[@"doryStudiosMerlinsTower001"] withCallback:@selector(tryRestore:) onTarget:self];
+    //[MGWU testRestoreProducts:@[@"doryStudiosMerlinsTower001"] withCallback:@selector(tryRestore:) onTarget:self];
+    [MGWU restoreProductsWithCallback:@selector(tryRestore:) onTarget:self];
 }
 
 - (void)tryPurchase: (NSString *)str {
